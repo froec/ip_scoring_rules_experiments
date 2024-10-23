@@ -37,10 +37,6 @@ def compute_decision_calibration(preds, outcomes, lossfunc, verbose=False):
 # for potentially imprecise forecasts
 # computes IP
 def compute_ip_decision_calibration(predictor, X_test, y_test, lossfunc, all_actions=[], verbose=False):
-    """
-    TODO: fix the issue which occurs when some action is never recommended!
-
-    """
 
     ip_preds = predictor.predict(X_test) # can be precise or imprecise!
 
@@ -101,7 +97,7 @@ def compute_ip_decision_calibration(predictor, X_test, y_test, lossfunc, all_act
 
     actual_mean_losses = [np.mean(losses[actions==a]) if (actions==a).sum()>0 else 0. for a in all_actions]
     if ip_preds.ndim > 1:
-        entropy_terms = [np.mean(ent_list) for ent_list in ents_actions]
+        entropy_terms = [np.mean(ent_list) if len(ent_list)>0. else 0. for ent_list in ents_actions]
     action_dec_cal_terms = [a-b for (a,b) in zip(actual_mean_losses,entropy_terms)]
 
     

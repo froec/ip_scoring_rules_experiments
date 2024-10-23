@@ -2,7 +2,7 @@
 Arxiv link
 
 ## Environment
-Create a conda environment named "base" with python 3.11 and
+Create a conda environment with python 3.11 and
  - matplotlib (3.8.4)
   - numpy (1.26.4)
   - pandas (2.2.2)
@@ -11,7 +11,11 @@ Create a conda environment named "base" with python 3.11 and
   - seaborn (0.13.2)
   - torchvision (0.18.1)
   - dill (0.3.7)
-You can use environment.txt or environment_mimimal.yaml to set up the environemnt.
+  - requests (2.31.0)
+  - imbalanced-learn (0.11.0)
+You can use environment.txt or environment_mimimal.yaml to set up the environment.
+For example, run
+> conda env create -f environment_minimal.yaml
 
 ## Preparing the data
 For framingham, download the dataset (a single csv file) from https://www.kaggle.com/datasets/aasheesh200/framingham-heart-study-dataset?select=framingham.csv and put it in the data/ directory
@@ -47,6 +51,8 @@ To run the framingham experiment:
 		--epochs_individual_predictors 5000 --epochs_erm 5000\
 		--c_params [0.1,0.3,0.7,0.9]\
 		--no-minibatches
+
+>python evaluation.py --modeldir results_framingham/ --plotdir results_framingham/ --c_params [0.1,0.3,0.7,0.9]
 
 ## Creating plots
 Finally, to create the plots:

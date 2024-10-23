@@ -10,7 +10,7 @@ We apply an age filter: 16 < age < 90
 import numpy as np
 import pandas as pd
 
-datadir = "../data/ACS_enemployment_data/"
+datadir = "../data/ACS_unemployment_data/"
 
 # read the states info from the csv file and turn into dictionary
 US_states_info = pd.read_csv(datadir + "US_states_ansi_codes.csv",sep=",")

@@ -7,7 +7,7 @@ import numpy as np
 import seaborn as sns
 import torch
 
-plotdir = "scoring_rules_paper_experiments/plots/"
+plotdir = "ip_scoring_rules_experiments/plots/"
 
 ps = np.linspace(1e-6,1.0-1e-6,1000)
 c = 0.1

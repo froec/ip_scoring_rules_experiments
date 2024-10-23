@@ -1,35 +1,15 @@
-name: base
+name: ipscoringruleenv
 channels:
   - defaults
 dependencies:
-  - _anaconda_depends
   - python=3.11
-  - setuptools
-  - pip
-  - wheel
-  - anaconda-anon-usage
-  - anaconda-catalogs
-  - anaconda-client
-  - anaconda-project
-  - anaconda-navigator==2.6.1
-  - conda[version='>=23.7']
-  - conda-build
-  - conda-content-trust
-  - conda-libmamba-solver
-  - conda-pack
-  - conda-package-handling
-  - conda-package-streaming
-  - conda-token
-  - conda-verify
-  - console_shortcut
-  - powershell_shortcut
-  - anaconda-toolbox
-  - matplotlib
-  - numpy
-  - pandas
-  - pytorch
-  - scikit-learn
-  - seaborn
-  - xgboost
-  - torchvision
-prefix: C:\Users\froec\anaconda3
+  - matplotlib=3.8.4
+  - numpy=1.26.4
+  - pandas=2.2.2
+  - pytorch=2.3.0
+  - torchvision=0.18.1
+  - scikit-learn=1.4.2
+  - seaborn=0.13.2
+  - dill=0.3.7
+  - requests=2.31.0
+  - imbalanced-learn=0.11.0
