@@ -1,0 +1,234 @@
+2024-10-23 14:19:32,157 - logger - DEBUG - Namespace(logfile='logs/celeba_job.log', dataset='celeba', datadir='data/celeba_embeddings/', modeldir='results_celeba/', test_size=0.2, batch_size=512, minibatches='True', c_params=[0.1, 0.3, 0.7, 0.9], learning_rate_individual_predictor=0.001, epochs_individual_predictors=5000, plot_sklearn_roc=False, learning_rate_erm=0.001, epochs_erm=5000, outer_learning_rate_dro=0.1, inner_learning_rate_dro=0.001, outer_epochs_dro=2000, inner_epochs_dro=500, superquick=True, states='')
+2024-10-23 14:19:32,526 - logger - DEBUG - X_train_male:
+2024-10-23 14:19:32,526 - logger - DEBUG - (32064, 2048)
+2024-10-23 14:19:32,648 - logger - DEBUG - X_test_male:
+2024-10-23 14:19:32,648 - logger - DEBUG - (7715, 2048)
+2024-10-23 14:19:39,169 - logger - DEBUG - State: male
+2024-10-23 14:19:39,172 - logger - DEBUG - N_train: 32064
+2024-10-23 14:19:39,172 - logger - DEBUG - N_test: 7715
+2024-10-23 14:19:39,172 - logger - DEBUG - positive train labels: 480.0000
+2024-10-23 14:19:39,173 - logger - DEBUG - positive test labels: 182.0000
+2024-10-23 14:19:39,278 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:19:42,107 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6926577797619216)
+2024-10-23 14:19:42,132 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,132 - logger - DEBUG - Bayes risk: 0.698481
+2024-10-23 14:19:42,159 - logger - DEBUG - tensor([ 0.0736,  0.0784, -0.0252,  0.0828, -0.0201,  0.0185, -0.0465,  0.0522,
+         0.0804, -0.0673,  0.0864,  0.0149,  0.0651,  0.0140,  0.0421, -0.0101,
+         0.0725,  0.0112, -0.0423,  0.0280], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,170 - logger - DEBUG - accuracy: 0.5669475197792053
+2024-10-23 14:19:42,170 - logger - DEBUG - fraction of prediction=1: 0.4273
+2024-10-23 14:19:42,170 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9999
+2024-10-23 14:19:42,173 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9325
+2024-10-23 14:19:42,173 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0518
+2024-10-23 14:19:42,173 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:19:42,173 - logger - DEBUG - train base rate of y=1: 0.0150
+2024-10-23 14:19:42,174 - logger - DEBUG - accuracy of train base rate predictor: 0.9764
+2024-10-23 14:19:42,183 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:19:42,201 - logger - DEBUG -           0                                                  1
+0  lin_feat  tensor(-0.0945, dtype=torch.float64, grad_fn=<...
+1  lin_feat  tensor(-0.0919, dtype=torch.float64, grad_fn=<...
+2  lin_feat  tensor(-0.0909, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:19:42,332 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.9760
+2024-10-23 14:19:42,332 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.0006
+2024-10-23 14:19:42,332 - logger - DEBUG - coefficients:
+2024-10-23 14:19:42,332 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:19:42,341 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:19:42,341 - logger - DEBUG - (7529, 4, 181, 1)
+2024-10-23 14:19:42,344 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.0778, dtype=torch.float64)
+2024-10-23 14:19:42,344 - logger - DEBUG - 
+2024-10-23 14:19:42,344 - logger - DEBUG - 
+2024-10-23 14:19:42,344 - logger - DEBUG - State: nonmale
+2024-10-23 14:19:42,344 - logger - DEBUG - N_train: 32064
+2024-10-23 14:19:42,347 - logger - DEBUG - N_test: 12247
+2024-10-23 14:19:42,347 - logger - DEBUG - positive train labels: 9825.0000
+2024-10-23 14:19:42,347 - logger - DEBUG - positive test labels: 3943.0000
+2024-10-23 14:19:42,396 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:19:42,400 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7407090322916043)
+2024-10-23 14:19:42,409 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,412 - logger - DEBUG - Bayes risk: 0.711712
+2024-10-23 14:19:42,412 - logger - DEBUG - tensor([-0.0434, -0.0787,  0.0154,  0.0774,  0.0398,  0.0859, -0.0489,  0.0432,
+        -0.0045, -0.0069,  0.1032,  0.0374, -0.0447,  0.0451, -0.0630, -0.0003,
+        -0.0859, -0.0349, -0.0117, -0.0112], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,421 - logger - DEBUG - accuracy: 0.5046133995056152
+2024-10-23 14:19:42,421 - logger - DEBUG - fraction of prediction=1: 0.4706
+2024-10-23 14:19:42,421 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:19:42,421 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9287
+2024-10-23 14:19:42,424 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0492
+2024-10-23 14:19:42,424 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:19:42,424 - logger - DEBUG - train base rate of y=1: 0.3064
+2024-10-23 14:19:42,424 - logger - DEBUG - accuracy of train base rate predictor: 0.6780
+2024-10-23 14:19:42,427 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:19:42,430 - logger - DEBUG -           0                                                  1
+0  lin_feat  tensor(0.1032, dtype=torch.float64, grad_fn=<U...
+1  lin_feat  tensor(-0.0969, dtype=torch.float64, grad_fn=<...
+2  lin_feat  tensor(-0.0962, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:19:42,521 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7449
+2024-10-23 14:19:42,521 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.1916
+2024-10-23 14:19:42,521 - logger - DEBUG - coefficients:
+2024-10-23 14:19:42,521 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:19:42,530 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:19:42,530 - logger - DEBUG - (7540, 764, 2360, 1583)
+2024-10-23 14:19:42,534 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6162, dtype=torch.float64)
+2024-10-23 14:19:42,534 - logger - DEBUG - 
+2024-10-23 14:19:42,534 - logger - DEBUG - 
+2024-10-23 14:19:42,534 - logger - DEBUG - Bayes risks of the states (empirical risk of optimal individual predictor on that state):
+2024-10-23 14:19:42,534 - logger - DEBUG - nonmale: 0.7117
+2024-10-23 14:19:42,534 - logger - DEBUG - male: 0.6985
+2024-10-23 14:19:42,534 - logger - DEBUG - 
+2024-10-23 14:19:42,534 - logger - DEBUG - 
+2024-10-23 14:19:42,534 - logger - DEBUG - Using individual predictor for male on data of male
+2024-10-23 14:19:42,537 - logger - DEBUG - accuracy: 0.5669
+2024-10-23 14:19:42,540 - logger - DEBUG - mean train loss: 0.6972
+2024-10-23 14:19:42,540 - logger - DEBUG - 
+2024-10-23 14:19:42,540 - logger - DEBUG - Using individual predictor for male on data of nonmale
+2024-10-23 14:19:42,549 - logger - DEBUG - accuracy: 0.5315
+2024-10-23 14:19:42,549 - logger - DEBUG - mean train loss: 0.7142
+2024-10-23 14:19:42,549 - logger - DEBUG - 
+2024-10-23 14:19:42,549 - logger - DEBUG - Using individual predictor for nonmale on data of male
+2024-10-23 14:19:42,555 - logger - DEBUG - accuracy: 0.4735
+2024-10-23 14:19:42,559 - logger - DEBUG - mean train loss: 0.7348
+2024-10-23 14:19:42,559 - logger - DEBUG - 
+2024-10-23 14:19:42,559 - logger - DEBUG - Using individual predictor for nonmale on data of nonmale
+2024-10-23 14:19:42,565 - logger - DEBUG - accuracy: 0.5046
+2024-10-23 14:19:42,568 - logger - DEBUG - mean train loss: 0.7237
+2024-10-23 14:19:42,568 - logger - DEBUG - 
+2024-10-23 14:19:42,580 - logger - DEBUG - ((64128, 100), (64128,))
+2024-10-23 14:19:42,758 - logger - DEBUG - Sklearn logistic regression on combined data accuracy: 0.8121
+2024-10-23 14:19:42,758 - logger - DEBUG - training ERM generalist with surrogate loss: log
+2024-10-23 14:19:42,765 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7300233434435102)
+2024-10-23 14:19:42,779 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,779 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:19:42,783 - logger - DEBUG - tensor([ 0.0660,  0.0217,  0.0821, -0.0410,  0.0553, -0.0115, -0.0443,  0.0461,
+        -0.0060, -0.0099,  0.0917,  0.0110,  0.0066,  0.0513, -0.0858, -0.0775,
+        -0.0595, -0.0497,  0.0737, -0.0497], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,786 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5244
+2024-10-23 14:19:42,786 - logger - DEBUG - 
+2024-10-23 14:19:42,786 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.1)
+2024-10-23 14:19:42,798 - logger - DEBUG - ('epoch:', 0, ',loss=', 1.137478770754325)
+2024-10-23 14:19:42,810 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,813 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:19:42,813 - logger - DEBUG - tensor([-0.0053,  0.0935,  0.0179, -0.0307,  0.0142, -0.0910, -0.0261,  0.0704,
+         0.0833, -0.0059,  0.0611,  0.1061,  0.0613, -0.0114, -0.0716,  0.0498,
+        -0.0055, -0.0500, -0.0523,  0.0587], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,816 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5510
+2024-10-23 14:19:42,816 - logger - DEBUG - 
+2024-10-23 14:19:42,816 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.3)
+2024-10-23 14:19:42,820 - logger - DEBUG - ('epoch:', 0, ',loss=', 1.203564028666024)
+2024-10-23 14:19:42,832 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,832 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:19:42,835 - logger - DEBUG - tensor([-0.0910, -0.0052, -0.0025, -0.0267, -0.0648, -0.0710, -0.0868, -0.0283,
+         0.0559,  0.0895,  0.0519, -0.0074, -0.0503,  0.0100, -0.0182,  0.0514,
+         0.0399,  0.0352,  0.0280,  0.0188], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,838 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5409
+2024-10-23 14:19:42,838 - logger - DEBUG - 
+2024-10-23 14:19:42,838 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.7)
+2024-10-23 14:19:42,840 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7296742636564237)
+2024-10-23 14:19:42,852 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,852 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:19:42,852 - logger - DEBUG - tensor([-0.0317,  0.0668,  0.0721, -0.0451,  0.0782,  0.0602,  0.0415,  0.0099,
+        -0.0492,  0.0407,  0.0326,  0.0459,  0.0492,  0.0492, -0.0007,  0.0591,
+        -0.0223, -0.0407, -0.0420, -0.0745], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,855 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5135
+2024-10-23 14:19:42,855 - logger - DEBUG - 
+2024-10-23 14:19:42,855 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.9)
+2024-10-23 14:19:42,858 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.4817391031253918)
+2024-10-23 14:19:42,870 - logger - DEBUG - training finished.
+2024-10-23 14:19:42,870 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:19:42,873 - logger - DEBUG - tensor([-0.0607, -0.0678, -0.0573, -0.0477, -0.0056,  0.0823, -0.0138, -0.0644,
+         0.0213,  0.0466, -0.0153,  0.0276, -0.0770, -0.0655, -0.0307,  0.0691,
+         0.0753, -0.0177,  0.0186, -0.0525], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:19:42,873 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5131
+2024-10-23 14:19:42,876 - logger - DEBUG - 
+2024-10-23 14:19:42,876 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:19:42,876 - logger - DEBUG - using surrogate loss function: log
+2024-10-23 14:19:42,876 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:19:42,879 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:19:42,879 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:19:42,910 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:19:42,910 - logger - DEBUG - dro loss:
+2024-10-23 14:19:42,926 - logger - DEBUG - 0.7132936063194646
+2024-10-23 14:19:42,927 - logger - DEBUG - max-min range: 0.036104
+2024-10-23 14:19:42,927 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:19:42,927 - logger - DEBUG - [0.7132936063194646]
+2024-10-23 14:19:42,927 - logger - DEBUG - final group weightings: 
+2024-10-23 14:19:42,927 - logger - DEBUG - male: 0.4992
+2024-10-23 14:19:42,927 - logger - DEBUG - nonmale: 0.5008
+2024-10-23 14:19:42,929 - logger - DEBUG - DRO model accuracy on combined test data: 0.5402
+2024-10-23 14:19:42,929 - logger - DEBUG - 
+2024-10-23 14:19:42,929 - logger - DEBUG - 
+2024-10-23 14:19:42,929 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:19:42,929 - logger - DEBUG - using surrogate loss function: asymm(c=0.1)
+2024-10-23 14:19:42,932 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:19:42,932 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:19:42,932 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:19:42,962 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:19:42,962 - logger - DEBUG - dro loss:
+2024-10-23 14:19:42,978 - logger - DEBUG - 1.271774724921537
+2024-10-23 14:19:42,978 - logger - DEBUG - max-min range: 0.267196
+2024-10-23 14:19:42,978 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:19:42,978 - logger - DEBUG - [1.271774724921537]
+2024-10-23 14:19:42,978 - logger - DEBUG - final group weightings: 
+2024-10-23 14:19:42,978 - logger - DEBUG - male: 0.5069
+2024-10-23 14:19:42,978 - logger - DEBUG - nonmale: 0.4931
+2024-10-23 14:19:42,978 - logger - DEBUG - DRO model accuracy on combined test data: 0.5384
+2024-10-23 14:19:42,978 - logger - DEBUG - 
+2024-10-23 14:19:42,978 - logger - DEBUG - 
+2024-10-23 14:19:42,981 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:19:42,981 - logger - DEBUG - using surrogate loss function: asymm(c=0.3)
+2024-10-23 14:19:42,981 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:19:42,984 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:19:42,984 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:19:43,026 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:19:43,026 - logger - DEBUG - dro loss:
+2024-10-23 14:19:43,042 - logger - DEBUG - 1.2864626856029897
+2024-10-23 14:19:43,042 - logger - DEBUG - max-min range: 0.192436
+2024-10-23 14:19:43,042 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:19:43,042 - logger - DEBUG - [1.2864626856029897]
+2024-10-23 14:19:43,042 - logger - DEBUG - final group weightings: 
+2024-10-23 14:19:43,042 - logger - DEBUG - male: 0.5047
+2024-10-23 14:19:43,042 - logger - DEBUG - nonmale: 0.4953
+2024-10-23 14:19:43,045 - logger - DEBUG - DRO model accuracy on combined test data: 0.5392
+2024-10-23 14:19:43,045 - logger - DEBUG - 
+2024-10-23 14:19:43,045 - logger - DEBUG - 
+2024-10-23 14:19:43,047 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:19:43,048 - logger - DEBUG - using surrogate loss function: asymm(c=0.7)
+2024-10-23 14:19:43,049 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:19:43,049 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:19:43,051 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:19:43,085 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:19:43,085 - logger - DEBUG - dro loss:
+2024-10-23 14:19:43,097 - logger - DEBUG - 0.79013020462988
+2024-10-23 14:19:43,097 - logger - DEBUG - max-min range: 0.267254
+2024-10-23 14:19:43,100 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:19:43,100 - logger - DEBUG - [0.79013020462988]
+2024-10-23 14:19:43,100 - logger - DEBUG - final group weightings: 
+2024-10-23 14:19:43,100 - logger - DEBUG - male: 0.4933
+2024-10-23 14:19:43,100 - logger - DEBUG - nonmale: 0.5067
+2024-10-23 14:19:43,102 - logger - DEBUG - DRO model accuracy on combined test data: 0.5348
+2024-10-23 14:19:43,102 - logger - DEBUG - 
+2024-10-23 14:19:43,102 - logger - DEBUG - 
+2024-10-23 14:19:43,103 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:19:43,103 - logger - DEBUG - using surrogate loss function: asymm(c=0.9)
+2024-10-23 14:19:43,106 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:19:43,106 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:19:43,106 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:19:43,141 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:19:43,141 - logger - DEBUG - dro loss:
+2024-10-23 14:19:43,154 - logger - DEBUG - 0.6222501378825358
+2024-10-23 14:19:43,154 - logger - DEBUG - max-min range: 0.308739
+2024-10-23 14:19:43,154 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:19:43,154 - logger - DEBUG - [0.6222501378825358]
+2024-10-23 14:19:43,154 - logger - DEBUG - final group weightings: 
+2024-10-23 14:19:43,154 - logger - DEBUG - male: 0.4925
+2024-10-23 14:19:43,154 - logger - DEBUG - nonmale: 0.5075
+2024-10-23 14:19:43,157 - logger - DEBUG - DRO model accuracy on combined test data: 0.5373
+2024-10-23 14:19:43,157 - logger - DEBUG - 
+2024-10-23 14:19:43,157 - logger - DEBUG - 
+2024-10-23 14:19:43,157 - logger - DEBUG - training of all DRO models finished

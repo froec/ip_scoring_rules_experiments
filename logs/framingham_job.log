@@ -1,0 +1,294 @@
+2024-10-23 14:13:35,410 - logger - DEBUG - Namespace(logfile='logs/framingham_job.log', dataset='framingham', datadir='data/', modeldir='results_framingham/', test_size=0.2, batch_size=64, minibatches=False, c_params=[0.1, 0.3, 0.7, 0.9], learning_rate_individual_predictor=0.001, epochs_individual_predictors=5000, plot_sklearn_roc=False, learning_rate_erm=0.001, epochs_erm=5000, outer_learning_rate_dro=0.1, inner_learning_rate_dro=0.001, outer_epochs_dro=2000, inner_epochs_dro=500, superquick=True, states='')
+2024-10-23 14:13:35,442 - logger - DEBUG - group data:
+2024-10-23 14:13:35,446 - logger - DEBUG - 0       39
+1       46
+2       48
+3       61
+4       46
+        ..
+4235    48
+4236    44
+4237    52
+4238    40
+4239    39
+Name: age, Length: 4240, dtype: int64
+2024-10-23 14:13:35,447 - logger - DEBUG - group sizes:
+2024-10-23 14:13:35,447 - logger - DEBUG - [3661, 579]
+2024-10-23 14:13:35,458 - logger - DEBUG - male               0
+age                0
+education          0
+currentSmoker      0
+cigsPerDay         0
+BPMeds             0
+prevalentStroke    0
+prevalentHyp       0
+diabetes           0
+totChol            0
+sysBP              0
+diaBP              0
+BMI                0
+heartRate          0
+glucose            0
+dtype: int64
+2024-10-23 14:13:35,475 - logger - DEBUG -       male  age  education  currentSmoker  cigsPerDay  BPMeds  ...  totChol  sysBP  diaBP    BMI  heartRate  glucose
+0        1   39        4.0              0         0.0     0.0  ...    195.0  106.0   70.0  26.97       80.0     77.0
+1        0   46        2.0              0         0.0     0.0  ...    250.0  121.0   81.0  28.73       95.0     76.0
+2        1   48        1.0              1        20.0     0.0  ...    245.0  127.5   80.0  25.34       75.0     70.0
+3        0   61        3.0              1        30.0     0.0  ...    225.0  150.0   95.0  28.58       65.0    103.0
+4        0   46        3.0              1        23.0     0.0  ...    285.0  130.0   84.0  23.10       85.0     85.0
+...    ...  ...        ...            ...         ...     ...  ...      ...    ...    ...    ...        ...      ...
+4235     0   48        2.0              1        20.0     0.0  ...    248.0  131.0   72.0  22.00       84.0     86.0
+4236     0   44        1.0              1        15.0     0.0  ...    210.0  126.5   87.0  19.16       86.0     78.0
+4237     0   52        2.0              0         0.0     0.0  ...    269.0  133.5   83.0  21.47       80.0    107.0
+4238     1   40        3.0              0         0.0     0.0  ...    185.0  141.0   98.0  25.60       67.0     72.0
+4239     0   39        3.0              1        30.0     0.0  ...    196.0  133.0   86.0  20.91       85.0     80.0
+
+[4240 rows x 15 columns]
+2024-10-23 14:13:35,475 - logger - DEBUG - how many have heart disease?
+2024-10-23 14:13:35,479 - logger - DEBUG - 644
+2024-10-23 14:13:35,515 - logger - DEBUG -               male          age    education  currentSmoker  ...        diaBP          BMI    heartRate      glucose
+count  4240.000000  4240.000000  4240.000000    4240.000000  ...  4240.000000  4240.000000  4240.000000  4240.000000
+mean      0.429245    49.580189     1.979953       0.494104  ...    82.897759    25.799005    75.878981    81.600943
+std       0.495027     8.572942     1.007087       0.500024  ...    11.910394     4.070775    12.023929    22.860340
+min       0.000000    32.000000     1.000000       0.000000  ...    48.000000    15.540000    44.000000    40.000000
+25%       0.000000    42.000000     1.000000       0.000000  ...    75.000000    23.077500    68.000000    72.000000
+50%       0.000000    49.000000     2.000000       0.000000  ...    82.000000    25.400000    75.000000    78.000000
+75%       1.000000    56.000000     3.000000       1.000000  ...    90.000000    28.032500    83.000000    85.000000
+max       1.000000    70.000000     4.000000       1.000000  ...   142.500000    56.800000   143.000000   394.000000
+
+[8 rows x 15 columns]
+2024-10-23 14:13:35,522 - logger - DEBUG - young
+2024-10-23 14:13:35,533 - logger - DEBUG - old
+2024-10-23 14:13:35,537 - logger - DEBUG - base rates of y=1:
+2024-10-23 14:13:35,537 - logger - DEBUG - young: 0.5000
+2024-10-23 14:13:35,537 - logger - DEBUG - old: 0.5000
+2024-10-23 14:13:35,545 - logger - DEBUG - Using full data instead of minibatches
+2024-10-23 14:13:35,545 - logger - DEBUG - State: young
+2024-10-23 14:13:35,545 - logger - DEBUG - N_train: 5091
+2024-10-23 14:13:35,547 - logger - DEBUG - N_test: 1273
+2024-10-23 14:13:35,547 - logger - DEBUG - positive train labels: 2567.0000
+2024-10-23 14:13:35,547 - logger - DEBUG - positive test labels: 615.0000
+2024-10-23 14:13:35,562 - logger - DEBUG - training individual predictor with full data
+2024-10-23 14:13:37,525 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7218946041607206)
+2024-10-23 14:13:37,533 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,533 - logger - DEBUG - Bayes risk: 0.666066
+2024-10-23 14:13:37,549 - logger - DEBUG - tensor([ 0.0795,  0.0857, -0.0211,  0.0927, -0.0105,  0.0261, -0.0348,  0.0633,
+         0.0902, -0.0571,  0.0891,  0.0268,  0.0773,  0.0222,  0.0538, -0.0031,
+         0.0801,  0.0231, -0.0330,  0.0320], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,553 - logger - DEBUG - accuracy: 0.5899450182914734
+2024-10-23 14:13:37,553 - logger - DEBUG - fraction of prediction=1: 0.4753
+2024-10-23 14:13:37,553 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:13:37,553 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9756
+2024-10-23 14:13:37,553 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0542
+2024-10-23 14:13:37,553 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0016
+2024-10-23 14:13:37,553 - logger - DEBUG - train base rate of y=1: 0.5042
+2024-10-23 14:13:37,553 - logger - DEBUG - accuracy of train base rate predictor: 0.4831
+2024-10-23 14:13:37,562 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:13:37,565 - logger - DEBUG -                   0                                                  1
+0       sysBP diaBP  tensor(0.1010, dtype=torch.float64, grad_fn=<U...
+1    cigsPerDay BMI  tensor(0.0974, dtype=torch.float64, grad_fn=<U...
+2  prevalentHyp BMI  tensor(0.0933, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:13:37,650 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.6622
+2024-10-23 14:13:37,654 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.4517
+2024-10-23 14:13:37,654 - logger - DEBUG - coefficients:
+2024-10-23 14:13:37,654 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:13:37,654 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:13:37,654 - logger - DEBUG - (463, 195, 235, 380)
+2024-10-23 14:13:37,658 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6931, dtype=torch.float64)
+2024-10-23 14:13:37,658 - logger - DEBUG - 
+2024-10-23 14:13:37,658 - logger - DEBUG - 
+2024-10-23 14:13:37,658 - logger - DEBUG - State: old
+2024-10-23 14:13:37,658 - logger - DEBUG - N_train: 662
+2024-10-23 14:13:37,658 - logger - DEBUG - N_test: 166
+2024-10-23 14:13:37,658 - logger - DEBUG - positive train labels: 330.0000
+2024-10-23 14:13:37,658 - logger - DEBUG - positive test labels: 84.0000
+2024-10-23 14:13:37,662 - logger - DEBUG - training individual predictor with full data
+2024-10-23 14:13:37,662 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7190847056412136)
+2024-10-23 14:13:37,671 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,671 - logger - DEBUG - Bayes risk: 0.677267
+2024-10-23 14:13:37,671 - logger - DEBUG - tensor([-0.0244,  0.0036, -0.0520, -0.0552, -0.0437, -0.0216, -0.0621,  0.0832,
+        -0.0083,  0.0688,  0.0381, -0.0874,  0.0533, -0.0352, -0.0251, -0.0662,
+        -0.0809,  0.0358, -0.0102,  0.0451], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,671 - logger - DEBUG - accuracy: 0.6265060305595398
+2024-10-23 14:13:37,671 - logger - DEBUG - fraction of prediction=1: 0.5301
+2024-10-23 14:13:37,671 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:13:37,671 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9699
+2024-10-23 14:13:37,671 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0783
+2024-10-23 14:13:37,671 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:13:37,671 - logger - DEBUG - train base rate of y=1: 0.4985
+2024-10-23 14:13:37,671 - logger - DEBUG - accuracy of train base rate predictor: 0.4940
+2024-10-23 14:13:37,675 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:13:37,679 - logger - DEBUG -                      0                                                  1
+0    totChol heartRate  tensor(-0.1000, dtype=torch.float64, grad_fn=<...
+1   prevalentHyp sysBP  tensor(0.0973, dtype=torch.float64, grad_fn=<U...
+2  age prevalentStroke  tensor(0.0931, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:13:37,695 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7108
+2024-10-23 14:13:37,695 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.4699
+2024-10-23 14:13:37,699 - logger - DEBUG - coefficients:
+2024-10-23 14:13:37,699 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:13:37,699 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:13:37,699 - logger - DEBUG - (61, 21, 27, 57)
+2024-10-23 14:13:37,699 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6931, dtype=torch.float64)
+2024-10-23 14:13:37,699 - logger - DEBUG - 
+2024-10-23 14:13:37,699 - logger - DEBUG - 
+2024-10-23 14:13:37,699 - logger - DEBUG - Bayes risks of the states (empirical risk of optimal individual predictor on that state):
+2024-10-23 14:13:37,703 - logger - DEBUG - old: 0.6773
+2024-10-23 14:13:37,703 - logger - DEBUG - young: 0.6661
+2024-10-23 14:13:37,703 - logger - DEBUG - 
+2024-10-23 14:13:37,703 - logger - DEBUG - 
+2024-10-23 14:13:37,703 - logger - DEBUG - Using individual predictor for young on data of young
+2024-10-23 14:13:37,705 - logger - DEBUG - accuracy: 0.5899
+2024-10-23 14:13:37,705 - logger - DEBUG - mean train loss: 0.6607
+2024-10-23 14:13:37,705 - logger - DEBUG - 
+2024-10-23 14:13:37,705 - logger - DEBUG - Using individual predictor for young on data of old
+2024-10-23 14:13:37,707 - logger - DEBUG - accuracy: 0.5482
+2024-10-23 14:13:37,707 - logger - DEBUG - mean train loss: 0.7078
+2024-10-23 14:13:37,707 - logger - DEBUG - 
+2024-10-23 14:13:37,707 - logger - DEBUG - Using individual predictor for old on data of young
+2024-10-23 14:13:37,707 - logger - DEBUG - accuracy: 0.5978
+2024-10-23 14:13:37,707 - logger - DEBUG - mean train loss: 0.6706
+2024-10-23 14:13:37,707 - logger - DEBUG - 
+2024-10-23 14:13:37,707 - logger - DEBUG - Using individual predictor for old on data of old
+2024-10-23 14:13:37,707 - logger - DEBUG - accuracy: 0.6265
+2024-10-23 14:13:37,707 - logger - DEBUG - mean train loss: 0.6715
+2024-10-23 14:13:37,711 - logger - DEBUG - 
+2024-10-23 14:13:37,711 - logger - DEBUG - ((5753, 120), (5753,))
+2024-10-23 14:13:37,795 - logger - DEBUG - Sklearn logistic regression on combined data accuracy: 0.6400
+2024-10-23 14:13:37,795 - logger - DEBUG - training ERM generalist with surrogate loss: log
+2024-10-23 14:13:37,799 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7951052537721709)
+2024-10-23 14:13:37,811 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,811 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:13:37,811 - logger - DEBUG - tensor([-0.0087, -0.0426, -0.0068, -0.0551, -0.0509,  0.0401, -0.0172,  0.0662,
+        -0.0195, -0.0571, -0.0062, -0.0344, -0.0182, -0.0771,  0.0609, -0.0538,
+         0.0556,  0.0508,  0.0743, -0.0602], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,811 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5087
+2024-10-23 14:13:37,811 - logger - DEBUG - 
+2024-10-23 14:13:37,811 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.1)
+2024-10-23 14:13:37,823 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.824554957987191)
+2024-10-23 14:13:37,835 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,835 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:13:37,839 - logger - DEBUG - tensor([ 0.0139,  0.0499,  0.0112,  0.0277, -0.0596, -0.0761,  0.0104,  0.0924,
+         0.0622, -0.0495, -0.0026, -0.0578, -0.0344,  0.0213,  0.0591,  0.0855,
+        -0.0740,  0.0709, -0.0545,  0.0438], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,839 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.6213
+2024-10-23 14:13:37,839 - logger - DEBUG - 
+2024-10-23 14:13:37,839 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.3)
+2024-10-23 14:13:37,843 - logger - DEBUG - ('epoch:', 0, ',loss=', 1.00993645110934)
+2024-10-23 14:13:37,859 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,859 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:13:37,859 - logger - DEBUG - tensor([-0.0439, -0.0495,  0.0377, -0.0250,  0.0934,  0.0974,  0.0374,  0.0411,
+         0.0309,  0.0111,  0.0032,  0.0111,  0.0438,  0.0816, -0.0137, -0.0287,
+        -0.0122, -0.0342,  0.0255,  0.0770], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,859 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5733
+2024-10-23 14:13:37,859 - logger - DEBUG - 
+2024-10-23 14:13:37,859 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.7)
+2024-10-23 14:13:37,863 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.9800586697946249)
+2024-10-23 14:13:37,879 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,879 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:13:37,879 - logger - DEBUG - tensor([-0.0677, -0.0481, -0.0248,  0.0789,  0.0979,  0.0680, -0.0455, -0.0498,
+         0.0699,  0.0422,  0.0123,  0.0221, -0.0636, -0.0206,  0.0818, -0.0126,
+         0.0053, -0.0659, -0.0412,  0.0081], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,879 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5288
+2024-10-23 14:13:37,879 - logger - DEBUG - 
+2024-10-23 14:13:37,879 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.9)
+2024-10-23 14:13:37,883 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.8739575765120173)
+2024-10-23 14:13:37,899 - logger - DEBUG - training finished.
+2024-10-23 14:13:37,899 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:13:37,899 - logger - DEBUG - tensor([ 0.0411, -0.0660, -0.0980, -0.0388,  0.0715, -0.0759, -0.0847,  0.0611,
+         0.0590,  0.0850, -0.0589, -0.0568,  0.0568,  0.0891,  0.0645,  0.0238,
+         0.0392,  0.0955, -0.0498, -0.0314], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:13:37,899 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.4878
+2024-10-23 14:13:37,899 - logger - DEBUG - 
+2024-10-23 14:13:37,899 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:13:37,899 - logger - DEBUG - using surrogate loss function: log
+2024-10-23 14:13:37,903 - logger - DEBUG - training DRO with full data
+2024-10-23 14:13:37,903 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:13:37,903 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:13:37,927 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:13:37,927 - logger - DEBUG - dro loss:
+2024-10-23 14:13:37,931 - logger - DEBUG - 0.6812830612718587
+2024-10-23 14:13:37,931 - logger - DEBUG - max-min range: 0.012802
+2024-10-23 14:13:37,931 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:13:37,931 - logger - DEBUG - [0.6812830612718587]
+2024-10-23 14:13:37,931 - logger - DEBUG - final group weightings: 
+2024-10-23 14:13:37,931 - logger - DEBUG - young: 0.4997
+2024-10-23 14:13:37,931 - logger - DEBUG - old: 0.5003
+2024-10-23 14:13:37,931 - logger - DEBUG - DRO model accuracy on combined test data: 0.5935
+2024-10-23 14:13:37,931 - logger - DEBUG - 
+2024-10-23 14:13:37,931 - logger - DEBUG - 
+2024-10-23 14:13:37,931 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:13:37,931 - logger - DEBUG - using surrogate loss function: asymm(c=0.1)
+2024-10-23 14:13:37,935 - logger - DEBUG - training DRO with full data
+2024-10-23 14:13:37,935 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:13:37,935 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:13:37,963 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:13:37,963 - logger - DEBUG - dro loss:
+2024-10-23 14:13:37,967 - logger - DEBUG - 0.7974742495634423
+2024-10-23 14:13:37,967 - logger - DEBUG - max-min range: 0.005472
+2024-10-23 14:13:37,967 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:13:37,967 - logger - DEBUG - [0.7974742495634423]
+2024-10-23 14:13:37,967 - logger - DEBUG - final group weightings: 
+2024-10-23 14:13:37,967 - logger - DEBUG - young: 0.4999
+2024-10-23 14:13:37,967 - logger - DEBUG - old: 0.5001
+2024-10-23 14:13:37,971 - logger - DEBUG - DRO model accuracy on combined test data: 0.5942
+2024-10-23 14:13:37,971 - logger - DEBUG - 
+2024-10-23 14:13:37,971 - logger - DEBUG - 
+2024-10-23 14:13:37,971 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:13:37,971 - logger - DEBUG - using surrogate loss function: asymm(c=0.3)
+2024-10-23 14:13:37,971 - logger - DEBUG - training DRO with full data
+2024-10-23 14:13:37,971 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:13:37,971 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:13:37,999 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:13:37,999 - logger - DEBUG - dro loss:
+2024-10-23 14:13:38,003 - logger - DEBUG - 0.9107677656451033
+2024-10-23 14:13:38,003 - logger - DEBUG - max-min range: 0.015428
+2024-10-23 14:13:38,003 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:13:38,003 - logger - DEBUG - [0.9107677656451033]
+2024-10-23 14:13:38,003 - logger - DEBUG - final group weightings: 
+2024-10-23 14:13:38,005 - logger - DEBUG - young: 0.4996
+2024-10-23 14:13:38,005 - logger - DEBUG - old: 0.5004
+2024-10-23 14:13:38,005 - logger - DEBUG - DRO model accuracy on combined test data: 0.5928
+2024-10-23 14:13:38,005 - logger - DEBUG - 
+2024-10-23 14:13:38,005 - logger - DEBUG - 
+2024-10-23 14:13:38,007 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:13:38,007 - logger - DEBUG - using surrogate loss function: asymm(c=0.7)
+2024-10-23 14:13:38,007 - logger - DEBUG - training DRO with full data
+2024-10-23 14:13:38,007 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:13:38,007 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:13:38,043 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:13:38,043 - logger - DEBUG - dro loss:
+2024-10-23 14:13:38,047 - logger - DEBUG - 0.9004032664881789
+2024-10-23 14:13:38,047 - logger - DEBUG - max-min range: 0.004046
+2024-10-23 14:13:38,047 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:13:38,047 - logger - DEBUG - [0.9004032664881789]
+2024-10-23 14:13:38,047 - logger - DEBUG - final group weightings: 
+2024-10-23 14:13:38,047 - logger - DEBUG - young: 0.4999
+2024-10-23 14:13:38,047 - logger - DEBUG - old: 0.5001
+2024-10-23 14:13:38,047 - logger - DEBUG - DRO model accuracy on combined test data: 0.5921
+2024-10-23 14:13:38,047 - logger - DEBUG - 
+2024-10-23 14:13:38,047 - logger - DEBUG - 
+2024-10-23 14:13:38,047 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:13:38,047 - logger - DEBUG - using surrogate loss function: asymm(c=0.9)
+2024-10-23 14:13:38,051 - logger - DEBUG - training DRO with full data
+2024-10-23 14:13:38,051 - logger - DEBUG - initial lam: [0.5 0.5]
+2024-10-23 14:13:38,051 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:13:38,084 - logger - DEBUG - weights: [0.5 0.5]
+2024-10-23 14:13:38,084 - logger - DEBUG - dro loss:
+2024-10-23 14:13:38,084 - logger - DEBUG - 0.7948535666930618
+2024-10-23 14:13:38,088 - logger - DEBUG - max-min range: 0.000470
+2024-10-23 14:13:38,088 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:13:38,088 - logger - DEBUG - [0.7948535666930618]
+2024-10-23 14:13:38,088 - logger - DEBUG - final group weightings: 
+2024-10-23 14:13:38,088 - logger - DEBUG - young: 0.5000
+2024-10-23 14:13:38,088 - logger - DEBUG - old: 0.5000
+2024-10-23 14:13:38,088 - logger - DEBUG - DRO model accuracy on combined test data: 0.5886
+2024-10-23 14:13:38,088 - logger - DEBUG - 
+2024-10-23 14:13:38,088 - logger - DEBUG - 
+2024-10-23 14:13:38,088 - logger - DEBUG - training of all DRO models finished

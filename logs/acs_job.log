@@ -1,0 +1,2418 @@
+2024-10-23 14:35:38,693 - logger - DEBUG - Namespace(logfile='logs/acs_job.log', dataset='acs', datadir='data/ACS_unemployment_data/', modeldir='results_acs/', test_size=0.2, batch_size=128, minibatches='True', c_params=[0.1, 0.3, 0.7, 0.9], learning_rate_individual_predictor=0.001, epochs_individual_predictors=5000, plot_sklearn_roc=False, learning_rate_erm=0.001, epochs_erm=5000, outer_learning_rate_dro=0.1, inner_learning_rate_dro=0.001, outer_epochs_dro=2000, inner_epochs_dro=500, superquick=True, states='')
+2024-10-23 14:35:38,693 - logger - DEBUG - list of states:
+2024-10-23 14:35:38,693 - logger - DEBUG - ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+2024-10-23 14:35:38,693 - logger - DEBUG - number of states: 50
+2024-10-23 14:35:38,693 - logger - DEBUG - load the data..
+2024-10-23 14:35:38,693 - logger - DEBUG - State: AL
+2024-10-23 14:35:38,782 - logger - DEBUG - 38786
+2024-10-23 14:35:38,782 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:38,782 - logger - DEBUG - 3879
+2024-10-23 14:35:38,839 - logger - DEBUG - State: AK
+2024-10-23 14:35:38,855 - logger - DEBUG - 5058
+2024-10-23 14:35:38,863 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:38,863 - logger - DEBUG - 506
+2024-10-23 14:35:38,871 - logger - DEBUG - State: AZ
+2024-10-23 14:35:38,976 - logger - DEBUG - 55528
+2024-10-23 14:35:38,976 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:38,976 - logger - DEBUG - 5553
+2024-10-23 14:35:39,000 - logger - DEBUG - State: AR
+2024-10-23 14:35:39,056 - logger - DEBUG - 24010
+2024-10-23 14:35:39,057 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:39,057 - logger - DEBUG - 2401
+2024-10-23 14:35:39,081 - logger - DEBUG - State: CA
+2024-10-23 14:35:39,626 - logger - DEBUG - 302640
+2024-10-23 14:35:39,650 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:39,650 - logger - DEBUG - 30264
+2024-10-23 14:35:39,844 - logger - DEBUG - State: CO
+2024-10-23 14:35:39,965 - logger - DEBUG - 44479
+2024-10-23 14:35:39,973 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:39,973 - logger - DEBUG - 4448
+2024-10-23 14:35:40,110 - logger - DEBUG - State: CT
+2024-10-23 14:35:40,198 - logger - DEBUG - 29300
+2024-10-23 14:35:40,198 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:40,198 - logger - DEBUG - 2930
+2024-10-23 14:35:40,309 - logger - DEBUG - State: DE
+2024-10-23 14:35:40,334 - logger - DEBUG - 7554
+2024-10-23 14:35:40,342 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:40,342 - logger - DEBUG - 755
+2024-10-23 14:35:40,446 - logger - DEBUG - State: FL
+2024-10-23 14:35:40,760 - logger - DEBUG - 167306
+2024-10-23 14:35:40,776 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:40,776 - logger - DEBUG - 16731
+2024-10-23 14:35:40,937 - logger - DEBUG - State: GA
+2024-10-23 14:35:41,073 - logger - DEBUG - 80086
+2024-10-23 14:35:41,073 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:41,073 - logger - DEBUG - 8009
+2024-10-23 14:35:41,218 - logger - DEBUG - State: HI
+2024-10-23 14:35:41,242 - logger - DEBUG - 11516
+2024-10-23 14:35:41,242 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:41,242 - logger - DEBUG - 1152
+2024-10-23 14:35:41,382 - logger - DEBUG - State: ID
+2024-10-23 14:35:41,412 - logger - DEBUG - 12806
+2024-10-23 14:35:41,412 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:41,412 - logger - DEBUG - 1281
+2024-10-23 14:35:41,548 - logger - DEBUG - State: IL
+2024-10-23 14:35:41,727 - logger - DEBUG - 100887
+2024-10-23 14:35:41,733 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:41,733 - logger - DEBUG - 10089
+2024-10-23 14:35:41,897 - logger - DEBUG - State: IN
+2024-10-23 14:35:42,003 - logger - DEBUG - 53357
+2024-10-23 14:35:42,003 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:42,011 - logger - DEBUG - 5336
+2024-10-23 14:35:42,171 - logger - DEBUG - State: IA
+2024-10-23 14:35:42,234 - logger - DEBUG - 25543
+2024-10-23 14:35:42,236 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:42,236 - logger - DEBUG - 2554
+2024-10-23 14:35:42,405 - logger - DEBUG - State: KS
+2024-10-23 14:35:42,462 - logger - DEBUG - 23092
+2024-10-23 14:35:42,462 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:42,462 - logger - DEBUG - 2309
+2024-10-23 14:35:42,624 - logger - DEBUG - State: KY
+2024-10-23 14:35:42,703 - logger - DEBUG - 36259
+2024-10-23 14:35:42,703 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:42,703 - logger - DEBUG - 3626
+2024-10-23 14:35:42,881 - logger - DEBUG - State: LA
+2024-10-23 14:35:42,953 - logger - DEBUG - 35012
+2024-10-23 14:35:42,953 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:42,953 - logger - DEBUG - 3501
+2024-10-23 14:35:43,114 - logger - DEBUG - State: ME
+2024-10-23 14:35:43,138 - logger - DEBUG - 11050
+2024-10-23 14:35:43,144 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:43,144 - logger - DEBUG - 1105
+2024-10-23 14:35:43,292 - logger - DEBUG - State: MD
+2024-10-23 14:35:43,389 - logger - DEBUG - 47957
+2024-10-23 14:35:43,397 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:43,397 - logger - DEBUG - 4796
+2024-10-23 14:35:43,574 - logger - DEBUG - State: MA
+2024-10-23 14:35:43,694 - logger - DEBUG - 57559
+2024-10-23 14:35:43,702 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:43,702 - logger - DEBUG - 5756
+2024-10-23 14:35:43,954 - logger - DEBUG - State: MI
+2024-10-23 14:35:44,123 - logger - DEBUG - 80126
+2024-10-23 14:35:44,131 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:44,131 - logger - DEBUG - 8013
+2024-10-23 14:35:44,374 - logger - DEBUG - State: MN
+2024-10-23 14:35:44,470 - logger - DEBUG - 43989
+2024-10-23 14:35:44,479 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:44,479 - logger - DEBUG - 4399
+2024-10-23 14:35:44,746 - logger - DEBUG - State: MS
+2024-10-23 14:35:44,834 - logger - DEBUG - 23245
+2024-10-23 14:35:44,842 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:44,842 - logger - DEBUG - 2324
+2024-10-23 14:35:45,110 - logger - DEBUG - State: MO
+2024-10-23 14:35:45,213 - logger - DEBUG - 49805
+2024-10-23 14:35:45,221 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:45,221 - logger - DEBUG - 4980
+2024-10-23 14:35:45,478 - logger - DEBUG - State: MT
+2024-10-23 14:35:45,494 - logger - DEBUG - 8261
+2024-10-23 14:35:45,503 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:45,503 - logger - DEBUG - 826
+2024-10-23 14:35:45,746 - logger - DEBUG - State: NE
+2024-10-23 14:35:45,800 - logger - DEBUG - 15108
+2024-10-23 14:35:45,800 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:45,800 - logger - DEBUG - 1511
+2024-10-23 14:35:46,124 - logger - DEBUG - State: NV
+2024-10-23 14:35:46,205 - logger - DEBUG - 23149
+2024-10-23 14:35:46,205 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:46,205 - logger - DEBUG - 2315
+2024-10-23 14:35:46,471 - logger - DEBUG - State: NH
+2024-10-23 14:35:46,513 - logger - DEBUG - 11422
+2024-10-23 14:35:46,515 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:46,515 - logger - DEBUG - 1142
+2024-10-23 14:35:46,761 - logger - DEBUG - State: NJ
+2024-10-23 14:35:46,914 - logger - DEBUG - 71382
+2024-10-23 14:35:46,922 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:46,922 - logger - DEBUG - 7138
+2024-10-23 14:35:47,226 - logger - DEBUG - State: NM
+2024-10-23 14:35:47,269 - logger - DEBUG - 15458
+2024-10-23 14:35:47,269 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:47,269 - logger - DEBUG - 1546
+2024-10-23 14:35:47,606 - logger - DEBUG - State: NY
+2024-10-23 14:35:47,971 - logger - DEBUG - 159575
+2024-10-23 14:35:47,983 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:47,983 - logger - DEBUG - 15958
+2024-10-23 14:35:48,376 - logger - DEBUG - State: NC
+2024-10-23 14:35:48,586 - logger - DEBUG - 82664
+2024-10-23 14:35:48,594 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:48,594 - logger - DEBUG - 8266
+2024-10-23 14:35:49,028 - logger - DEBUG - State: ND
+2024-10-23 14:35:49,045 - logger - DEBUG - 6214
+2024-10-23 14:35:49,052 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:49,052 - logger - DEBUG - 621
+2024-10-23 14:35:49,383 - logger - DEBUG - State: OH
+2024-10-23 14:35:49,591 - logger - DEBUG - 95222
+2024-10-23 14:35:49,599 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:49,599 - logger - DEBUG - 9522
+2024-10-23 14:35:50,006 - logger - DEBUG - State: OK
+2024-10-23 14:35:50,104 - logger - DEBUG - 29210
+2024-10-23 14:35:50,104 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:50,104 - logger - DEBUG - 2921
+2024-10-23 14:35:50,499 - logger - DEBUG - State: OR
+2024-10-23 14:35:50,588 - logger - DEBUG - 34067
+2024-10-23 14:35:50,596 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:50,596 - logger - DEBUG - 3407
+2024-10-23 14:35:51,121 - logger - DEBUG - State: PA
+2024-10-23 14:35:51,354 - logger - DEBUG - 105068
+2024-10-23 14:35:51,362 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:51,362 - logger - DEBUG - 10507
+2024-10-23 14:35:51,878 - logger - DEBUG - State: RI
+2024-10-23 14:35:51,900 - logger - DEBUG - 8629
+2024-10-23 14:35:51,900 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:51,900 - logger - DEBUG - 863
+2024-10-23 14:35:52,342 - logger - DEBUG - State: SC
+2024-10-23 14:35:52,438 - logger - DEBUG - 40554
+2024-10-23 14:35:52,438 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:52,452 - logger - DEBUG - 4055
+2024-10-23 14:35:52,909 - logger - DEBUG - State: SD
+2024-10-23 14:35:52,925 - logger - DEBUG - 6782
+2024-10-23 14:35:52,925 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:52,925 - logger - DEBUG - 678
+2024-10-23 14:35:53,411 - logger - DEBUG - State: TN
+2024-10-23 14:35:53,554 - logger - DEBUG - 54452
+2024-10-23 14:35:53,567 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:53,567 - logger - DEBUG - 5445
+2024-10-23 14:35:54,137 - logger - DEBUG - State: TX
+2024-10-23 14:35:54,624 - logger - DEBUG - 208358
+2024-10-23 14:35:54,640 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:54,640 - logger - DEBUG - 20836
+2024-10-23 14:35:55,269 - logger - DEBUG - State: UT
+2024-10-23 14:35:55,332 - logger - DEBUG - 22835
+2024-10-23 14:35:55,348 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:55,348 - logger - DEBUG - 2284
+2024-10-23 14:35:55,885 - logger - DEBUG - State: VT
+2024-10-23 14:35:55,910 - logger - DEBUG - 5384
+2024-10-23 14:35:55,910 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:55,910 - logger - DEBUG - 538
+2024-10-23 14:35:56,437 - logger - DEBUG - State: VA
+2024-10-23 14:35:56,642 - logger - DEBUG - 67991
+2024-10-23 14:35:56,642 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:56,642 - logger - DEBUG - 6799
+2024-10-23 14:35:57,557 - logger - DEBUG - State: WA
+2024-10-23 14:35:57,733 - logger - DEBUG - 60717
+2024-10-23 14:35:57,734 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:57,734 - logger - DEBUG - 6072
+2024-10-23 14:35:58,393 - logger - DEBUG - State: WV
+2024-10-23 14:35:58,424 - logger - DEBUG - 14832
+2024-10-23 14:35:58,424 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:58,424 - logger - DEBUG - 1483
+2024-10-23 14:35:59,087 - logger - DEBUG - State: WI
+2024-10-23 14:35:59,180 - logger - DEBUG - 47887
+2024-10-23 14:35:59,180 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:59,187 - logger - DEBUG - 4789
+2024-10-23 14:35:59,781 - logger - DEBUG - State: WY
+2024-10-23 14:35:59,798 - logger - DEBUG - 4552
+2024-10-23 14:35:59,798 - logger - DEBUG - length of subsampled data:
+2024-10-23 14:35:59,798 - logger - DEBUG - 455
+2024-10-23 14:36:00,396 - logger - DEBUG - State: AL
+2024-10-23 14:36:00,396 - logger - DEBUG - N_train: 3103
+2024-10-23 14:36:00,396 - logger - DEBUG - N_test: 776
+2024-10-23 14:36:00,396 - logger - DEBUG - positive train labels: 1536.0000
+2024-10-23 14:36:00,412 - logger - DEBUG - positive test labels: 400.0000
+2024-10-23 14:36:00,444 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:02,576 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7098069951341783)
+2024-10-23 14:36:02,592 - logger - DEBUG - training finished.
+2024-10-23 14:36:02,593 - logger - DEBUG - Bayes risk: 0.622175
+2024-10-23 14:36:02,606 - logger - DEBUG - tensor([ 0.0433,  0.0664, -0.0125,  0.0545, -0.0135,  0.0221, -0.0353,  0.0482,
+         0.0692, -0.0414,  0.0685,  0.0214,  0.0599,  0.0121,  0.0373, -0.0019,
+         0.0475,  0.0050, -0.0334,  0.0241], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:02,606 - logger - DEBUG - accuracy: 0.6365979313850403
+2024-10-23 14:36:02,606 - logger - DEBUG - fraction of prediction=1: 0.4948
+2024-10-23 14:36:02,606 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:02,606 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9343
+2024-10-23 14:36:02,606 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0941
+2024-10-23 14:36:02,606 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:02,621 - logger - DEBUG - train base rate of y=1: 0.4950
+2024-10-23 14:36:02,621 - logger - DEBUG - accuracy of train base rate predictor: 0.4845
+2024-10-23 14:36:02,621 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:02,637 - logger - DEBUG -            0                                                  1
+0   MIG DEYE  tensor(0.0774, dtype=torch.float64, grad_fn=<U...
+1  AGEP DEAR  tensor(-0.0773, dtype=torch.float64, grad_fn=<...
+2    DIS ANC  tensor(0.0714, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:02,747 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7474
+2024-10-23 14:36:02,747 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5232
+2024-10-23 14:36:02,747 - logger - DEBUG - coefficients:
+2024-10-23 14:36:02,747 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:02,747 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:02,747 - logger - DEBUG - (275, 101, 95, 305)
+2024-10-23 14:36:02,747 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6931, dtype=torch.float64)
+2024-10-23 14:36:02,747 - logger - DEBUG - 
+2024-10-23 14:36:02,747 - logger - DEBUG - 
+2024-10-23 14:36:02,747 - logger - DEBUG - State: AK
+2024-10-23 14:36:02,747 - logger - DEBUG - N_train: 404
+2024-10-23 14:36:02,747 - logger - DEBUG - N_test: 102
+2024-10-23 14:36:02,747 - logger - DEBUG - positive train labels: 254.0000
+2024-10-23 14:36:02,747 - logger - DEBUG - positive test labels: 56.0000
+2024-10-23 14:36:02,747 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:02,763 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6986431179042709)
+2024-10-23 14:36:02,763 - logger - DEBUG - training finished.
+2024-10-23 14:36:02,763 - logger - DEBUG - Bayes risk: 0.678340
+2024-10-23 14:36:02,763 - logger - DEBUG - tensor([-0.0100, -0.0296, -0.0348,  0.0118,  0.0082,  0.0062, -0.0287,  0.0358,
+         0.0186, -0.0572, -0.0032, -0.0091, -0.0212, -0.0286, -0.0464,  0.0659,
+        -0.0540,  0.0595, -0.0461, -0.0220], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:02,763 - logger - DEBUG - accuracy: 0.6176470518112183
+2024-10-23 14:36:02,763 - logger - DEBUG - fraction of prediction=1: 0.4608
+2024-10-23 14:36:02,763 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:02,763 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9804
+2024-10-23 14:36:02,763 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0882
+2024-10-23 14:36:02,763 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:02,763 - logger - DEBUG - train base rate of y=1: 0.6287
+2024-10-23 14:36:02,763 - logger - DEBUG - accuracy of train base rate predictor: 0.5490
+2024-10-23 14:36:02,779 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:02,779 - logger - DEBUG -              0                                                  1
+0  AGEP isHisp  tensor(0.0771, dtype=torch.float64, grad_fn=<U...
+1     DIS DREM  tensor(0.0747, dtype=torch.float64, grad_fn=<U...
+2    HICOV CIT  tensor(0.0701, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:02,795 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.6373
+2024-10-23 14:36:02,795 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6961
+2024-10-23 14:36:02,795 - logger - DEBUG - coefficients:
+2024-10-23 14:36:02,795 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:02,795 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:02,811 - logger - DEBUG - (20, 26, 11, 45)
+2024-10-23 14:36:02,812 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6596, dtype=torch.float64)
+2024-10-23 14:36:02,812 - logger - DEBUG - 
+2024-10-23 14:36:02,812 - logger - DEBUG - 
+2024-10-23 14:36:02,812 - logger - DEBUG - State: AZ
+2024-10-23 14:36:02,812 - logger - DEBUG - N_train: 4442
+2024-10-23 14:36:02,812 - logger - DEBUG - N_test: 1111
+2024-10-23 14:36:02,812 - logger - DEBUG - positive train labels: 2420.0000
+2024-10-23 14:36:02,812 - logger - DEBUG - positive test labels: 611.0000
+2024-10-23 14:36:02,827 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:02,827 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7265935689406346)
+2024-10-23 14:36:02,827 - logger - DEBUG - training finished.
+2024-10-23 14:36:02,827 - logger - DEBUG - Bayes risk: 0.697717
+2024-10-23 14:36:02,827 - logger - DEBUG - tensor([-0.0185, -0.0175, -0.0225, -0.0117,  0.0548, -0.0358,  0.0312,  0.0357,
+         0.0410,  0.0277, -0.0174,  0.0338, -0.0243, -0.0336,  0.0730,  0.0612,
+        -0.0413,  0.0473,  0.0233,  0.0084], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:02,827 - logger - DEBUG - accuracy: 0.6237623691558838
+2024-10-23 14:36:02,827 - logger - DEBUG - fraction of prediction=1: 0.5752
+2024-10-23 14:36:02,827 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9982
+2024-10-23 14:36:02,827 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9325
+2024-10-23 14:36:02,827 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0234
+2024-10-23 14:36:02,827 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:02,827 - logger - DEBUG - train base rate of y=1: 0.5448
+2024-10-23 14:36:02,827 - logger - DEBUG - accuracy of train base rate predictor: 0.5500
+2024-10-23 14:36:02,842 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:02,842 - logger - DEBUG -             0                                                  1
+0    DIS DREM  tensor(0.0764, dtype=torch.float64, grad_fn=<U...
+1   SEX HICOV  tensor(-0.0741, dtype=torch.float64, grad_fn=<...
+2  SCHL RAC1P  tensor(0.0734, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:03,000 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7516
+2024-10-23 14:36:03,000 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6220
+2024-10-23 14:36:03,000 - logger - DEBUG - coefficients:
+2024-10-23 14:36:03,000 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:03,000 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:03,000 - logger - DEBUG - (322, 178, 98, 513)
+2024-10-23 14:36:03,000 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6891, dtype=torch.float64)
+2024-10-23 14:36:03,000 - logger - DEBUG - 
+2024-10-23 14:36:03,000 - logger - DEBUG - 
+2024-10-23 14:36:03,000 - logger - DEBUG - State: AR
+2024-10-23 14:36:03,000 - logger - DEBUG - N_train: 1920
+2024-10-23 14:36:03,000 - logger - DEBUG - N_test: 481
+2024-10-23 14:36:03,000 - logger - DEBUG - positive train labels: 959.0000
+2024-10-23 14:36:03,000 - logger - DEBUG - positive test labels: 251.0000
+2024-10-23 14:36:03,017 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:03,017 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6958954124471965)
+2024-10-23 14:36:03,017 - logger - DEBUG - training finished.
+2024-10-23 14:36:03,017 - logger - DEBUG - Bayes risk: 0.623007
+2024-10-23 14:36:03,017 - logger - DEBUG - tensor([ 0.0095, -0.0186,  0.0249, -0.0335,  0.0184,  0.0465,  0.0354, -0.0062,
+         0.0744,  0.0037, -0.0522,  0.0587,  0.0739,  0.0318,  0.0607,  0.0377,
+         0.0212,  0.0423, -0.0459,  0.0019], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:03,032 - logger - DEBUG - accuracy: 0.6694386601448059
+2024-10-23 14:36:03,032 - logger - DEBUG - fraction of prediction=1: 0.4865
+2024-10-23 14:36:03,032 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:03,032 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9834
+2024-10-23 14:36:03,032 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0624
+2024-10-23 14:36:03,032 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0083
+2024-10-23 14:36:03,032 - logger - DEBUG - train base rate of y=1: 0.4995
+2024-10-23 14:36:03,032 - logger - DEBUG - accuracy of train base rate predictor: 0.4782
+2024-10-23 14:36:03,032 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:03,032 - logger - DEBUG -                   0                                                  1
+0  DEAR isWhiteOnly  tensor(0.0772, dtype=torch.float64, grad_fn=<U...
+1        DIS isHisp  tensor(0.0762, dtype=torch.float64, grad_fn=<U...
+2      SCIENGP DREM  tensor(0.0760, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:03,096 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7609
+2024-10-23 14:36:03,096 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5322
+2024-10-23 14:36:03,096 - logger - DEBUG - coefficients:
+2024-10-23 14:36:03,096 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:03,096 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:03,096 - logger - DEBUG - (170, 60, 55, 196)
+2024-10-23 14:36:03,096 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6931, dtype=torch.float64)
+2024-10-23 14:36:03,096 - logger - DEBUG - 
+2024-10-23 14:36:03,096 - logger - DEBUG - 
+2024-10-23 14:36:03,096 - logger - DEBUG - State: CA
+2024-10-23 14:36:03,096 - logger - DEBUG - N_train: 24211
+2024-10-23 14:36:03,096 - logger - DEBUG - N_test: 6053
+2024-10-23 14:36:03,096 - logger - DEBUG - positive train labels: 14306.0000
+2024-10-23 14:36:03,096 - logger - DEBUG - positive test labels: 3578.0000
+2024-10-23 14:36:03,159 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:03,159 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7241633848737359)
+2024-10-23 14:36:03,174 - logger - DEBUG - training finished.
+2024-10-23 14:36:03,174 - logger - DEBUG - Bayes risk: 0.671805
+2024-10-23 14:36:03,174 - logger - DEBUG - tensor([ 0.0526,  0.0540,  0.0414, -0.0343, -0.0421, -0.0305, -0.0553, -0.0045,
+         0.0457,  0.0197, -0.0167, -0.0010, -0.0432, -0.0360,  0.0147, -0.0413,
+         0.0117,  0.0496,  0.0243,  0.0463], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:03,174 - logger - DEBUG - accuracy: 0.584668755531311
+2024-10-23 14:36:03,174 - logger - DEBUG - fraction of prediction=1: 0.4788
+2024-10-23 14:36:03,174 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9972
+2024-10-23 14:36:03,174 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9665
+2024-10-23 14:36:03,174 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0083
+2024-10-23 14:36:03,174 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:03,174 - logger - DEBUG - train base rate of y=1: 0.5909
+2024-10-23 14:36:03,174 - logger - DEBUG - accuracy of train base rate predictor: 0.5911
+2024-10-23 14:36:03,193 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:03,193 - logger - DEBUG -           0                                                  1
+0  DIS DEYE  tensor(0.0770, dtype=torch.float64, grad_fn=<U...
+1  AGEP SEX  tensor(-0.0769, dtype=torch.float64, grad_fn=<...
+2   DIS CIT  tensor(0.0745, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:04,867 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7642
+2024-10-23 14:36:04,867 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6603
+2024-10-23 14:36:04,867 - logger - DEBUG - coefficients:
+2024-10-23 14:36:04,867 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:04,867 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:04,867 - logger - DEBUG - (1552, 923, 504, 3074)
+2024-10-23 14:36:04,867 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6765, dtype=torch.float64)
+2024-10-23 14:36:04,867 - logger - DEBUG - 
+2024-10-23 14:36:04,867 - logger - DEBUG - 
+2024-10-23 14:36:04,867 - logger - DEBUG - State: CO
+2024-10-23 14:36:04,867 - logger - DEBUG - N_train: 3558
+2024-10-23 14:36:04,881 - logger - DEBUG - N_test: 890
+2024-10-23 14:36:04,881 - logger - DEBUG - positive train labels: 2265.0000
+2024-10-23 14:36:04,881 - logger - DEBUG - positive test labels: 562.0000
+2024-10-23 14:36:04,882 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:04,897 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7063544173510167)
+2024-10-23 14:36:04,897 - logger - DEBUG - training finished.
+2024-10-23 14:36:04,897 - logger - DEBUG - Bayes risk: 0.626373
+2024-10-23 14:36:04,897 - logger - DEBUG - tensor([-0.0612,  0.0686, -0.0273, -0.0208, -0.0635,  0.0165,  0.0306, -0.0425,
+         0.0614,  0.0250, -0.0104,  0.0416, -0.0014,  0.0142,  0.0407, -0.0624,
+         0.0435,  0.0529,  0.0056, -0.0515], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:04,897 - logger - DEBUG - accuracy: 0.6471909880638123
+2024-10-23 14:36:04,897 - logger - DEBUG - fraction of prediction=1: 0.5124
+2024-10-23 14:36:04,897 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:04,897 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9607
+2024-10-23 14:36:04,897 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0899
+2024-10-23 14:36:04,897 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:04,897 - logger - DEBUG - train base rate of y=1: 0.6366
+2024-10-23 14:36:04,897 - logger - DEBUG - accuracy of train base rate predictor: 0.6315
+2024-10-23 14:36:04,913 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:04,913 - logger - DEBUG -               0                                                  1
+0     DEAR DREM  tensor(0.0761, dtype=torch.float64, grad_fn=<U...
+1  CIT NATIVITY  tensor(-0.0698, dtype=torch.float64, grad_fn=<...
+2          SCHL  tensor(0.0686, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:05,022 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.8011
+2024-10-23 14:36:05,022 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6933
+2024-10-23 14:36:05,022 - logger - DEBUG - coefficients:
+2024-10-23 14:36:05,022 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:05,022 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:05,022 - logger - DEBUG - (212, 116, 61, 501)
+2024-10-23 14:36:05,022 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6554, dtype=torch.float64)
+2024-10-23 14:36:05,022 - logger - DEBUG - 
+2024-10-23 14:36:05,022 - logger - DEBUG - 
+2024-10-23 14:36:05,022 - logger - DEBUG - State: CT
+2024-10-23 14:36:05,022 - logger - DEBUG - N_train: 2344
+2024-10-23 14:36:05,022 - logger - DEBUG - N_test: 586
+2024-10-23 14:36:05,022 - logger - DEBUG - positive train labels: 1462.0000
+2024-10-23 14:36:05,022 - logger - DEBUG - positive test labels: 357.0000
+2024-10-23 14:36:05,038 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:05,038 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6618932664612864)
+2024-10-23 14:36:05,038 - logger - DEBUG - training finished.
+2024-10-23 14:36:05,038 - logger - DEBUG - Bayes risk: 0.651710
+2024-10-23 14:36:05,038 - logger - DEBUG - tensor([-0.0624, -0.0076, -0.0287,  0.0328,  0.0074, -0.0255,  0.0220, -0.0036,
+        -0.0006,  0.0477,  0.0145,  0.0236,  0.0647,  0.0551, -0.0369, -0.0087,
+        -0.0315,  0.0251, -0.0187, -0.0303], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:05,055 - logger - DEBUG - accuracy: 0.6621160507202148
+2024-10-23 14:36:05,055 - logger - DEBUG - fraction of prediction=1: 0.5239
+2024-10-23 14:36:05,055 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9915
+2024-10-23 14:36:05,055 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9437
+2024-10-23 14:36:05,055 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0273
+2024-10-23 14:36:05,055 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:05,055 - logger - DEBUG - train base rate of y=1: 0.6237
+2024-10-23 14:36:05,055 - logger - DEBUG - accuracy of train base rate predictor: 0.6092
+2024-10-23 14:36:05,055 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:05,055 - logger - DEBUG -               0                                                  1
+0     DEAR DEYE  tensor(0.0715, dtype=torch.float64, grad_fn=<U...
+1    ESP isHisp  tensor(-0.0711, dtype=torch.float64, grad_fn=<...
+2  AGEP SCIENGP  tensor(-0.0707, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:05,133 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7662
+2024-10-23 14:36:05,133 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6962
+2024-10-23 14:36:05,133 - logger - DEBUG - coefficients:
+2024-10-23 14:36:05,133 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:05,133 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:05,133 - logger - DEBUG - (135, 94, 43, 314)
+2024-10-23 14:36:05,133 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6622, dtype=torch.float64)
+2024-10-23 14:36:05,133 - logger - DEBUG - 
+2024-10-23 14:36:05,133 - logger - DEBUG - 
+2024-10-23 14:36:05,133 - logger - DEBUG - State: DE
+2024-10-23 14:36:05,133 - logger - DEBUG - N_train: 604
+2024-10-23 14:36:05,133 - logger - DEBUG - N_test: 151
+2024-10-23 14:36:05,133 - logger - DEBUG - positive train labels: 327.0000
+2024-10-23 14:36:05,133 - logger - DEBUG - positive test labels: 96.0000
+2024-10-23 14:36:05,133 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:05,133 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.725937775091891)
+2024-10-23 14:36:05,149 - logger - DEBUG - training finished.
+2024-10-23 14:36:05,149 - logger - DEBUG - Bayes risk: 0.712055
+2024-10-23 14:36:05,149 - logger - DEBUG - tensor([-0.0010,  0.0422, -0.0072, -0.0328, -0.0552, -0.0320,  0.0029, -0.0587,
+         0.0003, -0.0315, -0.0199, -0.0403,  0.0496,  0.0714,  0.0721, -0.0232,
+         0.0361,  0.0440,  0.0205,  0.0055], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:05,149 - logger - DEBUG - accuracy: 0.5695364475250244
+2024-10-23 14:36:05,149 - logger - DEBUG - fraction of prediction=1: 0.4437
+2024-10-23 14:36:05,149 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:05,149 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9868
+2024-10-23 14:36:05,149 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0000
+2024-10-23 14:36:05,149 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:05,149 - logger - DEBUG - train base rate of y=1: 0.5414
+2024-10-23 14:36:05,149 - logger - DEBUG - accuracy of train base rate predictor: 0.6358
+2024-10-23 14:36:05,149 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:05,164 - logger - DEBUG -           0                                                  1
+0  GCL DREM  tensor(-0.0750, dtype=torch.float64, grad_fn=<...
+1  NATIVITY  tensor(0.0721, dtype=torch.float64, grad_fn=<U...
+2       CIT  tensor(0.0714, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:05,180 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7947
+2024-10-23 14:36:05,180 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6291
+2024-10-23 14:36:05,180 - logger - DEBUG - coefficients:
+2024-10-23 14:36:05,180 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:05,180 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:05,180 - logger - DEBUG - (40, 15, 16, 80)
+2024-10-23 14:36:05,180 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6897, dtype=torch.float64)
+2024-10-23 14:36:05,180 - logger - DEBUG - 
+2024-10-23 14:36:05,180 - logger - DEBUG - 
+2024-10-23 14:36:05,180 - logger - DEBUG - State: FL
+2024-10-23 14:36:05,180 - logger - DEBUG - N_train: 13384
+2024-10-23 14:36:05,180 - logger - DEBUG - N_test: 3347
+2024-10-23 14:36:05,180 - logger - DEBUG - positive train labels: 7185.0000
+2024-10-23 14:36:05,180 - logger - DEBUG - positive test labels: 1794.0000
+2024-10-23 14:36:05,228 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:05,228 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7179129034961601)
+2024-10-23 14:36:05,243 - logger - DEBUG - training finished.
+2024-10-23 14:36:05,243 - logger - DEBUG - Bayes risk: 0.690914
+2024-10-23 14:36:05,243 - logger - DEBUG - tensor([ 0.0357, -0.0197,  0.0171,  0.0625, -0.0597,  0.0603,  0.0465,  0.0546,
+         0.0107, -0.0076, -0.0522, -0.0004, -0.0247, -0.0506,  0.0074, -0.0104,
+        -0.0180, -0.0702, -0.0466,  0.0046], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:05,243 - logger - DEBUG - accuracy: 0.5763370394706726
+2024-10-23 14:36:05,243 - logger - DEBUG - fraction of prediction=1: 0.4428
+2024-10-23 14:36:05,243 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9958
+2024-10-23 14:36:05,243 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9737
+2024-10-23 14:36:05,243 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0353
+2024-10-23 14:36:05,243 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:05,243 - logger - DEBUG - train base rate of y=1: 0.5368
+2024-10-23 14:36:05,243 - logger - DEBUG - accuracy of train base rate predictor: 0.5360
+2024-10-23 14:36:05,261 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:05,261 - logger - DEBUG -               0                                                  1
+0  SCIENGP DREM  tensor(0.0784, dtype=torch.float64, grad_fn=<U...
+1       MIG DIS  tensor(0.0770, dtype=torch.float64, grad_fn=<U...
+2    SCHL HICOV  tensor(0.0761, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:06,041 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7610
+2024-10-23 14:36:06,041 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5563
+2024-10-23 14:36:06,041 - logger - DEBUG - coefficients:
+2024-10-23 14:36:06,041 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:06,041 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:06,041 - logger - DEBUG - (1119, 434, 366, 1428)
+2024-10-23 14:36:06,050 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6904, dtype=torch.float64)
+2024-10-23 14:36:06,050 - logger - DEBUG - 
+2024-10-23 14:36:06,050 - logger - DEBUG - 
+2024-10-23 14:36:06,050 - logger - DEBUG - State: GA
+2024-10-23 14:36:06,050 - logger - DEBUG - N_train: 6407
+2024-10-23 14:36:06,051 - logger - DEBUG - N_test: 1602
+2024-10-23 14:36:06,051 - logger - DEBUG - positive train labels: 3759.0000
+2024-10-23 14:36:06,051 - logger - DEBUG - positive test labels: 938.0000
+2024-10-23 14:36:06,066 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:06,073 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7111327154014753)
+2024-10-23 14:36:06,076 - logger - DEBUG - training finished.
+2024-10-23 14:36:06,076 - logger - DEBUG - Bayes risk: 0.651059
+2024-10-23 14:36:06,076 - logger - DEBUG - tensor([-0.0062,  0.0192,  0.0521,  0.0344, -0.0147, -0.0639,  0.0076, -0.0216,
+         0.0484, -0.0445,  0.0182, -0.0149, -0.0190, -0.0316,  0.0220, -0.0097,
+         0.0138, -0.0542, -0.0167, -0.0459], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:06,083 - logger - DEBUG - accuracy: 0.6260923743247986
+2024-10-23 14:36:06,083 - logger - DEBUG - fraction of prediction=1: 0.4850
+2024-10-23 14:36:06,083 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:06,083 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9276
+2024-10-23 14:36:06,083 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.1498
+2024-10-23 14:36:06,083 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0087
+2024-10-23 14:36:06,083 - logger - DEBUG - train base rate of y=1: 0.5867
+2024-10-23 14:36:06,083 - logger - DEBUG - accuracy of train base rate predictor: 0.5855
+2024-10-23 14:36:06,088 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:06,098 - logger - DEBUG -              0                                                  1
+0    MIG RAC1P  tensor(-0.0753, dtype=torch.float64, grad_fn=<...
+1     DEYE ANC  tensor(-0.0740, dtype=torch.float64, grad_fn=<...
+2  LANX isHisp  tensor(-0.0719, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:06,383 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7659
+2024-10-23 14:36:06,383 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6298
+2024-10-23 14:36:06,397 - logger - DEBUG - coefficients:
+2024-10-23 14:36:06,397 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:06,399 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:06,399 - logger - DEBUG - (441, 223, 152, 786)
+2024-10-23 14:36:06,399 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6780, dtype=torch.float64)
+2024-10-23 14:36:06,399 - logger - DEBUG - 
+2024-10-23 14:36:06,399 - logger - DEBUG - 
+2024-10-23 14:36:06,399 - logger - DEBUG - State: HI
+2024-10-23 14:36:06,399 - logger - DEBUG - N_train: 921
+2024-10-23 14:36:06,399 - logger - DEBUG - N_test: 231
+2024-10-23 14:36:06,399 - logger - DEBUG - positive train labels: 580.0000
+2024-10-23 14:36:06,399 - logger - DEBUG - positive test labels: 141.0000
+2024-10-23 14:36:06,399 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:06,399 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7315709347175667)
+2024-10-23 14:36:06,416 - logger - DEBUG - training finished.
+2024-10-23 14:36:06,416 - logger - DEBUG - Bayes risk: 0.671257
+2024-10-23 14:36:06,417 - logger - DEBUG - tensor([ 0.0022,  0.0387, -0.0241,  0.0277,  0.0416, -0.0533,  0.0360,  0.0394,
+        -0.0081, -0.0035, -0.0571,  0.0299, -0.0513,  0.0495, -0.0471, -0.0285,
+         0.0175,  0.0566, -0.0583,  0.0119], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:06,417 - logger - DEBUG - accuracy: 0.6147186160087585
+2024-10-23 14:36:06,417 - logger - DEBUG - fraction of prediction=1: 0.5195
+2024-10-23 14:36:06,417 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:06,417 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9784
+2024-10-23 14:36:06,417 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0390
+2024-10-23 14:36:06,417 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:06,417 - logger - DEBUG - train base rate of y=1: 0.6298
+2024-10-23 14:36:06,420 - logger - DEBUG - accuracy of train base rate predictor: 0.6104
+2024-10-23 14:36:06,425 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:06,431 - logger - DEBUG -                0                                                  1
+0   NATIVITY ANC  tensor(0.0760, dtype=torch.float64, grad_fn=<U...
+1  SCIENGP RAC1P  tensor(0.0744, dtype=torch.float64, grad_fn=<U...
+2  DEAR NATIVITY  tensor(0.0724, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:06,469 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.6797
+2024-10-23 14:36:06,469 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.7316
+2024-10-23 14:36:06,469 - logger - DEBUG - coefficients:
+2024-10-23 14:36:06,469 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:06,471 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:06,471 - logger - DEBUG - (39, 51, 23, 118)
+2024-10-23 14:36:06,471 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6591, dtype=torch.float64)
+2024-10-23 14:36:06,471 - logger - DEBUG - 
+2024-10-23 14:36:06,471 - logger - DEBUG - 
+2024-10-23 14:36:06,471 - logger - DEBUG - State: ID
+2024-10-23 14:36:06,471 - logger - DEBUG - N_train: 1024
+2024-10-23 14:36:06,471 - logger - DEBUG - N_test: 257
+2024-10-23 14:36:06,471 - logger - DEBUG - positive train labels: 583.0000
+2024-10-23 14:36:06,471 - logger - DEBUG - positive test labels: 147.0000
+2024-10-23 14:36:06,478 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:06,478 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.8195012450217409)
+2024-10-23 14:36:06,478 - logger - DEBUG - training finished.
+2024-10-23 14:36:06,478 - logger - DEBUG - Bayes risk: 0.691614
+2024-10-23 14:36:06,478 - logger - DEBUG - tensor([ 0.0119, -0.0393,  0.0437, -0.0717, -0.0087, -0.0394, -0.0036,  0.0032,
+        -0.0154,  0.0693, -0.0535, -0.0174,  0.0491, -0.0325,  0.0415, -0.0622,
+        -0.0550,  0.0397, -0.0319, -0.0364], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:06,478 - logger - DEBUG - accuracy: 0.4902723729610443
+2024-10-23 14:36:06,478 - logger - DEBUG - fraction of prediction=1: 0.5058
+2024-10-23 14:36:06,478 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:06,478 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9767
+2024-10-23 14:36:06,478 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0311
+2024-10-23 14:36:06,478 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:06,478 - logger - DEBUG - train base rate of y=1: 0.5693
+2024-10-23 14:36:06,478 - logger - DEBUG - accuracy of train base rate predictor: 0.5720
+2024-10-23 14:36:06,497 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:06,497 - logger - DEBUG -             0                                                  1
+0    GCL LANX  tensor(-0.0778, dtype=torch.float64, grad_fn=<...
+1   AGEP LANX  tensor(-0.0754, dtype=torch.float64, grad_fn=<...
+2  HICOV DEYE  tensor(0.0725, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:06,550 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7043
+2024-10-23 14:36:06,550 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6342
+2024-10-23 14:36:06,550 - logger - DEBUG - coefficients:
+2024-10-23 14:36:06,550 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:06,554 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:06,554 - logger - DEBUG - (64, 46, 30, 117)
+2024-10-23 14:36:06,554 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6835, dtype=torch.float64)
+2024-10-23 14:36:06,554 - logger - DEBUG - 
+2024-10-23 14:36:06,554 - logger - DEBUG - 
+2024-10-23 14:36:06,554 - logger - DEBUG - State: IL
+2024-10-23 14:36:06,558 - logger - DEBUG - N_train: 8071
+2024-10-23 14:36:06,558 - logger - DEBUG - N_test: 2018
+2024-10-23 14:36:06,558 - logger - DEBUG - positive train labels: 4839.0000
+2024-10-23 14:36:06,558 - logger - DEBUG - positive test labels: 1223.0000
+2024-10-23 14:36:06,579 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:06,589 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6877026361590766)
+2024-10-23 14:36:06,597 - logger - DEBUG - training finished.
+2024-10-23 14:36:06,597 - logger - DEBUG - Bayes risk: 0.622765
+2024-10-23 14:36:06,597 - logger - DEBUG - tensor([-0.0570, -0.0148, -0.0258,  0.0359, -0.0729,  0.0386,  0.0633, -0.0137,
+         0.0053, -0.0243,  0.0482,  0.0555,  0.0759,  0.0126, -0.0399,  0.0180,
+        -0.0070, -0.0318, -0.0632, -0.0405], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:06,603 - logger - DEBUG - accuracy: 0.6754212379455566
+2024-10-23 14:36:06,605 - logger - DEBUG - fraction of prediction=1: 0.5520
+2024-10-23 14:36:06,605 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9975
+2024-10-23 14:36:06,605 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9495
+2024-10-23 14:36:06,605 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0496
+2024-10-23 14:36:06,605 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:06,605 - logger - DEBUG - train base rate of y=1: 0.5996
+2024-10-23 14:36:06,605 - logger - DEBUG - accuracy of train base rate predictor: 0.6060
+2024-10-23 14:36:06,605 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:06,621 - logger - DEBUG -                  0                                                  1
+0         DIS LANX  tensor(0.0780, dtype=torch.float64, grad_fn=<U...
+1  MAR isWhiteOnly  tensor(0.0760, dtype=torch.float64, grad_fn=<U...
+2         DIS DREM  tensor(0.0759, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:07,078 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7795
+2024-10-23 14:36:07,078 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6601
+2024-10-23 14:36:07,078 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,078 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,078 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,078 - logger - DEBUG - (518, 277, 168, 1055)
+2024-10-23 14:36:07,078 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6732, dtype=torch.float64)
+2024-10-23 14:36:07,078 - logger - DEBUG - 
+2024-10-23 14:36:07,078 - logger - DEBUG - 
+2024-10-23 14:36:07,078 - logger - DEBUG - State: IN
+2024-10-23 14:36:07,078 - logger - DEBUG - N_train: 4268
+2024-10-23 14:36:07,078 - logger - DEBUG - N_test: 1068
+2024-10-23 14:36:07,078 - logger - DEBUG - positive train labels: 2503.0000
+2024-10-23 14:36:07,078 - logger - DEBUG - positive test labels: 609.0000
+2024-10-23 14:36:07,098 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,098 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7480685080359675)
+2024-10-23 14:36:07,110 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,110 - logger - DEBUG - Bayes risk: 0.685281
+2024-10-23 14:36:07,110 - logger - DEBUG - tensor([ 0.0522,  0.0331, -0.0237,  0.0131, -0.0343,  0.0526, -0.0586, -0.0183,
+         0.0463,  0.0687, -0.0295, -0.0166,  0.0082,  0.0221, -0.0582,  0.0221,
+        -0.0627, -0.0017, -0.0241, -0.0256], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,110 - logger - DEBUG - accuracy: 0.5983145833015442
+2024-10-23 14:36:07,110 - logger - DEBUG - fraction of prediction=1: 0.5805
+2024-10-23 14:36:07,110 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:07,110 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9794
+2024-10-23 14:36:07,110 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0309
+2024-10-23 14:36:07,110 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:07,110 - logger - DEBUG - train base rate of y=1: 0.5865
+2024-10-23 14:36:07,110 - logger - DEBUG - accuracy of train base rate predictor: 0.5702
+2024-10-23 14:36:07,110 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,125 - logger - DEBUG -            0                                                  1
+0  SCHL DREM  tensor(0.0751, dtype=torch.float64, grad_fn=<U...
+1   DEAR CIT  tensor(-0.0736, dtype=torch.float64, grad_fn=<...
+2    MAR MIG  tensor(-0.0729, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:07,304 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7800
+2024-10-23 14:36:07,304 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6105
+2024-10-23 14:36:07,304 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,304 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,306 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,306 - logger - DEBUG - (320, 139, 96, 513)
+2024-10-23 14:36:07,306 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6781, dtype=torch.float64)
+2024-10-23 14:36:07,306 - logger - DEBUG - 
+2024-10-23 14:36:07,306 - logger - DEBUG - 
+2024-10-23 14:36:07,306 - logger - DEBUG - State: IA
+2024-10-23 14:36:07,306 - logger - DEBUG - N_train: 2043
+2024-10-23 14:36:07,306 - logger - DEBUG - N_test: 511
+2024-10-23 14:36:07,306 - logger - DEBUG - positive train labels: 1308.0000
+2024-10-23 14:36:07,306 - logger - DEBUG - positive test labels: 338.0000
+2024-10-23 14:36:07,317 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,322 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7350412562287052)
+2024-10-23 14:36:07,327 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,327 - logger - DEBUG - Bayes risk: 0.689117
+2024-10-23 14:36:07,327 - logger - DEBUG - tensor([-4.7511e-02,  3.5526e-05,  4.8653e-02, -1.1098e-02,  7.4920e-03,
+         6.3219e-02,  1.8453e-02,  2.0163e-02, -4.9354e-02, -5.8690e-04,
+        -5.4995e-02, -3.2452e-02,  7.0830e-02, -5.8426e-02,  6.7523e-02,
+        -1.9739e-02,  4.8492e-02, -4.7775e-02, -5.2765e-02,  3.0456e-03],
+       dtype=torch.float64, grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,331 - logger - DEBUG - accuracy: 0.6281800270080566
+2024-10-23 14:36:07,331 - logger - DEBUG - fraction of prediction=1: 0.4971
+2024-10-23 14:36:07,331 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9883
+2024-10-23 14:36:07,331 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9472
+2024-10-23 14:36:07,331 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0822
+2024-10-23 14:36:07,331 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:07,331 - logger - DEBUG - train base rate of y=1: 0.6402
+2024-10-23 14:36:07,334 - logger - DEBUG - accuracy of train base rate predictor: 0.6614
+2024-10-23 14:36:07,335 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,335 - logger - DEBUG -             0                                                  1
+0    AGEP MAR  tensor(-0.0766, dtype=torch.float64, grad_fn=<...
+1  AGEP HICOV  tensor(-0.0729, dtype=torch.float64, grad_fn=<...
+2        DREM  tensor(0.0708, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:07,411 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.8102
+2024-10-23 14:36:07,411 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.7143
+2024-10-23 14:36:07,411 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,411 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,411 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,411 - logger - DEBUG - (111, 62, 35, 303)
+2024-10-23 14:36:07,411 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6533, dtype=torch.float64)
+2024-10-23 14:36:07,411 - logger - DEBUG - 
+2024-10-23 14:36:07,411 - logger - DEBUG - 
+2024-10-23 14:36:07,411 - logger - DEBUG - State: KS
+2024-10-23 14:36:07,411 - logger - DEBUG - N_train: 1847
+2024-10-23 14:36:07,411 - logger - DEBUG - N_test: 462
+2024-10-23 14:36:07,411 - logger - DEBUG - positive train labels: 1150.0000
+2024-10-23 14:36:07,411 - logger - DEBUG - positive test labels: 288.0000
+2024-10-23 14:36:07,411 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,411 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7631476694239513)
+2024-10-23 14:36:07,427 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,427 - logger - DEBUG - Bayes risk: 0.686418
+2024-10-23 14:36:07,427 - logger - DEBUG - tensor([ 0.0106, -0.0030, -0.0417,  0.0327, -0.0103,  0.0146,  0.0218,  0.0338,
+        -0.0124,  0.0132,  0.0717, -0.0406,  0.0305, -0.0605,  0.0494,  0.0660,
+        -0.0639,  0.0539, -0.0516, -0.0560], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,427 - logger - DEBUG - accuracy: 0.5497835278511047
+2024-10-23 14:36:07,427 - logger - DEBUG - fraction of prediction=1: 0.4762
+2024-10-23 14:36:07,427 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:07,427 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9697
+2024-10-23 14:36:07,427 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0346
+2024-10-23 14:36:07,427 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:07,427 - logger - DEBUG - train base rate of y=1: 0.6226
+2024-10-23 14:36:07,427 - logger - DEBUG - accuracy of train base rate predictor: 0.6234
+2024-10-23 14:36:07,443 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,443 - logger - DEBUG -               0                                                  1
+0     SCHL DEYE  tensor(0.0758, dtype=torch.float64, grad_fn=<U...
+1  SCIENGP DEAR  tensor(0.0754, dtype=torch.float64, grad_fn=<U...
+2      AGEP MIG  tensor(-0.0741, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:07,507 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7987
+2024-10-23 14:36:07,507 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.7035
+2024-10-23 14:36:07,507 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,507 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,507 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,507 - logger - DEBUG - (109, 65, 28, 260)
+2024-10-23 14:36:07,507 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6628, dtype=torch.float64)
+2024-10-23 14:36:07,507 - logger - DEBUG - 
+2024-10-23 14:36:07,507 - logger - DEBUG - 
+2024-10-23 14:36:07,507 - logger - DEBUG - State: KY
+2024-10-23 14:36:07,507 - logger - DEBUG - N_train: 2900
+2024-10-23 14:36:07,507 - logger - DEBUG - N_test: 726
+2024-10-23 14:36:07,507 - logger - DEBUG - positive train labels: 1585.0000
+2024-10-23 14:36:07,507 - logger - DEBUG - positive test labels: 408.0000
+2024-10-23 14:36:07,523 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,523 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7414310755531797)
+2024-10-23 14:36:07,523 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,523 - logger - DEBUG - Bayes risk: 0.655246
+2024-10-23 14:36:07,523 - logger - DEBUG - tensor([ 0.0135, -0.0521,  0.0301, -0.0029, -0.0101,  0.0487,  0.0485,  0.0261,
+        -0.0402,  0.0028,  0.0652,  0.0255,  0.0253, -0.0078, -0.0382, -0.0393,
+         0.0230, -0.0385,  0.0394,  0.0353], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,523 - logger - DEBUG - accuracy: 0.6225895285606384
+2024-10-23 14:36:07,523 - logger - DEBUG - fraction of prediction=1: 0.5014
+2024-10-23 14:36:07,523 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:07,523 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9504
+2024-10-23 14:36:07,523 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0551
+2024-10-23 14:36:07,523 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:07,523 - logger - DEBUG - train base rate of y=1: 0.5466
+2024-10-23 14:36:07,523 - logger - DEBUG - accuracy of train base rate predictor: 0.5620
+2024-10-23 14:36:07,538 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,538 - logger - DEBUG -           0                                                  1
+0   CIT ANC  tensor(0.0774, dtype=torch.float64, grad_fn=<U...
+1   MIG DIS  tensor(0.0749, dtype=torch.float64, grad_fn=<U...
+2  SCHL DIS  tensor(0.0719, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:07,638 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7631
+2024-10-23 14:36:07,638 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5868
+2024-10-23 14:36:07,638 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,638 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,638 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,638 - logger - DEBUG - (223, 95, 77, 331)
+2024-10-23 14:36:07,638 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6888, dtype=torch.float64)
+2024-10-23 14:36:07,638 - logger - DEBUG - 
+2024-10-23 14:36:07,638 - logger - DEBUG - 
+2024-10-23 14:36:07,638 - logger - DEBUG - State: LA
+2024-10-23 14:36:07,638 - logger - DEBUG - N_train: 2800
+2024-10-23 14:36:07,638 - logger - DEBUG - N_test: 701
+2024-10-23 14:36:07,638 - logger - DEBUG - positive train labels: 1546.0000
+2024-10-23 14:36:07,638 - logger - DEBUG - positive test labels: 367.0000
+2024-10-23 14:36:07,651 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,651 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.707516137521567)
+2024-10-23 14:36:07,666 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,666 - logger - DEBUG - Bayes risk: 0.656149
+2024-10-23 14:36:07,666 - logger - DEBUG - tensor([ 0.0043, -0.0415, -0.0297, -0.0522, -0.0209, -0.0292, -0.0120,  0.0522,
+        -0.0244,  0.0409, -0.0270, -0.0164, -0.0290,  0.0571, -0.0286,  0.0238,
+         0.0314,  0.0557, -0.0008,  0.0057], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,666 - logger - DEBUG - accuracy: 0.6148359775543213
+2024-10-23 14:36:07,666 - logger - DEBUG - fraction of prediction=1: 0.4009
+2024-10-23 14:36:07,666 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:07,666 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9772
+2024-10-23 14:36:07,666 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.1027
+2024-10-23 14:36:07,666 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0057
+2024-10-23 14:36:07,666 - logger - DEBUG - train base rate of y=1: 0.5521
+2024-10-23 14:36:07,666 - logger - DEBUG - accuracy of train base rate predictor: 0.5235
+2024-10-23 14:36:07,682 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,682 - logger - DEBUG -              0                                                  1
+0      SEX DIS  tensor(0.0776, dtype=torch.float64, grad_fn=<U...
+1      GCL ANC  tensor(-0.0742, dtype=torch.float64, grad_fn=<...
+2  SCIENGP DIS  tensor(0.0713, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:07,776 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7532
+2024-10-23 14:36:07,776 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5820
+2024-10-23 14:36:07,776 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,776 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,776 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,776 - logger - DEBUG - (227, 107, 66, 301)
+2024-10-23 14:36:07,776 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6877, dtype=torch.float64)
+2024-10-23 14:36:07,776 - logger - DEBUG - 
+2024-10-23 14:36:07,776 - logger - DEBUG - 
+2024-10-23 14:36:07,776 - logger - DEBUG - State: ME
+2024-10-23 14:36:07,776 - logger - DEBUG - N_train: 884
+2024-10-23 14:36:07,776 - logger - DEBUG - N_test: 221
+2024-10-23 14:36:07,776 - logger - DEBUG - positive train labels: 485.0000
+2024-10-23 14:36:07,776 - logger - DEBUG - positive test labels: 124.0000
+2024-10-23 14:36:07,776 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,790 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6519787400367207)
+2024-10-23 14:36:07,799 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,800 - logger - DEBUG - Bayes risk: 0.619894
+2024-10-23 14:36:07,801 - logger - DEBUG - tensor([-0.0511, -0.0450,  0.0045, -0.0319,  0.0588, -0.0323,  0.0272,  0.0486,
+         0.0564,  0.0401, -0.0559,  0.0440, -0.0024,  0.0452, -0.0585,  0.0192,
+         0.0600, -0.0298,  0.0172,  0.0020], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,803 - logger - DEBUG - accuracy: 0.692307710647583
+2024-10-23 14:36:07,803 - logger - DEBUG - fraction of prediction=1: 0.5882
+2024-10-23 14:36:07,803 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:07,803 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.8778
+2024-10-23 14:36:07,803 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0995
+2024-10-23 14:36:07,803 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:07,803 - logger - DEBUG - train base rate of y=1: 0.5486
+2024-10-23 14:36:07,803 - logger - DEBUG - accuracy of train base rate predictor: 0.5611
+2024-10-23 14:36:07,808 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,808 - logger - DEBUG -            0                                                  1
+0  HICOV DIS  tensor(0.0758, dtype=torch.float64, grad_fn=<U...
+1  DEYE DREM  tensor(0.0753, dtype=torch.float64, grad_fn=<U...
+2   ESP DEYE  tensor(0.0735, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:07,839 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7828
+2024-10-23 14:36:07,839 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5701
+2024-10-23 14:36:07,839 - logger - DEBUG - coefficients:
+2024-10-23 14:36:07,839 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:07,839 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:07,839 - logger - DEBUG - (72, 25, 23, 101)
+2024-10-23 14:36:07,839 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6884, dtype=torch.float64)
+2024-10-23 14:36:07,852 - logger - DEBUG - 
+2024-10-23 14:36:07,852 - logger - DEBUG - 
+2024-10-23 14:36:07,852 - logger - DEBUG - State: MD
+2024-10-23 14:36:07,852 - logger - DEBUG - N_train: 3836
+2024-10-23 14:36:07,852 - logger - DEBUG - N_test: 960
+2024-10-23 14:36:07,852 - logger - DEBUG - positive train labels: 2423.0000
+2024-10-23 14:36:07,852 - logger - DEBUG - positive test labels: 591.0000
+2024-10-23 14:36:07,855 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:07,855 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6525809623112414)
+2024-10-23 14:36:07,872 - logger - DEBUG - training finished.
+2024-10-23 14:36:07,872 - logger - DEBUG - Bayes risk: 0.657758
+2024-10-23 14:36:07,872 - logger - DEBUG - tensor([ 0.0065,  0.0634, -0.0079, -0.0517, -0.0004, -0.0491, -0.0263,  0.0416,
+        -0.0045,  0.0581,  0.0004, -0.0174,  0.0251, -0.0623, -0.0074,  0.0470,
+         0.0480, -0.0601, -0.0215,  0.0276], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:07,872 - logger - DEBUG - accuracy: 0.6385416388511658
+2024-10-23 14:36:07,872 - logger - DEBUG - fraction of prediction=1: 0.5708
+2024-10-23 14:36:07,872 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9990
+2024-10-23 14:36:07,872 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9292
+2024-10-23 14:36:07,872 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0573
+2024-10-23 14:36:07,872 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:07,872 - logger - DEBUG - train base rate of y=1: 0.6316
+2024-10-23 14:36:07,872 - logger - DEBUG - accuracy of train base rate predictor: 0.6156
+2024-10-23 14:36:07,887 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:07,887 - logger - DEBUG -                   0                                                  1
+0  SCHL isWhiteOnly  tensor(0.0745, dtype=torch.float64, grad_fn=<U...
+1   CIT isWhiteOnly  tensor(0.0742, dtype=torch.float64, grad_fn=<U...
+2         MIG HICOV  tensor(0.0731, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:08,014 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7385
+2024-10-23 14:36:08,014 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6958
+2024-10-23 14:36:08,014 - logger - DEBUG - coefficients:
+2024-10-23 14:36:08,014 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:08,022 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:08,022 - logger - DEBUG - (205, 164, 87, 504)
+2024-10-23 14:36:08,023 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6581, dtype=torch.float64)
+2024-10-23 14:36:08,023 - logger - DEBUG - 
+2024-10-23 14:36:08,023 - logger - DEBUG - 
+2024-10-23 14:36:08,023 - logger - DEBUG - State: MA
+2024-10-23 14:36:08,024 - logger - DEBUG - N_train: 4604
+2024-10-23 14:36:08,024 - logger - DEBUG - N_test: 1152
+2024-10-23 14:36:08,024 - logger - DEBUG - positive train labels: 2856.0000
+2024-10-23 14:36:08,024 - logger - DEBUG - positive test labels: 746.0000
+2024-10-23 14:36:08,030 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:08,044 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7233184945904696)
+2024-10-23 14:36:08,047 - logger - DEBUG - training finished.
+2024-10-23 14:36:08,047 - logger - DEBUG - Bayes risk: 0.665062
+2024-10-23 14:36:08,047 - logger - DEBUG - tensor([-0.0732, -0.0449, -0.0370,  0.0338, -0.0461, -0.0477,  0.0654, -0.0193,
+        -0.0527,  0.0539, -0.0074,  0.0559, -0.0507, -0.0437, -0.0033,  0.0243,
+        -0.0044,  0.0636,  0.0741,  0.0559], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:08,047 - logger - DEBUG - accuracy: 0.6536458134651184
+2024-10-23 14:36:08,047 - logger - DEBUG - fraction of prediction=1: 0.5616
+2024-10-23 14:36:08,047 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9965
+2024-10-23 14:36:08,047 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9453
+2024-10-23 14:36:08,047 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0026
+2024-10-23 14:36:08,047 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:08,047 - logger - DEBUG - train base rate of y=1: 0.6203
+2024-10-23 14:36:08,047 - logger - DEBUG - accuracy of train base rate predictor: 0.6476
+2024-10-23 14:36:08,062 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:08,072 - logger - DEBUG -            0                                                  1
+0  AGEP DEYE  tensor(-0.0764, dtype=torch.float64, grad_fn=<...
+1   SCHL MIG  tensor(0.0763, dtype=torch.float64, grad_fn=<U...
+2     isHisp  tensor(0.0741, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:08,269 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7743
+2024-10-23 14:36:08,269 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.7083
+2024-10-23 14:36:08,269 - logger - DEBUG - coefficients:
+2024-10-23 14:36:08,269 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:08,269 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:08,269 - logger - DEBUG - (241, 165, 95, 651)
+2024-10-23 14:36:08,269 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6639, dtype=torch.float64)
+2024-10-23 14:36:08,269 - logger - DEBUG - 
+2024-10-23 14:36:08,269 - logger - DEBUG - 
+2024-10-23 14:36:08,269 - logger - DEBUG - State: MI
+2024-10-23 14:36:08,269 - logger - DEBUG - N_train: 6410
+2024-10-23 14:36:08,269 - logger - DEBUG - N_test: 1603
+2024-10-23 14:36:08,269 - logger - DEBUG - positive train labels: 3620.0000
+2024-10-23 14:36:08,269 - logger - DEBUG - positive test labels: 898.0000
+2024-10-23 14:36:08,284 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:08,300 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7457298195969494)
+2024-10-23 14:36:08,300 - logger - DEBUG - training finished.
+2024-10-23 14:36:08,300 - logger - DEBUG - Bayes risk: 0.706501
+2024-10-23 14:36:08,300 - logger - DEBUG - tensor([ 0.0549,  0.0284,  0.0582,  0.0175, -0.0049,  0.0536, -0.0306, -0.0603,
+         0.0391, -0.0158,  0.0601,  0.0510, -0.0266,  0.0342, -0.0469, -0.0422,
+         0.0062,  0.0589, -0.0405, -0.0462], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:08,312 - logger - DEBUG - accuracy: 0.6232064962387085
+2024-10-23 14:36:08,312 - logger - DEBUG - fraction of prediction=1: 0.5028
+2024-10-23 14:36:08,312 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9975
+2024-10-23 14:36:08,312 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9414
+2024-10-23 14:36:08,312 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0455
+2024-10-23 14:36:08,312 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0006
+2024-10-23 14:36:08,312 - logger - DEBUG - train base rate of y=1: 0.5647
+2024-10-23 14:36:08,312 - logger - DEBUG - accuracy of train base rate predictor: 0.5602
+2024-10-23 14:36:08,319 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:08,319 - logger - DEBUG -                      0                                                  1
+0  SCIENGP isWhiteOnly  tensor(0.0778, dtype=torch.float64, grad_fn=<U...
+1         SCIENGP DEAR  tensor(0.0747, dtype=torch.float64, grad_fn=<U...
+2            HICOV DIS  tensor(0.0739, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:08,614 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7742
+2024-10-23 14:36:08,614 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6238
+2024-10-23 14:36:08,614 - logger - DEBUG - coefficients:
+2024-10-23 14:36:08,614 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:08,614 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:08,614 - logger - DEBUG - (473, 232, 130, 768)
+2024-10-23 14:36:08,614 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6847, dtype=torch.float64)
+2024-10-23 14:36:08,614 - logger - DEBUG - 
+2024-10-23 14:36:08,614 - logger - DEBUG - 
+2024-10-23 14:36:08,614 - logger - DEBUG - State: MN
+2024-10-23 14:36:08,614 - logger - DEBUG - N_train: 3519
+2024-10-23 14:36:08,614 - logger - DEBUG - N_test: 880
+2024-10-23 14:36:08,614 - logger - DEBUG - positive train labels: 2228.0000
+2024-10-23 14:36:08,614 - logger - DEBUG - positive test labels: 570.0000
+2024-10-23 14:36:08,630 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:08,630 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6839220162143511)
+2024-10-23 14:36:08,646 - logger - DEBUG - training finished.
+2024-10-23 14:36:08,646 - logger - DEBUG - Bayes risk: 0.644421
+2024-10-23 14:36:08,646 - logger - DEBUG - tensor([-0.0460,  0.0552, -0.0191,  0.0292, -0.0121, -0.0131,  0.0377,  0.0603,
+        -0.0371, -0.0237, -0.0414, -0.0555,  0.0097, -0.0616, -0.0519,  0.0442,
+         0.0188,  0.0583,  0.0411, -0.0188], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:08,646 - logger - DEBUG - accuracy: 0.7124999761581421
+2024-10-23 14:36:08,646 - logger - DEBUG - fraction of prediction=1: 0.5739
+2024-10-23 14:36:08,646 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9977
+2024-10-23 14:36:08,646 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9591
+2024-10-23 14:36:08,646 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0284
+2024-10-23 14:36:08,646 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0011
+2024-10-23 14:36:08,646 - logger - DEBUG - train base rate of y=1: 0.6331
+2024-10-23 14:36:08,646 - logger - DEBUG - accuracy of train base rate predictor: 0.6477
+2024-10-23 14:36:08,662 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:08,668 - logger - DEBUG -                   0                                                  1
+0  AGEP isWhiteOnly  tensor(-0.0766, dtype=torch.float64, grad_fn=<...
+1         SCHL DREM  tensor(0.0702, dtype=torch.float64, grad_fn=<U...
+2     HICOV SCIENGP  tensor(0.0696, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:08,779 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.8136
+2024-10-23 14:36:08,779 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6864
+2024-10-23 14:36:08,779 - logger - DEBUG - coefficients:
+2024-10-23 14:36:08,779 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:08,779 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:08,779 - logger - DEBUG - (211, 99, 65, 505)
+2024-10-23 14:36:08,779 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6573, dtype=torch.float64)
+2024-10-23 14:36:08,779 - logger - DEBUG - 
+2024-10-23 14:36:08,779 - logger - DEBUG - 
+2024-10-23 14:36:08,779 - logger - DEBUG - State: MS
+2024-10-23 14:36:08,779 - logger - DEBUG - N_train: 1859
+2024-10-23 14:36:08,779 - logger - DEBUG - N_test: 465
+2024-10-23 14:36:08,779 - logger - DEBUG - positive train labels: 933.0000
+2024-10-23 14:36:08,779 - logger - DEBUG - positive test labels: 257.0000
+2024-10-23 14:36:08,788 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:08,788 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7006705475034467)
+2024-10-23 14:36:08,800 - logger - DEBUG - training finished.
+2024-10-23 14:36:08,800 - logger - DEBUG - Bayes risk: 0.617273
+2024-10-23 14:36:08,800 - logger - DEBUG - tensor([-0.0039, -0.0282, -0.0264, -0.0633, -0.0646, -0.0018,  0.0340, -0.0087,
+        -0.0182, -0.0263,  0.0435,  0.0533,  0.0461, -0.0232, -0.0651, -0.0592,
+         0.0493, -0.0108, -0.0491,  0.0336], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:08,804 - logger - DEBUG - accuracy: 0.6645161509513855
+2024-10-23 14:36:08,804 - logger - DEBUG - fraction of prediction=1: 0.5226
+2024-10-23 14:36:08,804 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9978
+2024-10-23 14:36:08,804 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9183
+2024-10-23 14:36:08,804 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0473
+2024-10-23 14:36:08,804 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0022
+2024-10-23 14:36:08,804 - logger - DEBUG - train base rate of y=1: 0.5019
+2024-10-23 14:36:08,804 - logger - DEBUG - accuracy of train base rate predictor: 0.5527
+2024-10-23 14:36:08,804 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:08,804 - logger - DEBUG -               0                                                  1
+0     SCHL DEAR  tensor(0.0759, dtype=torch.float64, grad_fn=<U...
+1  MAR NATIVITY  tensor(-0.0736, dtype=torch.float64, grad_fn=<...
+2    AGEP RAC1P  tensor(-0.0732, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:08,875 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7376
+2024-10-23 14:36:08,876 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.4796
+2024-10-23 14:36:08,876 - logger - DEBUG - coefficients:
+2024-10-23 14:36:08,876 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:08,876 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:08,876 - logger - DEBUG - (164, 44, 78, 179)
+2024-10-23 14:36:08,876 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6931, dtype=torch.float64)
+2024-10-23 14:36:08,876 - logger - DEBUG - 
+2024-10-23 14:36:08,876 - logger - DEBUG - 
+2024-10-23 14:36:08,876 - logger - DEBUG - State: MO
+2024-10-23 14:36:08,876 - logger - DEBUG - N_train: 3984
+2024-10-23 14:36:08,876 - logger - DEBUG - N_test: 996
+2024-10-23 14:36:08,876 - logger - DEBUG - positive train labels: 2293.0000
+2024-10-23 14:36:08,880 - logger - DEBUG - positive test labels: 586.0000
+2024-10-23 14:36:08,884 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:08,884 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6816257834500334)
+2024-10-23 14:36:08,900 - logger - DEBUG - training finished.
+2024-10-23 14:36:08,900 - logger - DEBUG - Bayes risk: 0.633655
+2024-10-23 14:36:08,900 - logger - DEBUG - tensor([-0.0578,  0.0755,  0.0050, -0.0129, -0.0284, -0.0093, -0.0585,  0.0248,
+        -0.0519,  0.0485,  0.0498,  0.0384, -0.0501,  0.0705, -0.0025, -0.0237,
+        -0.0045, -0.0238,  0.0659,  0.0018], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:08,900 - logger - DEBUG - accuracy: 0.6345381736755371
+2024-10-23 14:36:08,900 - logger - DEBUG - fraction of prediction=1: 0.5321
+2024-10-23 14:36:08,900 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:08,900 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9458
+2024-10-23 14:36:08,900 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0351
+2024-10-23 14:36:08,900 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:08,900 - logger - DEBUG - train base rate of y=1: 0.5756
+2024-10-23 14:36:08,900 - logger - DEBUG - accuracy of train base rate predictor: 0.5884
+2024-10-23 14:36:08,900 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:08,915 - logger - DEBUG -              0                                                  1
+0         SCHL  tensor(0.0755, dtype=torch.float64, grad_fn=<U...
+1  SCIENGP ANC  tensor(0.0754, dtype=torch.float64, grad_fn=<U...
+2     SCHL DIS  tensor(0.0735, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:09,009 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7731
+2024-10-23 14:36:09,009 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6305
+2024-10-23 14:36:09,009 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,009 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,009 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,009 - logger - DEBUG - (276, 134, 92, 494)
+2024-10-23 14:36:09,009 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6817, dtype=torch.float64)
+2024-10-23 14:36:09,009 - logger - DEBUG - 
+2024-10-23 14:36:09,009 - logger - DEBUG - 
+2024-10-23 14:36:09,009 - logger - DEBUG - State: MT
+2024-10-23 14:36:09,009 - logger - DEBUG - N_train: 660
+2024-10-23 14:36:09,009 - logger - DEBUG - N_test: 166
+2024-10-23 14:36:09,009 - logger - DEBUG - positive train labels: 392.0000
+2024-10-23 14:36:09,009 - logger - DEBUG - positive test labels: 103.0000
+2024-10-23 14:36:09,025 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,025 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7916806587319054)
+2024-10-23 14:36:09,025 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,025 - logger - DEBUG - Bayes risk: 0.748982
+2024-10-23 14:36:09,025 - logger - DEBUG - tensor([ 0.0570,  0.0304,  0.0475, -0.0112,  0.0414, -0.0593,  0.0356,  0.0172,
+         0.0166,  0.0273, -0.0018, -0.0331, -0.0210, -0.0686,  0.0018,  0.0292,
+         0.0692,  0.0076, -0.0306,  0.0590], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,025 - logger - DEBUG - accuracy: 0.5180723071098328
+2024-10-23 14:36:09,025 - logger - DEBUG - fraction of prediction=1: 0.5241
+2024-10-23 14:36:09,025 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:09,025 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9398
+2024-10-23 14:36:09,025 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0361
+2024-10-23 14:36:09,025 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,025 - logger - DEBUG - train base rate of y=1: 0.5939
+2024-10-23 14:36:09,025 - logger - DEBUG - accuracy of train base rate predictor: 0.6205
+2024-10-23 14:36:09,041 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,041 - logger - DEBUG -             0                                                  1
+0  DIS isHisp  tensor(0.0779, dtype=torch.float64, grad_fn=<U...
+1  ANC isHisp  tensor(0.0773, dtype=torch.float64, grad_fn=<U...
+2  HICOV DEAR  tensor(0.0754, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:09,072 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7169
+2024-10-23 14:36:09,072 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5783
+2024-10-23 14:36:09,072 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,072 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,072 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,072 - logger - DEBUG - (43, 20, 27, 76)
+2024-10-23 14:36:09,072 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6754, dtype=torch.float64)
+2024-10-23 14:36:09,072 - logger - DEBUG - 
+2024-10-23 14:36:09,072 - logger - DEBUG - 
+2024-10-23 14:36:09,072 - logger - DEBUG - State: NE
+2024-10-23 14:36:09,072 - logger - DEBUG - N_train: 1208
+2024-10-23 14:36:09,072 - logger - DEBUG - N_test: 303
+2024-10-23 14:36:09,072 - logger - DEBUG - positive train labels: 783.0000
+2024-10-23 14:36:09,072 - logger - DEBUG - positive test labels: 193.0000
+2024-10-23 14:36:09,072 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,072 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7837480502809034)
+2024-10-23 14:36:09,088 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,088 - logger - DEBUG - Bayes risk: 0.701823
+2024-10-23 14:36:09,088 - logger - DEBUG - tensor([ 0.0510, -0.0533, -0.0417, -0.0217,  0.0252, -0.0584, -0.0081,  0.0295,
+         0.0193, -0.0219, -0.0268, -0.0009,  0.0188, -0.0220,  0.0231, -0.0396,
+        -0.0426, -0.0674,  0.0600,  0.0459], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,088 - logger - DEBUG - accuracy: 0.5577557682991028
+2024-10-23 14:36:09,088 - logger - DEBUG - fraction of prediction=1: 0.4191
+2024-10-23 14:36:09,088 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:09,088 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 1.0000
+2024-10-23 14:36:09,088 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0132
+2024-10-23 14:36:09,088 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,088 - logger - DEBUG - train base rate of y=1: 0.6482
+2024-10-23 14:36:09,088 - logger - DEBUG - accuracy of train base rate predictor: 0.6370
+2024-10-23 14:36:09,104 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,109 - logger - DEBUG -                0                                                  1
+0  DEAR NATIVITY  tensor(0.0748, dtype=torch.float64, grad_fn=<U...
+1       DREM CIT  tensor(0.0725, dtype=torch.float64, grad_fn=<U...
+2       MIG DREM  tensor(0.0723, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:09,135 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.8053
+2024-10-23 14:36:09,135 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6997
+2024-10-23 14:36:09,135 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,135 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,135 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,135 - logger - DEBUG - (71, 39, 20, 173)
+2024-10-23 14:36:09,135 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6486, dtype=torch.float64)
+2024-10-23 14:36:09,135 - logger - DEBUG - 
+2024-10-23 14:36:09,135 - logger - DEBUG - 
+2024-10-23 14:36:09,135 - logger - DEBUG - State: NV
+2024-10-23 14:36:09,135 - logger - DEBUG - N_train: 1852
+2024-10-23 14:36:09,135 - logger - DEBUG - N_test: 463
+2024-10-23 14:36:09,135 - logger - DEBUG - positive train labels: 1079.0000
+2024-10-23 14:36:09,135 - logger - DEBUG - positive test labels: 278.0000
+2024-10-23 14:36:09,151 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,151 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7440079899331643)
+2024-10-23 14:36:09,151 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,151 - logger - DEBUG - Bayes risk: 0.712551
+2024-10-23 14:36:09,151 - logger - DEBUG - tensor([ 0.0280, -0.0583,  0.0084, -0.0032,  0.0114, -0.0253, -0.0056,  0.0263,
+        -0.0559,  0.0405,  0.0014, -0.0417, -0.0190, -0.0282,  0.0171, -0.0505,
+        -0.0380, -0.0581,  0.0370,  0.0445], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,151 - logger - DEBUG - accuracy: 0.5874729752540588
+2024-10-23 14:36:09,151 - logger - DEBUG - fraction of prediction=1: 0.4514
+2024-10-23 14:36:09,151 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9892
+2024-10-23 14:36:09,151 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9482
+2024-10-23 14:36:09,166 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0886
+2024-10-23 14:36:09,166 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,166 - logger - DEBUG - train base rate of y=1: 0.5826
+2024-10-23 14:36:09,166 - logger - DEBUG - accuracy of train base rate predictor: 0.6004
+2024-10-23 14:36:09,166 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,166 - logger - DEBUG -                 0                                                  1
+0  HICOV NATIVITY  tensor(0.0750, dtype=torch.float64, grad_fn=<U...
+1       HICOV DIS  tensor(0.0745, dtype=torch.float64, grad_fn=<U...
+2     DEAR isHisp  tensor(0.0744, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:09,229 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7365
+2024-10-23 14:36:09,229 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6220
+2024-10-23 14:36:09,229 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,229 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,229 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,229 - logger - DEBUG - (119, 66, 56, 222)
+2024-10-23 14:36:09,229 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6794, dtype=torch.float64)
+2024-10-23 14:36:09,229 - logger - DEBUG - 
+2024-10-23 14:36:09,229 - logger - DEBUG - 
+2024-10-23 14:36:09,229 - logger - DEBUG - State: NH
+2024-10-23 14:36:09,229 - logger - DEBUG - N_train: 913
+2024-10-23 14:36:09,229 - logger - DEBUG - N_test: 229
+2024-10-23 14:36:09,229 - logger - DEBUG - positive train labels: 549.0000
+2024-10-23 14:36:09,229 - logger - DEBUG - positive test labels: 144.0000
+2024-10-23 14:36:09,229 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,245 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6932653186275132)
+2024-10-23 14:36:09,245 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,245 - logger - DEBUG - Bayes risk: 0.637499
+2024-10-23 14:36:09,245 - logger - DEBUG - tensor([-0.0772,  0.0648,  0.0133,  0.0272, -0.0567,  0.0195,  0.0597,  0.0168,
+        -0.0590,  0.0647,  0.0410,  0.0395,  0.0460,  0.0029,  0.0013, -0.0508,
+        -0.0023, -0.0608,  0.0133,  0.0229], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,245 - logger - DEBUG - accuracy: 0.6943231225013733
+2024-10-23 14:36:09,245 - logger - DEBUG - fraction of prediction=1: 0.5939
+2024-10-23 14:36:09,245 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9782
+2024-10-23 14:36:09,245 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.8690
+2024-10-23 14:36:09,245 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0131
+2024-10-23 14:36:09,245 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,245 - logger - DEBUG - train base rate of y=1: 0.6013
+2024-10-23 14:36:09,245 - logger - DEBUG - accuracy of train base rate predictor: 0.6288
+2024-10-23 14:36:09,262 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,262 - logger - DEBUG -               0                                                  1
+0          AGEP  tensor(-0.0772, dtype=torch.float64, grad_fn=<...
+1  SCIENGP LANX  tensor(0.0767, dtype=torch.float64, grad_fn=<U...
+2      SCHL MAR  tensor(0.0764, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:09,300 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7642
+2024-10-23 14:36:09,300 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6288
+2024-10-23 14:36:09,300 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,300 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,300 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,300 - logger - DEBUG - (58, 27, 27, 117)
+2024-10-23 14:36:09,300 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6725, dtype=torch.float64)
+2024-10-23 14:36:09,300 - logger - DEBUG - 
+2024-10-23 14:36:09,300 - logger - DEBUG - 
+2024-10-23 14:36:09,300 - logger - DEBUG - State: NJ
+2024-10-23 14:36:09,300 - logger - DEBUG - N_train: 5710
+2024-10-23 14:36:09,300 - logger - DEBUG - N_test: 1428
+2024-10-23 14:36:09,300 - logger - DEBUG - positive train labels: 3507.0000
+2024-10-23 14:36:09,300 - logger - DEBUG - positive test labels: 872.0000
+2024-10-23 14:36:09,324 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,326 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7698426607811146)
+2024-10-23 14:36:09,328 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,328 - logger - DEBUG - Bayes risk: 0.736412
+2024-10-23 14:36:09,328 - logger - DEBUG - tensor([-0.0477,  0.0502, -0.0184,  0.0585, -0.0417,  0.0612, -0.0002, -0.0224,
+         0.0043,  0.0172,  0.0745,  0.0266,  0.0068, -0.0449,  0.0733, -0.0140,
+         0.0659,  0.0539,  0.0379,  0.0084], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,328 - logger - DEBUG - accuracy: 0.6169467568397522
+2024-10-23 14:36:09,328 - logger - DEBUG - fraction of prediction=1: 0.6408
+2024-10-23 14:36:09,328 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9944
+2024-10-23 14:36:09,328 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9405
+2024-10-23 14:36:09,340 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0413
+2024-10-23 14:36:09,340 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,340 - logger - DEBUG - train base rate of y=1: 0.6142
+2024-10-23 14:36:09,340 - logger - DEBUG - accuracy of train base rate predictor: 0.6106
+2024-10-23 14:36:09,340 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,340 - logger - DEBUG -           0                                                  1
+0      DEAR  tensor(0.0745, dtype=torch.float64, grad_fn=<U...
+1  NATIVITY  tensor(0.0733, dtype=torch.float64, grad_fn=<U...
+2   MAR ANC  tensor(0.0731, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:09,689 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7563
+2024-10-23 14:36:09,689 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6625
+2024-10-23 14:36:09,689 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,689 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,689 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,689 - logger - DEBUG - (345, 211, 137, 735)
+2024-10-23 14:36:09,689 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6668, dtype=torch.float64)
+2024-10-23 14:36:09,689 - logger - DEBUG - 
+2024-10-23 14:36:09,689 - logger - DEBUG - 
+2024-10-23 14:36:09,689 - logger - DEBUG - State: NM
+2024-10-23 14:36:09,689 - logger - DEBUG - N_train: 1236
+2024-10-23 14:36:09,689 - logger - DEBUG - N_test: 310
+2024-10-23 14:36:09,689 - logger - DEBUG - positive train labels: 634.0000
+2024-10-23 14:36:09,689 - logger - DEBUG - positive test labels: 155.0000
+2024-10-23 14:36:09,700 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,700 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.771573475781403)
+2024-10-23 14:36:09,710 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,710 - logger - DEBUG - Bayes risk: 0.675890
+2024-10-23 14:36:09,710 - logger - DEBUG - tensor([-0.0346, -0.0451,  0.0446, -0.0323, -0.0010, -0.0323, -0.0272,  0.0621,
+         0.0468, -0.0287, -0.0205,  0.0302,  0.0448,  0.0041,  0.0111,  0.0033,
+         0.0633, -0.0588,  0.0715,  0.0567], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,710 - logger - DEBUG - accuracy: 0.5322580933570862
+2024-10-23 14:36:09,710 - logger - DEBUG - fraction of prediction=1: 0.5355
+2024-10-23 14:36:09,710 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:09,710 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9903
+2024-10-23 14:36:09,710 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0290
+2024-10-23 14:36:09,710 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,710 - logger - DEBUG - train base rate of y=1: 0.5129
+2024-10-23 14:36:09,710 - logger - DEBUG - accuracy of train base rate predictor: 0.5000
+2024-10-23 14:36:09,722 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,722 - logger - DEBUG -                   0                                                  1
+0         AGEP SCHL  tensor(-0.0757, dtype=torch.float64, grad_fn=<...
+1      RAC1P isHisp  tensor(0.0736, dtype=torch.float64, grad_fn=<U...
+2  DREM isWhiteOnly  tensor(-0.0726, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:09,770 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7226
+2024-10-23 14:36:09,770 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5000
+2024-10-23 14:36:09,770 - logger - DEBUG - coefficients:
+2024-10-23 14:36:09,770 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:09,776 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:09,776 - logger - DEBUG - (112, 43, 43, 112)
+2024-10-23 14:36:09,776 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6928, dtype=torch.float64)
+2024-10-23 14:36:09,776 - logger - DEBUG - 
+2024-10-23 14:36:09,776 - logger - DEBUG - 
+2024-10-23 14:36:09,776 - logger - DEBUG - State: NY
+2024-10-23 14:36:09,776 - logger - DEBUG - N_train: 12766
+2024-10-23 14:36:09,776 - logger - DEBUG - N_test: 3192
+2024-10-23 14:36:09,776 - logger - DEBUG - positive train labels: 7513.0000
+2024-10-23 14:36:09,776 - logger - DEBUG - positive test labels: 1843.0000
+2024-10-23 14:36:09,801 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:09,817 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7740309179997753)
+2024-10-23 14:36:09,817 - logger - DEBUG - training finished.
+2024-10-23 14:36:09,817 - logger - DEBUG - Bayes risk: 0.723989
+2024-10-23 14:36:09,817 - logger - DEBUG - tensor([ 0.0350,  0.0532,  0.0503, -0.0474,  0.0077, -0.0046,  0.0522, -0.0242,
+        -0.0556, -0.0066, -0.0445, -0.0342,  0.0780,  0.0642, -0.0169,  0.0011,
+        -0.0180,  0.0629,  0.0372, -0.0399], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:09,833 - logger - DEBUG - accuracy: 0.45864662528038025
+2024-10-23 14:36:09,833 - logger - DEBUG - fraction of prediction=1: 0.5103
+2024-10-23 14:36:09,833 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9966
+2024-10-23 14:36:09,833 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9539
+2024-10-23 14:36:09,833 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0257
+2024-10-23 14:36:09,833 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:09,833 - logger - DEBUG - train base rate of y=1: 0.5885
+2024-10-23 14:36:09,833 - logger - DEBUG - accuracy of train base rate predictor: 0.5774
+2024-10-23 14:36:09,833 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:09,833 - logger - DEBUG -               0                                                  1
+0          DREM  tensor(0.0780, dtype=torch.float64, grad_fn=<U...
+1  CIT NATIVITY  tensor(0.0737, dtype=torch.float64, grad_fn=<U...
+2  AGEP SCIENGP  tensor(0.0722, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:10,543 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7616
+2024-10-23 14:36:10,543 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6523
+2024-10-23 14:36:10,543 - logger - DEBUG - coefficients:
+2024-10-23 14:36:10,543 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:10,559 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:10,559 - logger - DEBUG - (849, 500, 261, 1582)
+2024-10-23 14:36:10,559 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6774, dtype=torch.float64)
+2024-10-23 14:36:10,559 - logger - DEBUG - 
+2024-10-23 14:36:10,559 - logger - DEBUG - 
+2024-10-23 14:36:10,559 - logger - DEBUG - State: NC
+2024-10-23 14:36:10,559 - logger - DEBUG - N_train: 6612
+2024-10-23 14:36:10,559 - logger - DEBUG - N_test: 1654
+2024-10-23 14:36:10,559 - logger - DEBUG - positive train labels: 3801.0000
+2024-10-23 14:36:10,559 - logger - DEBUG - positive test labels: 925.0000
+2024-10-23 14:36:10,581 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:10,588 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7777746674262032)
+2024-10-23 14:36:10,590 - logger - DEBUG - training finished.
+2024-10-23 14:36:10,590 - logger - DEBUG - Bayes risk: 0.662585
+2024-10-23 14:36:10,590 - logger - DEBUG - tensor([ 4.1275e-02,  1.7867e-02,  1.3013e-02, -8.0771e-03, -3.3140e-02,
+         5.8905e-02,  4.9994e-02, -3.5478e-02,  5.5193e-03,  6.0695e-02,
+         5.6301e-02, -3.9634e-02,  3.1077e-02, -3.8244e-02,  3.1800e-02,
+         6.1145e-02, -3.5025e-02, -1.1255e-02,  8.6284e-05,  5.9215e-02],
+       dtype=torch.float64, grad_fn=<SliceBackward0>)
+2024-10-23 14:36:10,590 - logger - DEBUG - accuracy: 0.6021765470504761
+2024-10-23 14:36:10,590 - logger - DEBUG - fraction of prediction=1: 0.5326
+2024-10-23 14:36:10,590 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9988
+2024-10-23 14:36:10,590 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9794
+2024-10-23 14:36:10,590 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0381
+2024-10-23 14:36:10,590 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:10,590 - logger - DEBUG - train base rate of y=1: 0.5749
+2024-10-23 14:36:10,601 - logger - DEBUG - accuracy of train base rate predictor: 0.5593
+2024-10-23 14:36:10,606 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:10,606 - logger - DEBUG -               0                                                  1
+0  SCIENGP LANX  tensor(0.0767, dtype=torch.float64, grad_fn=<U...
+1      DIS LANX  tensor(0.0734, dtype=torch.float64, grad_fn=<U...
+2    ESP isHisp  tensor(-0.0706, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:10,922 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7751
+2024-10-23 14:36:10,922 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6076
+2024-10-23 14:36:10,922 - logger - DEBUG - coefficients:
+2024-10-23 14:36:10,922 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:10,922 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:10,938 - logger - DEBUG - (503, 226, 146, 779)
+2024-10-23 14:36:10,938 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6819, dtype=torch.float64)
+2024-10-23 14:36:10,938 - logger - DEBUG - 
+2024-10-23 14:36:10,938 - logger - DEBUG - 
+2024-10-23 14:36:10,938 - logger - DEBUG - State: ND
+2024-10-23 14:36:10,938 - logger - DEBUG - N_train: 496
+2024-10-23 14:36:10,938 - logger - DEBUG - N_test: 125
+2024-10-23 14:36:10,938 - logger - DEBUG - positive train labels: 297.0000
+2024-10-23 14:36:10,938 - logger - DEBUG - positive test labels: 84.0000
+2024-10-23 14:36:10,938 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:10,938 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7029756725813852)
+2024-10-23 14:36:10,938 - logger - DEBUG - training finished.
+2024-10-23 14:36:10,938 - logger - DEBUG - Bayes risk: 0.652655
+2024-10-23 14:36:10,938 - logger - DEBUG - tensor([ 0.0135,  0.0403, -0.0070,  0.0201, -0.0738, -0.0529, -0.0470,  0.0069,
+         0.0041,  0.0657,  0.0424,  0.0604,  0.0284, -0.0301, -0.0770,  0.0495,
+        -0.0656, -0.0157,  0.0364,  0.0234], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:10,954 - logger - DEBUG - accuracy: 0.5759999752044678
+2024-10-23 14:36:10,954 - logger - DEBUG - fraction of prediction=1: 0.4400
+2024-10-23 14:36:10,954 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:10,954 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9280
+2024-10-23 14:36:10,954 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0400
+2024-10-23 14:36:10,954 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:10,954 - logger - DEBUG - train base rate of y=1: 0.5988
+2024-10-23 14:36:10,954 - logger - DEBUG - accuracy of train base rate predictor: 0.6720
+2024-10-23 14:36:10,954 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:10,969 - logger - DEBUG -           0                                                  1
+0  AGEP GCL  tensor(-0.0776, dtype=torch.float64, grad_fn=<...
+1  ESP DEAR  tensor(-0.0773, dtype=torch.float64, grad_fn=<...
+2  NATIVITY  tensor(-0.0770, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:10,985 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7920
+2024-10-23 14:36:10,985 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.7200
+2024-10-23 14:36:10,985 - logger - DEBUG - coefficients:
+2024-10-23 14:36:10,985 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:10,985 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:10,985 - logger - DEBUG - (25, 16, 10, 74)
+2024-10-23 14:36:10,985 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6735, dtype=torch.float64)
+2024-10-23 14:36:10,985 - logger - DEBUG - 
+2024-10-23 14:36:10,985 - logger - DEBUG - 
+2024-10-23 14:36:10,985 - logger - DEBUG - State: OH
+2024-10-23 14:36:10,985 - logger - DEBUG - N_train: 7617
+2024-10-23 14:36:10,985 - logger - DEBUG - N_test: 1905
+2024-10-23 14:36:10,985 - logger - DEBUG - positive train labels: 4456.0000
+2024-10-23 14:36:10,985 - logger - DEBUG - positive test labels: 1139.0000
+2024-10-23 14:36:11,002 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:11,017 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7638030018819815)
+2024-10-23 14:36:11,017 - logger - DEBUG - training finished.
+2024-10-23 14:36:11,017 - logger - DEBUG - Bayes risk: 0.662863
+2024-10-23 14:36:11,017 - logger - DEBUG - tensor([ 0.0195,  0.0632, -0.0171, -0.0078,  0.0042, -0.0294, -0.0625, -0.0016,
+        -0.0163, -0.0132,  0.0190, -0.0018,  0.0008,  0.0311,  0.0535,  0.0542,
+         0.0035,  0.0484, -0.0067, -0.0308], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:11,017 - logger - DEBUG - accuracy: 0.5165354609489441
+2024-10-23 14:36:11,017 - logger - DEBUG - fraction of prediction=1: 0.5144
+2024-10-23 14:36:11,017 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:11,017 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9921
+2024-10-23 14:36:11,017 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0310
+2024-10-23 14:36:11,017 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0005
+2024-10-23 14:36:11,017 - logger - DEBUG - train base rate of y=1: 0.5850
+2024-10-23 14:36:11,017 - logger - DEBUG - accuracy of train base rate predictor: 0.5979
+2024-10-23 14:36:11,033 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:11,033 - logger - DEBUG -                   0                                                  1
+0      SCHL SCIENGP  tensor(0.0767, dtype=torch.float64, grad_fn=<U...
+1  AGEP isWhiteOnly  tensor(-0.0735, dtype=torch.float64, grad_fn=<...
+2          AGEP CIT  tensor(-0.0730, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:11,426 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7759
+2024-10-23 14:36:11,426 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6436
+2024-10-23 14:36:11,426 - logger - DEBUG - coefficients:
+2024-10-23 14:36:11,426 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:11,426 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:11,426 - logger - DEBUG - (509, 257, 170, 969)
+2024-10-23 14:36:11,426 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6786, dtype=torch.float64)
+2024-10-23 14:36:11,426 - logger - DEBUG - 
+2024-10-23 14:36:11,426 - logger - DEBUG - 
+2024-10-23 14:36:11,426 - logger - DEBUG - State: OK
+2024-10-23 14:36:11,426 - logger - DEBUG - N_train: 2336
+2024-10-23 14:36:11,426 - logger - DEBUG - N_test: 585
+2024-10-23 14:36:11,426 - logger - DEBUG - positive train labels: 1290.0000
+2024-10-23 14:36:11,426 - logger - DEBUG - positive test labels: 308.0000
+2024-10-23 14:36:11,443 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:11,443 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7626447556511634)
+2024-10-23 14:36:11,443 - logger - DEBUG - training finished.
+2024-10-23 14:36:11,443 - logger - DEBUG - Bayes risk: 0.698550
+2024-10-23 14:36:11,443 - logger - DEBUG - tensor([-0.0174,  0.0009,  0.0069, -0.0273, -0.0367, -0.0693,  0.0019, -0.0489,
+        -0.0013,  0.0016,  0.0074,  0.0508, -0.0525, -0.0347,  0.0207, -0.0220,
+         0.0063, -0.0274, -0.0137, -0.0133], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:11,443 - logger - DEBUG - accuracy: 0.6239316463470459
+2024-10-23 14:36:11,457 - logger - DEBUG - fraction of prediction=1: 0.6974
+2024-10-23 14:36:11,458 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9983
+2024-10-23 14:36:11,458 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9761
+2024-10-23 14:36:11,458 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0120
+2024-10-23 14:36:11,458 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:11,458 - logger - DEBUG - train base rate of y=1: 0.5522
+2024-10-23 14:36:11,458 - logger - DEBUG - accuracy of train base rate predictor: 0.5265
+2024-10-23 14:36:11,466 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:11,466 - logger - DEBUG -                   0                                                  1
+0           MAR GCL  tensor(-0.0743, dtype=torch.float64, grad_fn=<...
+1  DREM isWhiteOnly  tensor(0.0742, dtype=torch.float64, grad_fn=<U...
+2       GCL SCIENGP  tensor(0.0731, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:11,552 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7299
+2024-10-23 14:36:11,552 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5436
+2024-10-23 14:36:11,552 - logger - DEBUG - coefficients:
+2024-10-23 14:36:11,552 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:11,557 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:11,557 - logger - DEBUG - (193, 84, 74, 234)
+2024-10-23 14:36:11,557 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6877, dtype=torch.float64)
+2024-10-23 14:36:11,557 - logger - DEBUG - 
+2024-10-23 14:36:11,557 - logger - DEBUG - 
+2024-10-23 14:36:11,557 - logger - DEBUG - State: OR
+2024-10-23 14:36:11,557 - logger - DEBUG - N_train: 2725
+2024-10-23 14:36:11,557 - logger - DEBUG - N_test: 682
+2024-10-23 14:36:11,557 - logger - DEBUG - positive train labels: 1578.0000
+2024-10-23 14:36:11,557 - logger - DEBUG - positive test labels: 371.0000
+2024-10-23 14:36:11,568 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:11,568 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.8272953034554733)
+2024-10-23 14:36:11,586 - logger - DEBUG - training finished.
+2024-10-23 14:36:11,587 - logger - DEBUG - Bayes risk: 0.705552
+2024-10-23 14:36:11,588 - logger - DEBUG - tensor([ 0.0327,  0.0228, -0.0560, -0.0604,  0.0286, -0.0405,  0.0013,  0.0479,
+         0.0532,  0.0624, -0.0440, -0.0413,  0.0419,  0.0245, -0.0416, -0.0346,
+        -0.0517, -0.0640, -0.0594, -0.0282], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:11,588 - logger - DEBUG - accuracy: 0.5542522072792053
+2024-10-23 14:36:11,590 - logger - DEBUG - fraction of prediction=1: 0.5528
+2024-10-23 14:36:11,590 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:11,590 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9619
+2024-10-23 14:36:11,590 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0132
+2024-10-23 14:36:11,590 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:11,590 - logger - DEBUG - train base rate of y=1: 0.5791
+2024-10-23 14:36:11,590 - logger - DEBUG - accuracy of train base rate predictor: 0.5440
+2024-10-23 14:36:11,600 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:11,606 - logger - DEBUG -                0                                                  1
+0       DEYE CIT  tensor(0.0774, dtype=torch.float64, grad_fn=<U...
+1  AGEP NATIVITY  tensor(-0.0765, dtype=torch.float64, grad_fn=<...
+2       SEX DEAR  tensor(0.0741, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:11,722 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7713
+2024-10-23 14:36:11,722 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5909
+2024-10-23 14:36:11,722 - logger - DEBUG - coefficients:
+2024-10-23 14:36:11,722 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:11,729 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:11,729 - logger - DEBUG - (217, 94, 62, 309)
+2024-10-23 14:36:11,729 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6806, dtype=torch.float64)
+2024-10-23 14:36:11,729 - logger - DEBUG - 
+2024-10-23 14:36:11,729 - logger - DEBUG - 
+2024-10-23 14:36:11,729 - logger - DEBUG - State: PA
+2024-10-23 14:36:11,729 - logger - DEBUG - N_train: 8405
+2024-10-23 14:36:11,729 - logger - DEBUG - N_test: 2102
+2024-10-23 14:36:11,729 - logger - DEBUG - positive train labels: 4920.0000
+2024-10-23 14:36:11,729 - logger - DEBUG - positive test labels: 1223.0000
+2024-10-23 14:36:11,759 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:11,759 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.8850299526670427)
+2024-10-23 14:36:11,771 - logger - DEBUG - training finished.
+2024-10-23 14:36:11,771 - logger - DEBUG - Bayes risk: 0.732586
+2024-10-23 14:36:11,774 - logger - DEBUG - tensor([-0.0080, -0.0500, -0.0029, -0.0352,  0.0229, -0.0172,  0.0057,  0.0426,
+        -0.0539,  0.0729, -0.0012,  0.0455, -0.0500, -0.0747,  0.0195, -0.0359,
+         0.0364, -0.0226, -0.0591, -0.0570], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:11,778 - logger - DEBUG - accuracy: 0.5076118111610413
+2024-10-23 14:36:11,778 - logger - DEBUG - fraction of prediction=1: 0.6004
+2024-10-23 14:36:11,778 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:11,778 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9696
+2024-10-23 14:36:11,778 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0590
+2024-10-23 14:36:11,778 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0024
+2024-10-23 14:36:11,778 - logger - DEBUG - train base rate of y=1: 0.5854
+2024-10-23 14:36:11,778 - logger - DEBUG - accuracy of train base rate predictor: 0.5818
+2024-10-23 14:36:11,784 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:11,792 - logger - DEBUG -            0                                                  1
+0  SCHL LANX  tensor(0.0747, dtype=torch.float64, grad_fn=<U...
+1        CIT  tensor(-0.0747, dtype=torch.float64, grad_fn=<...
+2        DIS  tensor(0.0729, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:12,292 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7745
+2024-10-23 14:36:12,292 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6370
+2024-10-23 14:36:12,292 - logger - DEBUG - coefficients:
+2024-10-23 14:36:12,292 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:12,298 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:12,298 - logger - DEBUG - (584, 295, 179, 1044)
+2024-10-23 14:36:12,298 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6785, dtype=torch.float64)
+2024-10-23 14:36:12,298 - logger - DEBUG - 
+2024-10-23 14:36:12,298 - logger - DEBUG - 
+2024-10-23 14:36:12,298 - logger - DEBUG - State: RI
+2024-10-23 14:36:12,298 - logger - DEBUG - N_train: 690
+2024-10-23 14:36:12,298 - logger - DEBUG - N_test: 173
+2024-10-23 14:36:12,298 - logger - DEBUG - positive train labels: 392.0000
+2024-10-23 14:36:12,298 - logger - DEBUG - positive test labels: 93.0000
+2024-10-23 14:36:12,304 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:12,304 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7024226112497824)
+2024-10-23 14:36:12,316 - logger - DEBUG - training finished.
+2024-10-23 14:36:12,316 - logger - DEBUG - Bayes risk: 0.653817
+2024-10-23 14:36:12,316 - logger - DEBUG - tensor([-0.0632,  0.0450, -0.0312,  0.0195,  0.0130,  0.0380, -0.0666,  0.0641,
+        -0.0575, -0.0266,  0.0479, -0.0178, -0.0328, -0.0392,  0.0635,  0.0339,
+        -0.0326, -0.0546,  0.0303, -0.0747], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:12,316 - logger - DEBUG - accuracy: 0.6820809245109558
+2024-10-23 14:36:12,316 - logger - DEBUG - fraction of prediction=1: 0.5087
+2024-10-23 14:36:12,316 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:12,316 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9422
+2024-10-23 14:36:12,316 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0289
+2024-10-23 14:36:12,316 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:12,316 - logger - DEBUG - train base rate of y=1: 0.5681
+2024-10-23 14:36:12,316 - logger - DEBUG - accuracy of train base rate predictor: 0.5376
+2024-10-23 14:36:12,322 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:12,328 - logger - DEBUG -              0                                                  1
+0  isWhiteOnly  tensor(-0.0747, dtype=torch.float64, grad_fn=<...
+1   HICOV DREM  tensor(0.0738, dtype=torch.float64, grad_fn=<U...
+2     SCHL GCL  tensor(0.0703, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:12,358 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7457
+2024-10-23 14:36:12,358 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5954
+2024-10-23 14:36:12,358 - logger - DEBUG - coefficients:
+2024-10-23 14:36:12,358 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:12,358 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:12,358 - logger - DEBUG - (53, 27, 17, 76)
+2024-10-23 14:36:12,358 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6838, dtype=torch.float64)
+2024-10-23 14:36:12,358 - logger - DEBUG - 
+2024-10-23 14:36:12,358 - logger - DEBUG - 
+2024-10-23 14:36:12,358 - logger - DEBUG - State: SC
+2024-10-23 14:36:12,358 - logger - DEBUG - N_train: 3244
+2024-10-23 14:36:12,358 - logger - DEBUG - N_test: 811
+2024-10-23 14:36:12,358 - logger - DEBUG - positive train labels: 1790.0000
+2024-10-23 14:36:12,358 - logger - DEBUG - positive test labels: 439.0000
+2024-10-23 14:36:12,374 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:12,377 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7009219948515895)
+2024-10-23 14:36:12,384 - logger - DEBUG - training finished.
+2024-10-23 14:36:12,384 - logger - DEBUG - Bayes risk: 0.691816
+2024-10-23 14:36:12,384 - logger - DEBUG - tensor([-0.0619,  0.0244,  0.0234, -0.0174,  0.0480,  0.0105, -0.0446, -0.0251,
+        -0.0140,  0.0463,  0.0498, -0.0450,  0.0186,  0.0002,  0.0220,  0.0041,
+        -0.0002, -0.0392, -0.0020,  0.0387], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:12,384 - logger - DEBUG - accuracy: 0.5511714220046997
+2024-10-23 14:36:12,390 - logger - DEBUG - fraction of prediction=1: 0.5314
+2024-10-23 14:36:12,390 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9951
+2024-10-23 14:36:12,390 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9618
+2024-10-23 14:36:12,390 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0592
+2024-10-23 14:36:12,390 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0025
+2024-10-23 14:36:12,390 - logger - DEBUG - train base rate of y=1: 0.5518
+2024-10-23 14:36:12,390 - logger - DEBUG - accuracy of train base rate predictor: 0.5413
+2024-10-23 14:36:12,398 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:12,403 - logger - DEBUG -             0                                                  1
+0    AGEP MIG  tensor(-0.0760, dtype=torch.float64, grad_fn=<...
+1  AGEP HICOV  tensor(-0.0739, dtype=torch.float64, grad_fn=<...
+2    DEAR ANC  tensor(0.0729, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:12,518 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7226
+2024-10-23 14:36:12,520 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.5869
+2024-10-23 14:36:12,520 - logger - DEBUG - coefficients:
+2024-10-23 14:36:12,520 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:12,520 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:12,520 - logger - DEBUG - (241, 131, 94, 345)
+2024-10-23 14:36:12,524 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6878, dtype=torch.float64)
+2024-10-23 14:36:12,524 - logger - DEBUG - 
+2024-10-23 14:36:12,524 - logger - DEBUG - 
+2024-10-23 14:36:12,524 - logger - DEBUG - State: SD
+2024-10-23 14:36:12,524 - logger - DEBUG - N_train: 542
+2024-10-23 14:36:12,524 - logger - DEBUG - N_test: 136
+2024-10-23 14:36:12,524 - logger - DEBUG - positive train labels: 348.0000
+2024-10-23 14:36:12,524 - logger - DEBUG - positive test labels: 95.0000
+2024-10-23 14:36:12,524 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:12,529 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7008496323171325)
+2024-10-23 14:36:12,535 - logger - DEBUG - training finished.
+2024-10-23 14:36:12,535 - logger - DEBUG - Bayes risk: 0.650498
+2024-10-23 14:36:12,538 - logger - DEBUG - tensor([-0.0430,  0.0122,  0.0304, -0.0484,  0.0367, -0.0572,  0.0047, -0.0492,
+        -0.0594,  0.0052,  0.0438, -0.0243, -0.0202,  0.0254,  0.0356, -0.0240,
+        -0.0258,  0.0067,  0.0339,  0.0606], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:12,538 - logger - DEBUG - accuracy: 0.5661764740943909
+2024-10-23 14:36:12,538 - logger - DEBUG - fraction of prediction=1: 0.5147
+2024-10-23 14:36:12,538 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:12,538 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9118
+2024-10-23 14:36:12,538 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0735
+2024-10-23 14:36:12,538 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:12,538 - logger - DEBUG - train base rate of y=1: 0.6421
+2024-10-23 14:36:12,538 - logger - DEBUG - accuracy of train base rate predictor: 0.6985
+2024-10-23 14:36:12,548 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:12,554 - logger - DEBUG -            0                                                  1
+0  AGEP LANX  tensor(-0.0769, dtype=torch.float64, grad_fn=<...
+1  AGEP DEYE  tensor(-0.0761, dtype=torch.float64, grad_fn=<...
+2   AGEP GCL  tensor(-0.0760, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:12,576 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7426
+2024-10-23 14:36:12,576 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6765
+2024-10-23 14:36:12,576 - logger - DEBUG - coefficients:
+2024-10-23 14:36:12,577 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:12,577 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:12,578 - logger - DEBUG - (25, 16, 19, 76)
+2024-10-23 14:36:12,578 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6522, dtype=torch.float64)
+2024-10-23 14:36:12,578 - logger - DEBUG - 
+2024-10-23 14:36:12,578 - logger - DEBUG - 
+2024-10-23 14:36:12,578 - logger - DEBUG - State: TN
+2024-10-23 14:36:12,579 - logger - DEBUG - N_train: 4356
+2024-10-23 14:36:12,579 - logger - DEBUG - N_test: 1089
+2024-10-23 14:36:12,579 - logger - DEBUG - positive train labels: 2439.0000
+2024-10-23 14:36:12,579 - logger - DEBUG - positive test labels: 632.0000
+2024-10-23 14:36:12,590 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:12,597 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7068161447566448)
+2024-10-23 14:36:12,604 - logger - DEBUG - training finished.
+2024-10-23 14:36:12,604 - logger - DEBUG - Bayes risk: 0.679773
+2024-10-23 14:36:12,604 - logger - DEBUG - tensor([-0.0765,  0.0293,  0.0085,  0.0526, -0.0380,  0.0443, -0.0272,  0.0065,
+         0.0378,  0.0207,  0.0176, -0.0437,  0.0256, -0.0244,  0.0638, -0.0327,
+        -0.0541, -0.0419,  0.0413,  0.0304], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:12,609 - logger - DEBUG - accuracy: 0.6198347210884094
+2024-10-23 14:36:12,609 - logger - DEBUG - fraction of prediction=1: 0.5179
+2024-10-23 14:36:12,609 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:12,609 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9073
+2024-10-23 14:36:12,609 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.1175
+2024-10-23 14:36:12,609 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0028
+2024-10-23 14:36:12,609 - logger - DEBUG - train base rate of y=1: 0.5599
+2024-10-23 14:36:12,609 - logger - DEBUG - accuracy of train base rate predictor: 0.5803
+2024-10-23 14:36:12,615 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:12,621 - logger - DEBUG -               0                                                  1
+0          AGEP  tensor(-0.0765, dtype=torch.float64, grad_fn=<...
+1      DIS DEYE  tensor(0.0759, dtype=torch.float64, grad_fn=<U...
+2  DIS NATIVITY  tensor(0.0746, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:12,792 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7603
+2024-10-23 14:36:12,792 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6235
+2024-10-23 14:36:12,792 - logger - DEBUG - coefficients:
+2024-10-23 14:36:12,792 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:12,792 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:12,792 - logger - DEBUG - (303, 154, 107, 525)
+2024-10-23 14:36:12,792 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6859, dtype=torch.float64)
+2024-10-23 14:36:12,792 - logger - DEBUG - 
+2024-10-23 14:36:12,792 - logger - DEBUG - 
+2024-10-23 14:36:12,792 - logger - DEBUG - State: TX
+2024-10-23 14:36:12,792 - logger - DEBUG - N_train: 16668
+2024-10-23 14:36:12,792 - logger - DEBUG - N_test: 4168
+2024-10-23 14:36:12,792 - logger - DEBUG - positive train labels: 9853.0000
+2024-10-23 14:36:12,792 - logger - DEBUG - positive test labels: 2474.0000
+2024-10-23 14:36:12,846 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:12,851 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6984434109616409)
+2024-10-23 14:36:12,858 - logger - DEBUG - training finished.
+2024-10-23 14:36:12,858 - logger - DEBUG - Bayes risk: 0.665282
+2024-10-23 14:36:12,858 - logger - DEBUG - tensor([-0.0441, -0.0152, -0.0508, -0.0074,  0.0004,  0.0576,  0.0282,  0.0575,
+        -0.0488, -0.0286, -0.0578,  0.0607,  0.0038, -0.0003, -0.0100, -0.0110,
+        -0.0170, -0.0283,  0.0158, -0.0279], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:12,864 - logger - DEBUG - accuracy: 0.5839731097221375
+2024-10-23 14:36:12,864 - logger - DEBUG - fraction of prediction=1: 0.4707
+2024-10-23 14:36:12,864 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9986
+2024-10-23 14:36:12,864 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9609
+2024-10-23 14:36:12,864 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0785
+2024-10-23 14:36:12,864 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0007
+2024-10-23 14:36:12,864 - logger - DEBUG - train base rate of y=1: 0.5911
+2024-10-23 14:36:12,864 - logger - DEBUG - accuracy of train base rate predictor: 0.5936
+2024-10-23 14:36:12,876 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:12,882 - logger - DEBUG -               0                                                  1
+0      SCHL MAR  tensor(0.0737, dtype=torch.float64, grad_fn=<U...
+1  SCIENGP LANX  tensor(0.0699, dtype=torch.float64, grad_fn=<U...
+2    ANC isHisp  tensor(0.0690, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:13,952 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7416
+2024-10-23 14:36:13,952 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6471
+2024-10-23 14:36:13,952 - logger - DEBUG - coefficients:
+2024-10-23 14:36:13,952 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:13,958 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:13,958 - logger - DEBUG - (1044, 650, 427, 2047)
+2024-10-23 14:36:13,964 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6764, dtype=torch.float64)
+2024-10-23 14:36:13,964 - logger - DEBUG - 
+2024-10-23 14:36:13,964 - logger - DEBUG - 
+2024-10-23 14:36:13,964 - logger - DEBUG - State: UT
+2024-10-23 14:36:13,964 - logger - DEBUG - N_train: 1827
+2024-10-23 14:36:13,964 - logger - DEBUG - N_test: 457
+2024-10-23 14:36:13,964 - logger - DEBUG - positive train labels: 1195.0000
+2024-10-23 14:36:13,964 - logger - DEBUG - positive test labels: 313.0000
+2024-10-23 14:36:13,970 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:13,975 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7491447733365462)
+2024-10-23 14:36:13,981 - logger - DEBUG - training finished.
+2024-10-23 14:36:13,981 - logger - DEBUG - Bayes risk: 0.690965
+2024-10-23 14:36:13,981 - logger - DEBUG - tensor([-0.0226, -0.0600, -0.0376,  0.0405, -0.0331, -0.0472,  0.0031, -0.0280,
+         0.0614,  0.0194,  0.0723,  0.0597,  0.0245, -0.0418,  0.0419, -0.0627,
+         0.0165,  0.0464,  0.0334,  0.0517], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:13,981 - logger - DEBUG - accuracy: 0.6214442253112793
+2024-10-23 14:36:13,981 - logger - DEBUG - fraction of prediction=1: 0.5427
+2024-10-23 14:36:13,987 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:13,987 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9475
+2024-10-23 14:36:13,987 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0044
+2024-10-23 14:36:13,987 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:13,987 - logger - DEBUG - train base rate of y=1: 0.6541
+2024-10-23 14:36:13,987 - logger - DEBUG - accuracy of train base rate predictor: 0.6849
+2024-10-23 14:36:14,000 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,005 - logger - DEBUG -            0                                                  1
+0   AGEP SEX  tensor(-0.0729, dtype=torch.float64, grad_fn=<...
+1       DEAR  tensor(0.0723, dtype=torch.float64, grad_fn=<U...
+2  SCHL LANX  tensor(0.0707, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:14,061 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7374
+2024-10-23 14:36:14,061 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.7462
+2024-10-23 14:36:14,061 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,061 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,066 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,066 - logger - DEBUG - (70, 74, 46, 267)
+2024-10-23 14:36:14,067 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6449, dtype=torch.float64)
+2024-10-23 14:36:14,067 - logger - DEBUG - 
+2024-10-23 14:36:14,067 - logger - DEBUG - 
+2024-10-23 14:36:14,067 - logger - DEBUG - State: VT
+2024-10-23 14:36:14,067 - logger - DEBUG - N_train: 430
+2024-10-23 14:36:14,067 - logger - DEBUG - N_test: 108
+2024-10-23 14:36:14,067 - logger - DEBUG - positive train labels: 270.0000
+2024-10-23 14:36:14,067 - logger - DEBUG - positive test labels: 60.0000
+2024-10-23 14:36:14,067 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:14,073 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7054614262700853)
+2024-10-23 14:36:14,079 - logger - DEBUG - training finished.
+2024-10-23 14:36:14,079 - logger - DEBUG - Bayes risk: 0.666013
+2024-10-23 14:36:14,079 - logger - DEBUG - tensor([-0.0234,  0.0002,  0.0561, -0.0744,  0.0118, -0.0426, -0.0238, -0.0542,
+         0.0083,  0.0678, -0.0217,  0.0052,  0.0312, -0.0343, -0.0077,  0.0188,
+         0.0473, -0.0298, -0.0541,  0.0479], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:14,079 - logger - DEBUG - accuracy: 0.6388888955116272
+2024-10-23 14:36:14,079 - logger - DEBUG - fraction of prediction=1: 0.4537
+2024-10-23 14:36:14,079 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9815
+2024-10-23 14:36:14,079 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9074
+2024-10-23 14:36:14,079 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0278
+2024-10-23 14:36:14,079 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:14,079 - logger - DEBUG - train base rate of y=1: 0.6279
+2024-10-23 14:36:14,079 - logger - DEBUG - accuracy of train base rate predictor: 0.5556
+2024-10-23 14:36:14,091 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,097 - logger - DEBUG -              0                                                  1
+0  SCIENGP DIS  tensor(0.0780, dtype=torch.float64, grad_fn=<U...
+1     DIS DEYE  tensor(0.0756, dtype=torch.float64, grad_fn=<U...
+2          SEX  tensor(-0.0744, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:14,118 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7685
+2024-10-23 14:36:14,118 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6944
+2024-10-23 14:36:14,118 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,118 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,118 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,118 - logger - DEBUG - (28, 20, 5, 55)
+2024-10-23 14:36:14,118 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6601, dtype=torch.float64)
+2024-10-23 14:36:14,118 - logger - DEBUG - 
+2024-10-23 14:36:14,122 - logger - DEBUG - 
+2024-10-23 14:36:14,122 - logger - DEBUG - State: VA
+2024-10-23 14:36:14,122 - logger - DEBUG - N_train: 5439
+2024-10-23 14:36:14,122 - logger - DEBUG - N_test: 1360
+2024-10-23 14:36:14,122 - logger - DEBUG - positive train labels: 3316.0000
+2024-10-23 14:36:14,122 - logger - DEBUG - positive test labels: 812.0000
+2024-10-23 14:36:14,140 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:14,140 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.742165323723594)
+2024-10-23 14:36:14,150 - logger - DEBUG - training finished.
+2024-10-23 14:36:14,150 - logger - DEBUG - Bayes risk: 0.676225
+2024-10-23 14:36:14,153 - logger - DEBUG - tensor([ 0.0568,  0.0103, -0.0370, -0.0563, -0.0052,  0.0614,  0.0210,  0.0209,
+         0.0552,  0.0452,  0.0293,  0.0049, -0.0542, -0.0619, -0.0193, -0.0597,
+         0.0089, -0.0148, -0.0222, -0.0086], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:14,153 - logger - DEBUG - accuracy: 0.6191176176071167
+2024-10-23 14:36:14,153 - logger - DEBUG - fraction of prediction=1: 0.4824
+2024-10-23 14:36:14,153 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:14,153 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9463
+2024-10-23 14:36:14,153 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0934
+2024-10-23 14:36:14,153 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0029
+2024-10-23 14:36:14,153 - logger - DEBUG - train base rate of y=1: 0.6097
+2024-10-23 14:36:14,153 - logger - DEBUG - accuracy of train base rate predictor: 0.5971
+2024-10-23 14:36:14,165 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,171 - logger - DEBUG -               0                                                  1
+0  SCIENGP DREM  tensor(0.0744, dtype=torch.float64, grad_fn=<U...
+1     AGEP LANX  tensor(-0.0741, dtype=torch.float64, grad_fn=<...
+2      SEX LANX  tensor(-0.0741, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:14,418 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7485
+2024-10-23 14:36:14,418 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6588
+2024-10-23 14:36:14,419 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,419 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,422 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,422 - logger - DEBUG - (335, 213, 129, 683)
+2024-10-23 14:36:14,422 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6689, dtype=torch.float64)
+2024-10-23 14:36:14,422 - logger - DEBUG - 
+2024-10-23 14:36:14,422 - logger - DEBUG - 
+2024-10-23 14:36:14,422 - logger - DEBUG - State: WA
+2024-10-23 14:36:14,422 - logger - DEBUG - N_train: 4857
+2024-10-23 14:36:14,422 - logger - DEBUG - N_test: 1215
+2024-10-23 14:36:14,422 - logger - DEBUG - positive train labels: 2870.0000
+2024-10-23 14:36:14,422 - logger - DEBUG - positive test labels: 729.0000
+2024-10-23 14:36:14,440 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:14,447 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6854039857670808)
+2024-10-23 14:36:14,454 - logger - DEBUG - training finished.
+2024-10-23 14:36:14,454 - logger - DEBUG - Bayes risk: 0.636206
+2024-10-23 14:36:14,454 - logger - DEBUG - tensor([-0.0258,  0.0773, -0.0073,  0.0428, -0.0358, -0.0049, -0.0020, -0.0549,
+         0.0448, -0.0235, -0.0375, -0.0569,  0.0453,  0.0067,  0.0040,  0.0181,
+         0.0564, -0.0303,  0.0699,  0.0487], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:14,454 - logger - DEBUG - accuracy: 0.6469135880470276
+2024-10-23 14:36:14,459 - logger - DEBUG - fraction of prediction=1: 0.5728
+2024-10-23 14:36:14,459 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 0.9934
+2024-10-23 14:36:14,459 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9778
+2024-10-23 14:36:14,459 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0189
+2024-10-23 14:36:14,459 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:14,459 - logger - DEBUG - train base rate of y=1: 0.5909
+2024-10-23 14:36:14,459 - logger - DEBUG - accuracy of train base rate predictor: 0.6000
+2024-10-23 14:36:14,465 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,473 - logger - DEBUG -             0                                                  1
+0  AGEP HICOV  tensor(-0.0775, dtype=torch.float64, grad_fn=<...
+1        SCHL  tensor(0.0773, dtype=torch.float64, grad_fn=<U...
+2    MAR DEYE  tensor(-0.0768, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:14,672 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7712
+2024-10-23 14:36:14,672 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6543
+2024-10-23 14:36:14,672 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,672 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,678 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,678 - logger - DEBUG - (314, 172, 106, 623)
+2024-10-23 14:36:14,678 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6765, dtype=torch.float64)
+2024-10-23 14:36:14,678 - logger - DEBUG - 
+2024-10-23 14:36:14,678 - logger - DEBUG - 
+2024-10-23 14:36:14,678 - logger - DEBUG - State: WV
+2024-10-23 14:36:14,678 - logger - DEBUG - N_train: 1186
+2024-10-23 14:36:14,678 - logger - DEBUG - N_test: 297
+2024-10-23 14:36:14,678 - logger - DEBUG - positive train labels: 565.0000
+2024-10-23 14:36:14,678 - logger - DEBUG - positive test labels: 129.0000
+2024-10-23 14:36:14,684 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:14,684 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.6983960065961012)
+2024-10-23 14:36:14,696 - logger - DEBUG - training finished.
+2024-10-23 14:36:14,696 - logger - DEBUG - Bayes risk: 0.627872
+2024-10-23 14:36:14,696 - logger - DEBUG - tensor([ 0.0068,  0.0608,  0.0314,  0.0490,  0.0493, -0.0358,  0.0172,  0.0557,
+         0.0113,  0.0601,  0.0300, -0.0221,  0.0123, -0.0190, -0.0179, -0.0548,
+        -0.0171,  0.0151,  0.0331, -0.0178], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:14,696 - logger - DEBUG - accuracy: 0.6161616444587708
+2024-10-23 14:36:14,696 - logger - DEBUG - fraction of prediction=1: 0.6768
+2024-10-23 14:36:14,696 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:14,696 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9259
+2024-10-23 14:36:14,696 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0000
+2024-10-23 14:36:14,696 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:14,696 - logger - DEBUG - train base rate of y=1: 0.4764
+2024-10-23 14:36:14,696 - logger - DEBUG - accuracy of train base rate predictor: 0.5657
+2024-10-23 14:36:14,707 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,713 - logger - DEBUG -           0                                                  1
+0  AGEP CIT  tensor(-0.0750, dtype=torch.float64, grad_fn=<...
+1  DREM ANC  tensor(-0.0747, dtype=torch.float64, grad_fn=<...
+2  AGEP MIG  tensor(-0.0742, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:14,743 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7710
+2024-10-23 14:36:14,743 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.4343
+2024-10-23 14:36:14,743 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,743 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,743 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,743 - logger - DEBUG - (134, 34, 34, 95)
+2024-10-23 14:36:14,743 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6920, dtype=torch.float64)
+2024-10-23 14:36:14,743 - logger - DEBUG - 
+2024-10-23 14:36:14,749 - logger - DEBUG - 
+2024-10-23 14:36:14,749 - logger - DEBUG - State: WI
+2024-10-23 14:36:14,749 - logger - DEBUG - N_train: 3831
+2024-10-23 14:36:14,749 - logger - DEBUG - N_test: 958
+2024-10-23 14:36:14,749 - logger - DEBUG - positive train labels: 2369.0000
+2024-10-23 14:36:14,749 - logger - DEBUG - positive test labels: 623.0000
+2024-10-23 14:36:14,762 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:14,765 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7273906552285159)
+2024-10-23 14:36:14,768 - logger - DEBUG - training finished.
+2024-10-23 14:36:14,768 - logger - DEBUG - Bayes risk: 0.691875
+2024-10-23 14:36:14,768 - logger - DEBUG - tensor([-0.0240, -0.0247,  0.0305,  0.0559, -0.0289,  0.0595,  0.0062,  0.0671,
+        -0.0357,  0.0407, -0.0552, -0.0520,  0.0549,  0.0425, -0.0076, -0.0182,
+        -0.0096,  0.0038,  0.0178, -0.0144], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:14,774 - logger - DEBUG - accuracy: 0.5459290146827698
+2024-10-23 14:36:14,774 - logger - DEBUG - fraction of prediction=1: 0.5157
+2024-10-23 14:36:14,774 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:14,774 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 0.9854
+2024-10-23 14:36:14,774 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0355
+2024-10-23 14:36:14,774 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0042
+2024-10-23 14:36:14,774 - logger - DEBUG - train base rate of y=1: 0.6184
+2024-10-23 14:36:14,774 - logger - DEBUG - accuracy of train base rate predictor: 0.6503
+2024-10-23 14:36:14,780 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,786 - logger - DEBUG -            0                                                  1
+0  DEAR DREM  tensor(0.0782, dtype=torch.float64, grad_fn=<U...
+1    MIG DIS  tensor(0.0749, dtype=torch.float64, grad_fn=<U...
+2  GCL HICOV  tensor(-0.0743, dtype=torch.float64, grad_fn=<...
+2024-10-23 14:36:14,908 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7985
+2024-10-23 14:36:14,908 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6660
+2024-10-23 14:36:14,908 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,908 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,914 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,914 - logger - DEBUG - (231, 104, 89, 534)
+2024-10-23 14:36:14,914 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6649, dtype=torch.float64)
+2024-10-23 14:36:14,914 - logger - DEBUG - 
+2024-10-23 14:36:14,914 - logger - DEBUG - 
+2024-10-23 14:36:14,914 - logger - DEBUG - State: WY
+2024-10-23 14:36:14,914 - logger - DEBUG - N_train: 364
+2024-10-23 14:36:14,914 - logger - DEBUG - N_test: 91
+2024-10-23 14:36:14,914 - logger - DEBUG - positive train labels: 218.0000
+2024-10-23 14:36:14,914 - logger - DEBUG - positive test labels: 54.0000
+2024-10-23 14:36:14,914 - logger - DEBUG - training individual predictor with mini-batches
+2024-10-23 14:36:14,920 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7634348396766238)
+2024-10-23 14:36:14,926 - logger - DEBUG - training finished.
+2024-10-23 14:36:14,926 - logger - DEBUG - Bayes risk: 0.640511
+2024-10-23 14:36:14,926 - logger - DEBUG - tensor([ 0.0078,  0.0057,  0.0389, -0.0662, -0.0780,  0.0520,  0.0027,  0.0276,
+        -0.0430, -0.0356, -0.0115, -0.0490, -0.0587, -0.0438, -0.0097,  0.0309,
+         0.0021,  0.0658,  0.0220,  0.0145], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:14,926 - logger - DEBUG - accuracy: 0.6593406796455383
+2024-10-23 14:36:14,926 - logger - DEBUG - fraction of prediction=1: 0.4725
+2024-10-23 14:36:14,926 - logger - DEBUG - when using cost-sensitive loss with c=0.1, fraction of prediction=1: 1.0000
+2024-10-23 14:36:14,926 - logger - DEBUG - when using cost-sensitive loss with c=0.3, fraction of prediction=1: 1.0000
+2024-10-23 14:36:14,926 - logger - DEBUG - when using cost-sensitive loss with c=0.7, fraction of prediction=1: 0.0330
+2024-10-23 14:36:14,926 - logger - DEBUG - when using cost-sensitive loss with c=0.9, fraction of prediction=1: 0.0000
+2024-10-23 14:36:14,926 - logger - DEBUG - train base rate of y=1: 0.5989
+2024-10-23 14:36:14,926 - logger - DEBUG - accuracy of train base rate predictor: 0.5934
+2024-10-23 14:36:14,938 - logger - DEBUG - top sorted (by absolute value) coefficients:
+2024-10-23 14:36:14,938 - logger - DEBUG -              0                                                  1
+0     AGEP SEX  tensor(-0.0782, dtype=torch.float64, grad_fn=<...
+1          ESP  tensor(-0.0780, dtype=torch.float64, grad_fn=<...
+2  SEX SCIENGP  tensor(0.0766, dtype=torch.float64, grad_fn=<U...
+2024-10-23 14:36:14,956 - logger - DEBUG - sklearn Logistic Regression accuracy on test set: 0.7033
+2024-10-23 14:36:14,956 - logger - DEBUG - sklearn : fraction of prediction=employed: 0.6484
+2024-10-23 14:36:14,956 - logger - DEBUG - coefficients:
+2024-10-23 14:36:14,956 - logger - DEBUG - confusion_matrix of sklearn model:
+2024-10-23 14:36:14,956 - logger - DEBUG - (tn, fp, fn, tp)
+2024-10-23 14:36:14,956 - logger - DEBUG - (21, 16, 11, 43)
+2024-10-23 14:36:14,956 - logger - DEBUG - naive (constant base rate predictor) training loss: tensor(0.6735, dtype=torch.float64)
+2024-10-23 14:36:14,962 - logger - DEBUG - 
+2024-10-23 14:36:14,962 - logger - DEBUG - 
+2024-10-23 14:36:14,962 - logger - DEBUG - Bayes risks of the states (empirical risk of optimal individual predictor on that state):
+2024-10-23 14:36:14,962 - logger - DEBUG - MT: 0.7490
+2024-10-23 14:36:14,962 - logger - DEBUG - NJ: 0.7364
+2024-10-23 14:36:14,962 - logger - DEBUG - PA: 0.7326
+2024-10-23 14:36:14,962 - logger - DEBUG - NY: 0.7240
+2024-10-23 14:36:14,962 - logger - DEBUG - NV: 0.7126
+2024-10-23 14:36:14,962 - logger - DEBUG - DE: 0.7121
+2024-10-23 14:36:14,962 - logger - DEBUG - MI: 0.7065
+2024-10-23 14:36:14,962 - logger - DEBUG - OR: 0.7056
+2024-10-23 14:36:14,962 - logger - DEBUG - NE: 0.7018
+2024-10-23 14:36:14,962 - logger - DEBUG - OK: 0.6986
+2024-10-23 14:36:14,962 - logger - DEBUG - AZ: 0.6977
+2024-10-23 14:36:14,962 - logger - DEBUG - WI: 0.6919
+2024-10-23 14:36:14,962 - logger - DEBUG - SC: 0.6918
+2024-10-23 14:36:14,962 - logger - DEBUG - ID: 0.6916
+2024-10-23 14:36:14,962 - logger - DEBUG - UT: 0.6910
+2024-10-23 14:36:14,962 - logger - DEBUG - FL: 0.6909
+2024-10-23 14:36:14,962 - logger - DEBUG - IA: 0.6891
+2024-10-23 14:36:14,962 - logger - DEBUG - KS: 0.6864
+2024-10-23 14:36:14,962 - logger - DEBUG - IN: 0.6853
+2024-10-23 14:36:14,962 - logger - DEBUG - TN: 0.6798
+2024-10-23 14:36:14,962 - logger - DEBUG - AK: 0.6783
+2024-10-23 14:36:14,962 - logger - DEBUG - VA: 0.6762
+2024-10-23 14:36:14,962 - logger - DEBUG - NM: 0.6759
+2024-10-23 14:36:14,962 - logger - DEBUG - CA: 0.6718
+2024-10-23 14:36:14,962 - logger - DEBUG - HI: 0.6713
+2024-10-23 14:36:14,962 - logger - DEBUG - VT: 0.6660
+2024-10-23 14:36:14,962 - logger - DEBUG - TX: 0.6653
+2024-10-23 14:36:14,962 - logger - DEBUG - MA: 0.6651
+2024-10-23 14:36:14,962 - logger - DEBUG - OH: 0.6629
+2024-10-23 14:36:14,962 - logger - DEBUG - NC: 0.6626
+2024-10-23 14:36:14,962 - logger - DEBUG - MD: 0.6578
+2024-10-23 14:36:14,962 - logger - DEBUG - LA: 0.6561
+2024-10-23 14:36:14,962 - logger - DEBUG - KY: 0.6552
+2024-10-23 14:36:14,962 - logger - DEBUG - RI: 0.6538
+2024-10-23 14:36:14,962 - logger - DEBUG - ND: 0.6527
+2024-10-23 14:36:14,962 - logger - DEBUG - CT: 0.6517
+2024-10-23 14:36:14,962 - logger - DEBUG - GA: 0.6511
+2024-10-23 14:36:14,962 - logger - DEBUG - SD: 0.6505
+2024-10-23 14:36:14,962 - logger - DEBUG - MN: 0.6444
+2024-10-23 14:36:14,962 - logger - DEBUG - WY: 0.6405
+2024-10-23 14:36:14,962 - logger - DEBUG - NH: 0.6375
+2024-10-23 14:36:14,962 - logger - DEBUG - WA: 0.6362
+2024-10-23 14:36:14,962 - logger - DEBUG - MO: 0.6337
+2024-10-23 14:36:14,962 - logger - DEBUG - WV: 0.6279
+2024-10-23 14:36:14,962 - logger - DEBUG - CO: 0.6264
+2024-10-23 14:36:14,962 - logger - DEBUG - AR: 0.6230
+2024-10-23 14:36:14,962 - logger - DEBUG - IL: 0.6228
+2024-10-23 14:36:14,962 - logger - DEBUG - AL: 0.6222
+2024-10-23 14:36:14,962 - logger - DEBUG - ME: 0.6199
+2024-10-23 14:36:14,962 - logger - DEBUG - MS: 0.6173
+2024-10-23 14:36:14,962 - logger - DEBUG - 
+2024-10-23 14:36:14,962 - logger - DEBUG - 
+2024-10-23 14:36:15,047 - logger - DEBUG - ((205317, 210), (205317,))
+2024-10-23 14:36:28,765 - logger - DEBUG - Sklearn logistic regression on combined data accuracy: 0.7702
+2024-10-23 14:36:28,765 - logger - DEBUG - training ERM generalist with surrogate loss: log
+2024-10-23 14:36:28,776 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.7180596029005406)
+2024-10-23 14:36:28,788 - logger - DEBUG - training finished.
+2024-10-23 14:36:28,788 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:36:28,788 - logger - DEBUG - tensor([-0.0377, -0.0329, -0.0367,  0.0190, -0.0282,  0.0464, -0.0626, -0.0057,
+        -0.0118, -0.0198,  0.0477, -0.0259,  0.0380, -0.0637, -0.0587, -0.0072,
+        -0.0184, -0.0181, -0.0319, -0.0338], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:28,800 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.6314
+2024-10-23 14:36:28,800 - logger - DEBUG - 
+2024-10-23 14:36:28,800 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.1)
+2024-10-23 14:36:28,832 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.736352873428875)
+2024-10-23 14:36:28,844 - logger - DEBUG - training finished.
+2024-10-23 14:36:28,844 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:36:28,844 - logger - DEBUG - tensor([-0.0425, -0.0152, -0.0419, -0.0758, -0.0505, -0.0309,  0.0345, -0.0209,
+        -0.0055, -0.0225,  0.0692, -0.0217, -0.0243,  0.0284, -0.0075,  0.0142,
+        -0.0073,  0.0046,  0.0539, -0.0406], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:28,850 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.6320
+2024-10-23 14:36:28,856 - logger - DEBUG - 
+2024-10-23 14:36:28,856 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.3)
+2024-10-23 14:36:28,862 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.9081972366554191)
+2024-10-23 14:36:28,875 - logger - DEBUG - training finished.
+2024-10-23 14:36:28,875 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:36:28,875 - logger - DEBUG - tensor([-0.0146,  0.0418, -0.0396,  0.0297, -0.0607, -0.0706, -0.0665, -0.0553,
+         0.0716, -0.0006,  0.0390,  0.0074, -0.0406,  0.0491,  0.0520,  0.0447,
+         0.0420, -0.0536,  0.0162, -0.0056], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:28,880 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.5080
+2024-10-23 14:36:28,880 - logger - DEBUG - 
+2024-10-23 14:36:28,886 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.7)
+2024-10-23 14:36:28,892 - logger - DEBUG - ('epoch:', 0, ',loss=', 1.0593977716040106)
+2024-10-23 14:36:28,904 - logger - DEBUG - training finished.
+2024-10-23 14:36:28,904 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:36:28,904 - logger - DEBUG - tensor([-0.0185, -0.0184, -0.0599, -0.0100,  0.0230, -0.0224,  0.0102, -0.0573,
+        -0.0178,  0.0338,  0.0718, -0.0447,  0.0554, -0.0435,  0.0330,  0.0013,
+         0.0358,  0.0437,  0.0629,  0.0683], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:28,916 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.6160
+2024-10-23 14:36:28,916 - logger - DEBUG - 
+2024-10-23 14:36:28,916 - logger - DEBUG - training ERM generalist with surrogate loss: asymm(c=0.9)
+2024-10-23 14:36:28,922 - logger - DEBUG - ('epoch:', 0, ',loss=', 0.8965628089202455)
+2024-10-23 14:36:28,934 - logger - DEBUG - training finished.
+2024-10-23 14:36:28,934 - logger - DEBUG - coefficients of first 20 final weights:
+2024-10-23 14:36:28,934 - logger - DEBUG - tensor([ 0.0503, -0.0389,  0.0563,  0.0187, -0.0461,  0.0250, -0.0201, -0.0574,
+        -0.0417, -0.0404,  0.0613, -0.0324,  0.0227,  0.0358,  0.0639, -0.0552,
+        -0.0368, -0.0113, -0.0538, -0.0122], dtype=torch.float64,
+       grad_fn=<SliceBackward0>)
+2024-10-23 14:36:28,940 - logger - DEBUG - our accuracy on all test data of logreg trained on combined data: 0.6304
+2024-10-23 14:36:28,940 - logger - DEBUG - 
+2024-10-23 14:36:28,940 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:36:28,940 - logger - DEBUG - using surrogate loss function: log
+2024-10-23 14:36:28,947 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:36:28,965 - logger - DEBUG - initial lam: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:28,965 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:36:29,272 - logger - DEBUG - weights: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:29,272 - logger - DEBUG - dro loss:
+2024-10-23 14:36:29,369 - logger - DEBUG - 0.6603881827593304
+2024-10-23 14:36:29,369 - logger - DEBUG - max-min range: 0.074855
+2024-10-23 14:36:29,369 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:36:29,369 - logger - DEBUG - [0.6603881827593304]
+2024-10-23 14:36:29,369 - logger - DEBUG - final group weightings: 
+2024-10-23 14:36:29,375 - logger - DEBUG - AL: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - AK: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - AZ: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - AR: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - CA: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - CO: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - CT: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - DE: 0.0201
+2024-10-23 14:36:29,375 - logger - DEBUG - FL: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - GA: 0.0200
+2024-10-23 14:36:29,375 - logger - DEBUG - HI: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - ID: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - IL: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - IN: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - IA: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - KS: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - KY: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - LA: 0.0200
+2024-10-23 14:36:29,376 - logger - DEBUG - ME: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MD: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MA: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MI: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MN: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MS: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MO: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - MT: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NE: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NV: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NH: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NJ: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NM: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NY: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - NC: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - ND: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - OH: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - OK: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - OR: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - PA: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - RI: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - SC: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - SD: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - TN: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - TX: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - UT: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - VT: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - VA: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - WA: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - WV: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - WI: 0.0200
+2024-10-23 14:36:29,377 - logger - DEBUG - WY: 0.0200
+2024-10-23 14:36:29,385 - logger - DEBUG - DRO model accuracy on combined test data: 0.6944
+2024-10-23 14:36:29,385 - logger - DEBUG - 
+2024-10-23 14:36:29,386 - logger - DEBUG - 
+2024-10-23 14:36:29,389 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:36:29,389 - logger - DEBUG - using surrogate loss function: asymm(c=0.1)
+2024-10-23 14:36:29,389 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:36:29,406 - logger - DEBUG - initial lam: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:29,406 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:36:29,759 - logger - DEBUG - weights: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:29,759 - logger - DEBUG - dro loss:
+2024-10-23 14:36:29,862 - logger - DEBUG - 0.7742653831241748
+2024-10-23 14:36:29,862 - logger - DEBUG - max-min range: 0.175274
+2024-10-23 14:36:29,862 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:36:29,862 - logger - DEBUG - [0.7742653831241748]
+2024-10-23 14:36:29,862 - logger - DEBUG - final group weightings: 
+2024-10-23 14:36:29,862 - logger - DEBUG - AL: 0.0201
+2024-10-23 14:36:29,862 - logger - DEBUG - AK: 0.0199
+2024-10-23 14:36:29,862 - logger - DEBUG - AZ: 0.0201
+2024-10-23 14:36:29,862 - logger - DEBUG - AR: 0.0202
+2024-10-23 14:36:29,862 - logger - DEBUG - CA: 0.0200
+2024-10-23 14:36:29,862 - logger - DEBUG - CO: 0.0199
+2024-10-23 14:36:29,862 - logger - DEBUG - CT: 0.0200
+2024-10-23 14:36:29,862 - logger - DEBUG - DE: 0.0202
+2024-10-23 14:36:29,862 - logger - DEBUG - FL: 0.0201
+2024-10-23 14:36:29,862 - logger - DEBUG - GA: 0.0200
+2024-10-23 14:36:29,862 - logger - DEBUG - HI: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - ID: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - IL: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - IN: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - IA: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - KS: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - KY: 0.0201
+2024-10-23 14:36:29,868 - logger - DEBUG - LA: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - ME: 0.0201
+2024-10-23 14:36:29,868 - logger - DEBUG - MD: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - MA: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - MI: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - MN: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - MS: 0.0201
+2024-10-23 14:36:29,868 - logger - DEBUG - MO: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - MT: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - NE: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - NV: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - NH: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - NJ: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - NM: 0.0202
+2024-10-23 14:36:29,868 - logger - DEBUG - NY: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - NC: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - ND: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - OH: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - OK: 0.0201
+2024-10-23 14:36:29,868 - logger - DEBUG - OR: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - PA: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - RI: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - SC: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - SD: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - TN: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - TX: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - UT: 0.0198
+2024-10-23 14:36:29,868 - logger - DEBUG - VT: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - VA: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - WA: 0.0200
+2024-10-23 14:36:29,868 - logger - DEBUG - WV: 0.0203
+2024-10-23 14:36:29,868 - logger - DEBUG - WI: 0.0199
+2024-10-23 14:36:29,868 - logger - DEBUG - WY: 0.0200
+2024-10-23 14:36:29,874 - logger - DEBUG - DRO model accuracy on combined test data: 0.6926
+2024-10-23 14:36:29,874 - logger - DEBUG - 
+2024-10-23 14:36:29,874 - logger - DEBUG - 
+2024-10-23 14:36:29,882 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:36:29,882 - logger - DEBUG - using surrogate loss function: asymm(c=0.3)
+2024-10-23 14:36:29,887 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:36:29,902 - logger - DEBUG - initial lam: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:29,902 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:36:30,267 - logger - DEBUG - weights: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:30,267 - logger - DEBUG - dro loss:
+2024-10-23 14:36:30,369 - logger - DEBUG - 0.8498478126509166
+2024-10-23 14:36:30,375 - logger - DEBUG - max-min range: 0.151365
+2024-10-23 14:36:30,375 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:36:30,375 - logger - DEBUG - [0.8498478126509166]
+2024-10-23 14:36:30,375 - logger - DEBUG - final group weightings: 
+2024-10-23 14:36:30,375 - logger - DEBUG - AL: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - AK: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - AZ: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - AR: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - CA: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - CO: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - CT: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - DE: 0.0202
+2024-10-23 14:36:30,375 - logger - DEBUG - FL: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - GA: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - HI: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - ID: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - IL: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - IN: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - IA: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - KS: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - KY: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - LA: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - ME: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - MD: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - MA: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - MI: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - MN: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - MS: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - MO: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - MT: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - NE: 0.0198
+2024-10-23 14:36:30,375 - logger - DEBUG - NV: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - NH: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - NJ: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - NM: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - NY: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - NC: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - ND: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - OH: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - OK: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - OR: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - PA: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - RI: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - SC: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - SD: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - TN: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - TX: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - UT: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - VT: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - VA: 0.0199
+2024-10-23 14:36:30,375 - logger - DEBUG - WA: 0.0200
+2024-10-23 14:36:30,375 - logger - DEBUG - WV: 0.0201
+2024-10-23 14:36:30,375 - logger - DEBUG - WI: 0.0200
+2024-10-23 14:36:30,381 - logger - DEBUG - WY: 0.0200
+2024-10-23 14:36:30,381 - logger - DEBUG - DRO model accuracy on combined test data: 0.6916
+2024-10-23 14:36:30,381 - logger - DEBUG - 
+2024-10-23 14:36:30,381 - logger - DEBUG - 
+2024-10-23 14:36:30,387 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:36:30,387 - logger - DEBUG - using surrogate loss function: asymm(c=0.7)
+2024-10-23 14:36:30,393 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:36:30,405 - logger - DEBUG - initial lam: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:30,405 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:36:30,786 - logger - DEBUG - weights: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:30,786 - logger - DEBUG - dro loss:
+2024-10-23 14:36:30,888 - logger - DEBUG - 0.9540954736405352
+2024-10-23 14:36:30,888 - logger - DEBUG - max-min range: 0.147036
+2024-10-23 14:36:30,888 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:36:30,888 - logger - DEBUG - [0.9540954736405352]
+2024-10-23 14:36:30,888 - logger - DEBUG - final group weightings: 
+2024-10-23 14:36:30,888 - logger - DEBUG - AL: 0.0198
+2024-10-23 14:36:30,888 - logger - DEBUG - AK: 0.0201
+2024-10-23 14:36:30,888 - logger - DEBUG - AZ: 0.0200
+2024-10-23 14:36:30,888 - logger - DEBUG - AR: 0.0198
+2024-10-23 14:36:30,888 - logger - DEBUG - CA: 0.0200
+2024-10-23 14:36:30,888 - logger - DEBUG - CO: 0.0201
+2024-10-23 14:36:30,888 - logger - DEBUG - CT: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - DE: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - FL: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - GA: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - HI: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - ID: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - IL: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - IN: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - IA: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - KS: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - KY: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - LA: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - ME: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - MD: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - MA: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - MI: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - MN: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - MS: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - MO: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - MT: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - NE: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - NV: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - NH: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - NJ: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - NM: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - NY: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - NC: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - ND: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - OH: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - OK: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - OR: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - PA: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - RI: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - SC: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - SD: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - TN: 0.0199
+2024-10-23 14:36:30,894 - logger - DEBUG - TX: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - UT: 0.0202
+2024-10-23 14:36:30,894 - logger - DEBUG - VT: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - VA: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - WA: 0.0200
+2024-10-23 14:36:30,894 - logger - DEBUG - WV: 0.0198
+2024-10-23 14:36:30,894 - logger - DEBUG - WI: 0.0201
+2024-10-23 14:36:30,894 - logger - DEBUG - WY: 0.0200
+2024-10-23 14:36:30,900 - logger - DEBUG - DRO model accuracy on combined test data: 0.6938
+2024-10-23 14:36:30,900 - logger - DEBUG - 
+2024-10-23 14:36:30,900 - logger - DEBUG - 
+2024-10-23 14:36:30,906 - logger - DEBUG - Training Exponentiated Gradient Descent DRO Model..
+2024-10-23 14:36:30,906 - logger - DEBUG - using surrogate loss function: asymm(c=0.9)
+2024-10-23 14:36:30,906 - logger - DEBUG - training DRO with mini-batches
+2024-10-23 14:36:30,922 - logger - DEBUG - initial lam: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:30,922 - logger - DEBUG - learning rate: 0.1
+2024-10-23 14:36:31,273 - logger - DEBUG - weights: [0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02
+ 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2024-10-23 14:36:31,273 - logger - DEBUG - dro loss:
+2024-10-23 14:36:31,375 - logger - DEBUG - 0.9032908506976048
+2024-10-23 14:36:31,375 - logger - DEBUG - max-min range: 0.180285
+2024-10-23 14:36:31,381 - logger - DEBUG - all DRO losses over time:
+2024-10-23 14:36:31,381 - logger - DEBUG - [0.9032908506976048]
+2024-10-23 14:36:31,381 - logger - DEBUG - final group weightings: 
+2024-10-23 14:36:31,381 - logger - DEBUG - AL: 0.0199
+2024-10-23 14:36:31,381 - logger - DEBUG - AK: 0.0201
+2024-10-23 14:36:31,381 - logger - DEBUG - AZ: 0.0200
+2024-10-23 14:36:31,381 - logger - DEBUG - AR: 0.0198
+2024-10-23 14:36:31,381 - logger - DEBUG - CA: 0.0200
+2024-10-23 14:36:31,381 - logger - DEBUG - CO: 0.0201
+2024-10-23 14:36:31,381 - logger - DEBUG - CT: 0.0201
+2024-10-23 14:36:31,381 - logger - DEBUG - DE: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - FL: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - GA: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - HI: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - ID: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - IL: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - IN: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - IA: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - KS: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - KY: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - LA: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - ME: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - MD: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - MA: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - MI: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - MN: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - MS: 0.0198
+2024-10-23 14:36:31,383 - logger - DEBUG - MO: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - MT: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - NE: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - NV: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - NH: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - NJ: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - NM: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - NY: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - NC: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - ND: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - OH: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - OK: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - OR: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - PA: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - RI: 0.0199
+2024-10-23 14:36:31,383 - logger - DEBUG - SC: 0.0200
+2024-10-23 14:36:31,383 - logger - DEBUG - SD: 0.0201
+2024-10-23 14:36:31,383 - logger - DEBUG - TN: 0.0199
+2024-10-23 14:36:31,388 - logger - DEBUG - TX: 0.0201
+2024-10-23 14:36:31,388 - logger - DEBUG - UT: 0.0201
+2024-10-23 14:36:31,388 - logger - DEBUG - VT: 0.0201
+2024-10-23 14:36:31,388 - logger - DEBUG - VA: 0.0200
+2024-10-23 14:36:31,388 - logger - DEBUG - WA: 0.0200
+2024-10-23 14:36:31,388 - logger - DEBUG - WV: 0.0198
+2024-10-23 14:36:31,388 - logger - DEBUG - WI: 0.0201
+2024-10-23 14:36:31,388 - logger - DEBUG - WY: 0.0201
+2024-10-23 14:36:31,393 - logger - DEBUG - DRO model accuracy on combined test data: 0.6945
+2024-10-23 14:36:31,393 - logger - DEBUG - 
+2024-10-23 14:36:31,393 - logger - DEBUG - 
+2024-10-23 14:36:31,393 - logger - DEBUG - training of all DRO models finished
