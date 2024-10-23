@@ -13,6 +13,7 @@ Create a conda environment with python 3.11 and
   - dill (0.3.7)
   - requests (2.31.0)
   - imbalanced-learn (0.11.0)
+  
 You can use environment.txt or environment_mimimal.yaml to set up the environment.
 For example, run
 > conda env create -f environment_minimal.yaml
