@@ -79,10 +79,8 @@ logger.debug("")
 ipscores = []
 
 # loss functions to be used for evaluation
-#loss_funcs = [CostSensitiveLoss(c), CostSensitiveLoss(0.2), LogLoss()]#  CostSensitiveLoss(1-c), LogLoss()]
-cost_sensitive_losses = [CostSensitiveLoss(c_param) for c_param in args.c_params] #[CostSensitiveLoss(c) for c in [0.01,0.02,0.03,0.04,0.05,0.5]] 
+cost_sensitive_losses = [CostSensitiveLoss(c_param) for c_param in args.c_params] 
 loss_funcs = cost_sensitive_losses #+ [LogLoss()]
-#loss_funcs = [CostSensitiveLoss(c) for c in [0.1,0.12,0.14,0.16,0.18,0.2]] + [LogLoss()]
 
 # we might want to exclude some predictors since they are not too interesting
 # otherwise the plots get too crowded
@@ -320,7 +318,6 @@ for predictor in predictors_to_evaluate:
     logger.debug(predictor)
 
     # evaluation of decision calibration for different loss functions, both on training and on test set
-    #loss_funcs = [CostSensitiveLoss(c),CostSensitiveLoss(0.2)]#, CostSensitiveLoss(1-c)]
     loss_funcs = cost_sensitive_losses # same as above
 
     y_preds_train = predictor.predict(X_train_combined)

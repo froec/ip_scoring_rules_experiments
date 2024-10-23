@@ -1,20 +1,5 @@
 # run this using python -m main, in order for imports/dill to work
 # use python -m main --no-minibatches for using full data instead of minibatches, this will set the args.minibatches to false
-# for framingham: python -m main --dataset framingham --logfile results_framingham_loglossbase/output.log --datadir data/ --no-minibatches --epochs_individual_predictors 5000 --c_params [0.1,0.2] --modeldir results_framingham/
-# for ACS: python -m main --dataset acs --datadir data/ACS_unemployment_data/
-# for celebA: python -m main --dataset celeba --datadir data/celeba_embeddings/ --batch_size 512 --modeldir results_celeba/ --logfile results_celeba/celeba_job.log --outer_learning_rate_dro 1.0 --outer_epochs_dro 250 --inner_learning_rate_dro 0.001 --c_params [0.1,0.2,0.3,0.7,0.8,0.9]
-
-# current test:
-# python -m main --dataset celeba --datadir data/celeba_embeddings/ --batch_size 256 --epochs_individual_predictors 2000 --epochs_erm 2000 --modeldir results_celeba/ --logfile results_celeba/celeba_job.log --outer_learning_rate_dro 1.0 --outer_epochs_dro 250 --inner_learning_rate_dro 0.001 --c_params [0.2]
-
-# to do the AK-CA pair:
-# python -m main --dataset acs --datadir data/ACS_Unemployment_data/ --states ['AK','CA'] -- --outer_learning_rate_dro 0.1 --outer_epochs_dro 500 --inner_epochs_dro 500 --inner_learning_rate_dro 0.001 --c_params [0.2,0.8] --epochs_individual_predictors 5000 --epochs_erm 5000
-# and use a subsample of [5058,50000]
-
-# to draw entropy comparison curve:
-# python -m main --dataset acs --datadir data/ACS_unemployment_data/ --plot_binary_entropy_curves --superquick --states ['AK','CA']
-
-# L-BFGS test: python -m main.py --dataset framingham --no-minibatches --epochs_individual_predictors 100
 
 # python ML/data science stack
 import numpy as np
@@ -136,7 +121,7 @@ elif args.dataset == "acs":
         # we will use all states
         args.states = None 
     else:
-        args.states = ast.literal_eval(args.states) # [5058,50000]
+        args.states = ast.literal_eval(args.states)
     data_dictionary_loader = ACSLoader(args.datadir, logger,subsample=None, seed=seed, test_size=args.test_size, states=args.states)
  
 

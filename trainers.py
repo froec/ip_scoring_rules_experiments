@@ -3,7 +3,6 @@ import torch
 from models import BinaryLogReg_model
 from abc import ABC, abstractmethod
 from sklearn.preprocessing import StandardScaler
-#import matplotlib.pyplot as plt
 import typing
 from group_data_loader import GroupDataLoader
 from utils import DummyLogger

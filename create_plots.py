@@ -28,20 +28,6 @@ all_combined_res_df = pd.read_csv(plotdir + 'all_combined_res_df.csv')
 ip_dec_cal_df = pd.read_csv(plotdir + 'ip_dec_cal_df.csv')
 
 
-"""
-# filter the results
-def filter_df(df):
-    lossname_set = ["CostSensitive(c=0.1)","CostSensitive(c=0.3)","CostSensitive(c=0.7)","CostSensitive(c=0.9)"]
-    models_set = ["model-log","model-log-dro","model-asymm(c=0.1)-dro","model-asymm(c=0.3)-dro","model-asymm(c=0.7)-dro","model-asymm(c=0.9)-dro","GBR"]
-    df = df[df['Predictor Name'].isin(models_set)]
-    df = df[df['Loss Name'].isin(lossname_set)]
-    return df 
-
-ipscores_df = filter_df(ipscores_df)
-all_combined_res_df = filter_df(all_combined_res_df)
-ip_dec_cal_df = filter_df(ip_dec_cal_df)
-"""
-
 
 ########################################
 ######## visualization of IP scores

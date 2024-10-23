@@ -46,22 +46,9 @@ class ACSLoader(DataDictionaryLoader):
 
 
         # the states for which we collect the data
-        # try ['DE','WV'] quite different baselines and different coefficients
         if states is None:
             states = all_states 
 
-        #['AK','CA'] #['AK','HI'] #['CA','MS']
-        # if we don't balance ID-MS but take frac=0.2, interesting entropy curve
-        # ['AK','CA'] # this seems to be crazy 2 states - they get all the DRO weight of the first 20 states
-        #all_states[:20] # all_states
-        # ['ID','MS'] good one to showcase max ent difference with log loss vs brier vs asymmetric loss 
-        # nice one ['AK','SC'], max ent is at lamb=0.65 roughly
-        # try ['CA', 'UT'] # max ent is inbetween
-        #['NM','IA'] max ent=NM
-         #['ID','MS'] # nice example for where max ent is in the middle
-        # MN is a very easy state
-        # ['OK','MN'] is a good couple, DRO will put all weight on OK since MN is so easy.
-        # Maximum entropy dist is clearly at the boundary=OK then
 
         logger.debug("number of states: %s" % len(states))
 

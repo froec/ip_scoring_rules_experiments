@@ -83,28 +83,6 @@ class FullGroupDataLoader(GroupDataLoader):
     def getRandomBigBatches(self, N):
         return self.getRandomBatches()
 
-
-
-    """
-    def __iter__(self):
-        #Reset the iteration and return the iterator object.
-        self.current_batch = 0
-        self._shuffle_data()
-        return self
-
-
-    def __next__(self):
-        # this will only return the full dataset _once_
-        # i.e. there is a single batch
-        if self.current_batch > 0:
-            raise StopIteration
-
-        self.current_batch += 1
-        if len(self.group_labels)>1:
-            return [(self.X[self.group_indices[g]], self.y[self.group_indices[g]]) for g in self.group_labels]
-        else:
-            return [(self.X,self.y)]
-    """
         
 
 

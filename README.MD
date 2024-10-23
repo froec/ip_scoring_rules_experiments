@@ -1,6 +1,20 @@
-Create an environment named "base" with ..
+# Code for the Paper "Scoring Rules and Calibration for Imprecise Probabilities"
+Arxiv link
 
-Download the framingham dataset (a single csv file) from https://www.kaggle.com/datasets/aasheesh200/framingham-heart-study-dataset?select=framingham.csv and put it in the data/ directory
+## Environment
+Create a conda environment named "base" with python 3.11 and
+ - matplotlib (3.8.4)
+  - numpy (1.26.4)
+  - pandas (2.2.2)
+  - pytorch (2.3.0)
+  - scikit-learn (1.4.2)
+  - seaborn (0.13.2)
+  - torchvision (0.18.1)
+  - dill (0.3.7)
+You can use environment.txt or environment_mimimal.yaml to set up the environemnt.
+
+## Preparing the data
+For framingham, download the dataset (a single csv file) from https://www.kaggle.com/datasets/aasheesh200/framingham-heart-study-dataset?select=framingham.csv and put it in the data/ directory
 
 For ACS, run "python download_acs.py" and then "python preprocess_acs.py" (run from within the data_scripts/ directory)
 
@@ -10,6 +24,7 @@ For CelebA:
 OR
 1. Simply download the computed embeddings from https://1drv.ms/u/c/4ff88d640b476479/EUqTT8bQqVZAsfbR5Ol8fAcBOvZQgIu0umxtsl7m6zB8BQ?e=bEcd4L and put them in the data/celeba_embeddings/ directory
 
+## Running the experiments
 To run the ACS experiment:
 > python -m main --dataset acs --datadir data/ACS_unemployment_data/ --modeldir results_acs/ --logfile logs/acs_job.log \
 		--batch_size 512 --outer_learning_rate_dro 0.1 --outer_epochs_dro 2000 --inner_learning_rate_dro 0.001 --inner_epochs_dro 500 \
@@ -33,9 +48,12 @@ To run the framingham experiment:
 		--c_params [0.1,0.3,0.7,0.9]\
 		--no-minibatches
 
+## Creating plots
 Finally, to create the plots:
 > python create_plots.py --plotdir results_acs/
+
 > python create_plots.py --plotdir results_framingham/
+
 > python create_plots.py --plotdir results_celeba/
 
 To create helper plots for the paper, run plots/plots.py (see the instructions in plots.py)

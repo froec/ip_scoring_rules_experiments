@@ -380,6 +380,7 @@ def SphericalScore(preds,outcomes):
 
 """
 # asymmetric loss as a simple torch function for training models
+# this is the version without smoothing
 def AsymmetricScore(c):
     def f(preds,outcomes):
         S = lambda pred, true : (pred-true)**2

@@ -9,7 +9,6 @@ class CelebALoader(DataDictionaryLoader):
     """
     def __init__(self, datadir, logger, seed=42):
 
-        # todo: try https://scikit-learn.org/stable/auto_examples/decomposition/plot_incremental_pca.html to prevent overfitting
         N = 9999999
         X_train_male = np.load(datadir + 'embeddings_train_male.npy')[:N]
         y_train_male = np.load(datadir + 'labels_train_male.npy')[:N]
