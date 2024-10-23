@@ -1,0 +1,26 @@
+,0
+AGEP,age
+SCHL,educational attainment
+MAR,marital status
+SEX,sex
+ESP,employment of parents
+MIG,1-year-non-mover
+GCL,grandparent with grandchildren
+HICOV,health insured
+SCIENGP,science/eng degree
+DIS,disability
+DEAR,hearing difficulty
+DEYE,vision difficulty
+DREM,cognitive difficulty
+CIT,citizen status
+NATIVITY,nativity status
+ANC,ancestry status
+RAC1P,Race
+HISP,Hispanic (detailled)
+LANX,non-english lang at home
+PWGTP,person weight
+ESR,employment status
+isEmployed,employed
+ThreeClassesEmploymentStatus,3-class employment status
+isHisp,hispanic origin
+isWhiteOnly,white (non-hispanic)
